@@ -9,11 +9,11 @@ const Footer = () => {
         <MaxWidthWrapper>
           <div className="relative py-[10px] pt-[20px] pb-[50px]  flex items-center justify-center">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center w-full">
-              <h2 className="leading-[30px] lg:leading-[35px] font-heading font-bold text-[30px] lg:text-[35px] text-[#ffffff]">
+              <h2 className="leading-[30px] mb-4 md:md-0 text-center md:text-left lg:leading-[35px] font-heading font-bold text-[30px] lg:text-[35px] text-[#ffffff]">
                 Subscribe To Newsletter
               </h2>
               <div className="p-[10px]">
-                <form className="flex items-center gap-[10px]">
+                <form className="flex flex-col md:flex-row justify-center items-center gap-[20px]">
                   <input
                     type="email"
                     placeholder="Your email"
@@ -21,7 +21,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="px-[30px] py-[15px] font-medium  bg-[#ffffff] text-[#181818]  uppercase tracking-[2px] text-[14px]"
+                    className=" px-[30px] py-[15px] font-medium  bg-[#ffffff] text-[#181818]  uppercase tracking-[2px] text-[14px]"
                   >
                     Subscribe
                   </button>

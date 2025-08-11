@@ -12,7 +12,7 @@ const About: React.FC = () => {
       <MaxWidthWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center">
           {/* Left Column */}
-          <div className="flex flex-col items-center lg:flex-row gap-4">
+          <div className="flex  items-center flex-row gap-4">
             {/* Left Image */}
             <div className="flex-1">
               <Image

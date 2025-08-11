@@ -25,10 +25,9 @@ const CampusHistorySection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left Section */}
             <div className="relative">
-              <div className="border-gray-900 border-l pl-10 max-[576px]:border:none">
-                <h2 className="text-3xl md:text-[55px] font-bold text-gray-900 font-heading mb-10">
-                  Our{" "}
-                  <span className="text-blue-600 ml-[100px] block">Story</span>
+              <div className="border-gray-900 border-l pl-6 md:pl-10 max-[576px]:border:none">
+                <h2 className="text-[33px] md:text-[55px] mb-4 font-bold text-gray-900 font-heading ">
+                  Our <span className="text-[#890c25]  ">Story</span>
                 </h2>
                 <div>
                   <p className="leading-[26px] text-[15px] text-[#737477]   mb-8">

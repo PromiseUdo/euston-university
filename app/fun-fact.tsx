@@ -16,7 +16,7 @@ const FunFact: React.FC = () => {
                   90%
                 </h2>
                 <p className="mt-2 text-base text-gray-600">
-                  post-graduation success rate
+                  Graduation success rate
                 </p>
               </div>
 
