@@ -54,7 +54,7 @@ const About: React.FC = () => {
 
             {/* Title */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading">
-              About University
+              About Euston University
             </h2>
 
             {/* Description */}
