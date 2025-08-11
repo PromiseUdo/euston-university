@@ -15,13 +15,16 @@ export default function Home() {
     <main className="">
       <Hero />
       <About />
-      {/* <AcademicPrograms /> */}
       <FunFact />
-      <Feedback />
-      <ProgramSection />
+
       <CampusHistorySection />
-      <ParallaxImageSection />
+
+      {/* <AcademicPrograms /> */}
+      <ProgramSection />
       <CampusLifeSection />
+
+      <Feedback />
+      <ParallaxImageSection />
       <ScholarshipSection />
       {/* insert a parallax image section */}
       <BlogSection />
