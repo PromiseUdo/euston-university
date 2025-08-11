@@ -108,13 +108,6 @@ const CampusLifeSection: React.FC = () => {
                         {item.description}
                       </p>
                     </div>
-                    <Link
-                      href={item.link}
-                      className="inline-flex items-center justify-center w-12 h-12 border border-[#181818] group-hover:border-white rounded-full text-white transition-colors"
-                      aria-label={`Learn more about ${item.title}`}
-                    >
-                      <ArrowRight className="-rotate-45 w-5 h-5 text-[#181818] group-hover:text-white" />
-                    </Link>
                   </div>
                 </div>
               ))}
