@@ -560,7 +560,7 @@ const faculties: FacultyData[] = [
       },
       {
         thumbnail: "/testifier2.jpg",
-        name: "Albert Mack",
+        name: "Albert Mackss",
         designation: "Head Teacher",
         href: "/faculty-details/albert-mack",
         socialLinks: [
