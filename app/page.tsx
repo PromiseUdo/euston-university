@@ -23,8 +23,8 @@ export default function Home() {
       <ProgramSection />
       <CampusLifeSection />
 
-      <Feedback />
       <ParallaxImageSection />
+      <Feedback />
       <ScholarshipSection />
       {/* insert a parallax image section */}
       <BlogSection />
