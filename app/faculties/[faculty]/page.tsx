@@ -250,7 +250,7 @@ const faculties: FacultyData[] = [
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/09.jpg",
         title: "BNSc Nursing Science",
-        href: "/department/nursing",
+        href: "/faculties/faculty-of-allied-health-sciences",
       },
     ],
     lecturers: [
@@ -378,49 +378,49 @@ const faculties: FacultyData[] = [
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/09.jpg",
         title: "BSc Biology",
-        href: "/department/computer-science",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/10.jpg",
         title: "BSc Microbiology",
-        href: "/department/information-technology",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/11.jpg",
         title: "BSc Chemistry",
-        href: "/department/cybersecurity",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Mathematics",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Statistics",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Physics",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Physics with Electronics",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Forensic Science",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
     ],
     lecturers: [
@@ -468,73 +468,73 @@ const faculties: FacultyData[] = [
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/09.jpg",
         title: "BSc Accounting",
-        href: "/department/computer-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/10.jpg",
         title: "BSc Economics",
-        href: "/department/information-technology",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/11.jpg",
         title: "BSc Finance",
-        href: "/department/cybersecurity",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Entrepreneurship and Innovation",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Business Administration",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Public Administration",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Procurement Management",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Logistics and Supply Chain Management",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Criminology and Security Studies",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BSc Hospitality and Tourism Management",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BA History and International Studies",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
         title: "BA French",
-        href: "/department/data-science",
+        href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
     ],
     lecturers: [
