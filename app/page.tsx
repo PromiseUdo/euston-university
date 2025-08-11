@@ -21,9 +21,9 @@ export default function Home() {
 
       {/* <AcademicPrograms /> */}
       <ProgramSection />
+      <ParallaxImageSection />
       <CampusLifeSection />
 
-      <ParallaxImageSection />
       <Feedback />
       <ScholarshipSection />
       {/* insert a parallax image section */}
