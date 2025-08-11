@@ -60,7 +60,7 @@ const FacultySection: React.FC = () => {
               placeholder="Search Faculties"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-4 pr-12 py-2 border border-input rounded-md bg-card text-foreground font-body focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-full pl-4 pr-12 py-2 border border-input  bg-card text-foreground font-body focus:outline-none focus:ring-2 focus:ring-ring"
               aria-label="Search faculty or staff"
             />
             <button
@@ -78,7 +78,7 @@ const FacultySection: React.FC = () => {
           {facultyItems.map((item, index) => (
             <article
               key={index}
-              className="bg-card border rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="bg-card border overflow-hidden hover:shadow-md transition-shadow duration-300"
             >
               <div className="relative">
                 <Link
@@ -94,7 +94,7 @@ const FacultySection: React.FC = () => {
                 {item.badge && (
                   <Link
                     href={item.href}
-                    className="absolute bottom-2 left-2 bg-primary text-primary-foreground text-xs font-semibold font-body uppercase tracking-wider px-3 py-1 rounded-md"
+                    className="absolute bottom-2 left-2 bg-primary text-primary-foreground text-xs font-semibold font-body uppercase tracking-wider px-3 py-1 "
                     aria-label={`${item.badge} for ${item.title}`}
                   >
                     {item.badge}

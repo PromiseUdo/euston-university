@@ -16,7 +16,7 @@ const ScholarshipSection = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#9E001F] opacity-80"></div>
+      <div className="absolute inset-0 bg-[#000000] opacity-80"></div>
       <MaxWidthWrapper>
         <div className=" mx-auto max-w-3xl relative w-full p-[10px] z-10 flex flex-col justify-center items-center  h-full">
           <div className="pb-[20px]">
