@@ -467,25 +467,73 @@ const faculties: FacultyData[] = [
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/09.jpg",
-        title: "Department of Computer Science",
+        title: "BSc Accounting",
         href: "/department/computer-science",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/10.jpg",
-        title: "Department of Information Technology",
+        title: "BSc Economics",
         href: "/department/information-technology",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/11.jpg",
-        title: "Department of Cybersecurity",
+        title: "BSc Finance",
         href: "/department/cybersecurity",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
-        title: "Department of Data Science",
+        title: "BSc Entrepreneurship and Innovation",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Business Administration",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Public Administration",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Procurement Management",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Logistics and Supply Chain Management",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Criminology and Security Studies",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Hospitality and Tourism Management",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BA History and International Studies",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BA French",
         href: "/department/data-science",
       },
     ],
