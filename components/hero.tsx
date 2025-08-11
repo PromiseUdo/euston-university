@@ -95,12 +95,25 @@ const Hero = () => {
 
             {/* Right Column - Static */}
             <div className="col-span-12 md:col-span-4 flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
-              <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
-                Undergraduate
-              </p>
-              <p className="font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
-                Browse the undergraduate programs
-              </p>
+              <div className="flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
+                <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
+                  Undergraduate
+                </p>
+                <p className="font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
+                  Browse the undergraduate programs
+                </p>
+
+                <hr className="max-w-[300px] border-gray-500" />
+              </div>
+              <div className="flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
+                <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
+                  University News
+                </p>
+                <p className="font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
+                  Browse the latest updates
+                </p>
+                <hr className="max-w-[300px] border-gray-500" />
+              </div>
             </div>
           </div>
         </div>
