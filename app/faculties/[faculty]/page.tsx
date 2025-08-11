@@ -377,25 +377,49 @@ const faculties: FacultyData[] = [
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/09.jpg",
-        title: "Department of Computer Science",
+        title: "BSc Biology",
         href: "/department/computer-science",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/10.jpg",
-        title: "Department of Information Technology",
+        title: "BSc Microbiology",
         href: "/department/information-technology",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/11.jpg",
-        title: "Department of Cybersecurity",
+        title: "BSc Chemistry",
         href: "/department/cybersecurity",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
-        title: "Department of Data Science",
+        title: "BSc Mathematics",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Statistics",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Physics",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Physics with Electronics",
+        href: "/department/data-science",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Forensic Science",
         href: "/department/data-science",
       },
     ],
