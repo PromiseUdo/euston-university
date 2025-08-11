@@ -249,20 +249,8 @@ const faculties: FacultyData[] = [
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/09.jpg",
-        title: "Department of Nursing",
+        title: "BNSc Nursing Science",
         href: "/department/nursing",
-      },
-      {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/10.jpg",
-        title: "Department of Physiotherapy",
-        href: "/department/physiotherapy",
-      },
-      {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/11.jpg",
-        title: "Department of Medical Laboratory Science",
-        href: "/department/medical-laboratory-science",
       },
     ],
     lecturers: [
@@ -299,26 +287,50 @@ const faculties: FacultyData[] = [
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/09.jpg",
-        title: "Department of Computer Science",
-        href: "/department/computer-science",
+        title: "BSc Computer Science",
+        href: "/faculties/faculty-of-computing",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/10.jpg",
-        title: "Department of Information Technology",
-        href: "/department/information-technology",
+        title: "BSc Cybersecurity",
+        href: "/faculties/faculty-of-computing",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/11.jpg",
-        title: "Department of Cybersecurity",
-        href: "/department/cybersecurity",
+        title: "BSc Data Science",
+        href: "/faculties/faculty-of-computing",
       },
       {
         thumbnail:
           "https://html.themewant.com/unipix/assets/images/course/12.jpg",
-        title: "Department of Data Science",
-        href: "/department/data-science",
+        title: "BSc Information and Communication Technology (ICT)",
+        href: "/faculties/faculty-of-computing",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Information Systems",
+        href: "/faculties/faculty-of-computing",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Information Technology",
+        href: "/faculties/faculty-of-computing",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Software Engineering",
+        href: "/faculties/faculty-of-computing",
+      },
+      {
+        thumbnail:
+          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        title: "BSc Artificial Intelligence",
+        href: "/faculties/faculty-of-computing",
       },
     ],
     lecturers: [
