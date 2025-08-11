@@ -63,9 +63,9 @@ const Hero = () => {
       {/* Content */}
       <MaxWidthWrapper className="h-full">
         <div className="flex h-full w-full flex-col items-center justify-end pb-16 text-white">
-          <div className="w-full grid grid-cols-12">
+          <div className="w-full grid grid-cols-12 gap-[20px] md:gap-0">
             {/* Left Column - Animated */}
-            <div className="col-span-8 min-h-[220px] max-w-[550px] md:min-h-[300px]">
+            <div className="col-span-12 md:col-span-8 min-h-[220px] max-w-[550px] md:min-h-[300px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
@@ -73,12 +73,12 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="flex flex-col gap-[0.5rem] md:gap-[0.875rem]"
+                  className="flex flex-col gap-[0.75rem] md:gap-[0.875rem]"
                 >
-                  <p className="font-body font-medium text-[15px] leading-[15px] uppercase tracking-[4px]">
+                  <p className="font-body font-medium text-[15px] leading-[22px] md:leading-[15px] uppercase tracking-[4px]">
                     {slides[currentSlide].subheading}
                   </p>
-                  <h1 className="leading-[2.1875rem] md:leading-[3.4375rem] text-[35px] md:text-[55px] font-heading font-bold mb-4 text-center md:text-left">
+                  <h1 className="leading-[2.1875rem] md:leading-[3.4375rem] text-[35px] md:text-[55px] font-heading font-bold mb-4 ">
                     {slides[currentSlide].headline}
                   </h1>
                   <div className="flex items-center gap-4">
@@ -94,7 +94,7 @@ const Hero = () => {
             </div>
 
             {/* Right Column - Static */}
-            <div className="col-span-4 flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
+            <div className="col-span-12 md:col-span-4 flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
               <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
                 Undergraduate
               </p>

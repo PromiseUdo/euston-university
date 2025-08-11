@@ -154,8 +154,8 @@ const ProgramSection: React.FC = () => {
             href="/faculties"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
           >
-            More Program
-            <ArrowRight className="w-4 h-4" />
+            More Programs
+            <ArrowRight className="-rotate-45 w-4 h-4" />
           </Link>
         </div>
 

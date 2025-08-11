@@ -110,7 +110,7 @@ const About: React.FC = () => {
               className="inline-flex w-fit items-center gap-2 text-center uppercase bg-[#890c25] h-[44px] px-6 py-3 text-[14px] text-[#ffffff] tracking-[2px] transition-colors"
             >
               View Our Programs
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="-rotate-45 w-4 h-4" />
             </a>
           </div>
         </div>
