@@ -50,7 +50,7 @@ const speakerItems: SpeakerItem[] = [
   },
 ];
 
-const EventSpeakersSection: React.FC = () => {
+const LecturerSection: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       <MaxWidthWrapper>
@@ -105,4 +105,4 @@ const EventSpeakersSection: React.FC = () => {
   );
 };
 
-export default EventSpeakersSection;
+export default LecturerSection;

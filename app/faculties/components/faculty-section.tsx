@@ -16,22 +16,22 @@ const facultyItems: FacultyItem[] = [
   {
     thumbnail: "https://html.themewant.com/unipix/assets/images/course/01.jpg",
     title: "Faculty of Allied Health Sciences",
-    href: "/faculty/arts",
+    href: "/faculties/faculty-of-allied-health-sciences",
   },
   {
     thumbnail: "https://html.themewant.com/unipix/assets/images/course/02.jpg",
     title: "Faculty of Natural and Applied Sciences",
-    href: "/faculty/science",
+    href: "/faculties/faculty-of-natural-and-applied-sciences",
   },
   {
     thumbnail: "https://html.themewant.com/unipix/assets/images/course/03.jpg",
     title: "Faculty of Computing",
-    href: "/faculty/law",
+    href: "/faculties/faculty-of-computing",
   },
   {
     thumbnail: "https://html.themewant.com/unipix/assets/images/course/03.jpg",
     title: "Faculty of Arts, Management and Social Sciences",
-    href: "/faculty/social-sciences",
+    href: "/faculties/faculty-of-arts-management-and-social-sciences",
   },
 ];
 
