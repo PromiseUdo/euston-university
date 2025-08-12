@@ -74,7 +74,7 @@ const About: React.FC = () => {
                 </p>
               </div>
             </div>
-            <p className="text-base text-gray-700 leading-relaxed">
+            <p className="text-base text-[#737477] leading-relaxed">
               At Euston University, we envision a future where knowledge knows
               no borders and education empowers individuals to transform their
               immediate environment and the world. Our aim is to become a pillar
@@ -97,7 +97,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-base text-gray-700 leading-relaxed">
+            <p className="text-base text-[#737477] leading-relaxed">
               Our vision is to be a leading institution that fosters innovation,
               inclusivity, and excellence in education, empowering students to
               thrive in a global society.
