@@ -30,7 +30,7 @@ const CampusHistorySection: React.FC = () => {
                   Our <span className="text-[#890c25]  ">Story</span>
                 </h2>
                 <div>
-                  <p className="leading-[26px] text-[15px] text-[#737477]   mb-8">
+                  <p className="text-base text-[#737477]   mb-8">
                     Euston University is not just another institution of higher
                     learning—it is a living expression of a noble vision, shaped
                     by compassion, rooted in service, and destined for impact.
@@ -42,12 +42,23 @@ const CampusHistorySection: React.FC = () => {
                     University and the compassionate force behind the renowned
                     Widowcare Foundation.
                   </p>
-                  <Link
+                  {/* <Link
                     href="/"
-                    className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#890c25]   tracking-wider  transition-colors"
+                    className="overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#890c25]   tracking-wider  transition-colors"
                   >
-                    Read More
+                    <span className="relative z-10">Read More</span>
+                    <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+
                     <ArrowRight className="w-4 h-4 -rotate-45" />
+                  </Link> */}
+
+                  <Link
+                    href="/faculties"
+                    className="inline-flex relative w-fit items-center gap-2 text-center  bg-[#890c25] h-[44px] px-6 py-3 text-[14px] text-[#ffffff]  font-medium overflow-hidden group"
+                  >
+                    <span className="relative z-10">Read More</span>
+                    <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+                    <ArrowRight className="-rotate-45 w-4 h-4 text-white relative z-10" />
                   </Link>
                 </div>
               </div>
