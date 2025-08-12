@@ -24,7 +24,7 @@ const slides = [
     image: "/slide3.png",
     headline: "World-Class Faculty and Learning Infrastructure",
     subheading:
-      "Euston University prides itself on attracting seasoned academics and industry professionals who are passionate about teaching and mentoring.",
+      "Euston University prides itself on attracting seasoned academics & industry professionals.",
     primaryButton: "Apply",
     secondaryButton: "Learn more",
   },
@@ -58,7 +58,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/90" />
 
       {/* Content */}
       <MaxWidthWrapper className="h-full">
@@ -75,27 +75,34 @@ const Hero = () => {
                   transition={{ duration: 0.5 }}
                   className="flex flex-col gap-[0.75rem] md:gap-[0.875rem]"
                 >
-                  <p className="font-body font-medium text-[15px] leading-[22px] md:leading-[15px] uppercase tracking-[4px]">
+                  <p className="font-body font-medium text-[15px] leading-[26px] md:leading-[26px] uppercase tracking-[4px]">
                     {slides[currentSlide].subheading}
                   </p>
                   <h1 className="leading-[2.1875rem] md:leading-[3.4375rem] text-[35px] md:text-[55px] font-heading font-bold mb-4 ">
                     {slides[currentSlide].headline}
                   </h1>
                   <div className="flex items-center gap-4">
-                    <button className="text-center uppercase bg-[#ffffff] h-[44px] px-12 py-2 text-[14px] text-[#292929] tracking-[2px]">
+                    {/* <button className="text-center uppercase bg-[#890c25] h-[44px] px-12 py-2 text-[14px] text-[#ffffff] tracking-[2px] font-medium">
                       {slides[currentSlide].primaryButton}
+                    </button> */}
+                    <button className="relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group">
+                      <span className="relative z-10">
+                        {slides[currentSlide].primaryButton}
+                      </span>
+                      <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
                     </button>
-                    <button className="text-center text-white uppercase bg-transparent h-[44px] px-10 py-2 text-[14px] tracking-[2px]">
+
+                    {/* <button className="text-center text-white uppercase bg-transparent h-[44px] px-10 py-2 text-[14px] tracking-[2px]">
                       {slides[currentSlide].secondaryButton}
-                    </button>
+                    </button> */}
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
 
             {/* Right Column - Static */}
-            <div className="col-span-12 md:col-span-4 flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
-              <div className="flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
+            <div className="col-span-12  md:col-span-4 flex flex-col gap-[1rem] md:gap-[2.4rem]">
+              <div className="flex flex-col gap-[0.625rem] md:gap-[1.0625rem]">
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
                   Undergraduate
                 </p>
@@ -103,7 +110,7 @@ const Hero = () => {
                   Browse the undergraduate programs
                 </p>
 
-                <hr className="max-w-[300px] border-gray-500" />
+                <hr className="py-[10px] max-w-[300px] mt-3 border-gray-500 hover:border-[#890c25] transition-border" />
               </div>
               <div className="flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
@@ -112,7 +119,7 @@ const Hero = () => {
                 <p className="font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
                   Browse the latest updates
                 </p>
-                <hr className="max-w-[300px] border-gray-500" />
+                <hr className="py-[10px] mt-3 max-w-[300px] border-gray-500 hover:border-[#890c25] transition-border" />
               </div>
             </div>
           </div>
