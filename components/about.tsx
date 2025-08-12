@@ -16,7 +16,7 @@ const About: React.FC = () => {
             {/* Left Image */}
             <div className="flex-1">
               <Image
-                src="/about__h2-1.png"
+                src="/mission1.webp"
                 alt="About left"
                 width={300}
                 height={400}

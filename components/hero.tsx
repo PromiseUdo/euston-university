@@ -65,7 +65,7 @@ const Hero = () => {
       {/* Content */}
       <MaxWidthWrapper className="h-full">
         <div className="flex h-full w-full flex-col items-center justify-end pb-16 text-white">
-          <div className="w-full grid grid-cols-12 gap-[20px] md:gap-0">
+          <div className="w-full grid grid-cols-12 gap-[24px] md:gap-0">
             {/* Left Column - Animated */}
             <div className="col-span-12 md:col-span-8 min-h-[220px] max-w-[550px] md:min-h-[300px]">
               <AnimatePresence mode="wait">
