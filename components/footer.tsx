@@ -1,6 +1,7 @@
 import React from "react";
 import MaxWidthWrapper from "./max-width-wrapper";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -21,9 +22,11 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className=" px-[30px] py-[15px] font-medium  bg-[#ffffff] text-[#181818]  uppercase tracking-[2px] text-[14px]"
+                    className="gap-2 inline-flex items-center px-[30px] py-[15px] font-medium  bg-[#ffffff] text-[#181818]  uppercase tracking-[2px] text-[14px]"
                   >
-                    Subscribe
+                    <span className="relative z-10">Subscribe</span>
+
+                    <ArrowRight className="-rotate-45 w-4 h-4 relative z-10" />
                   </button>
                 </form>
               </div>

@@ -53,10 +53,13 @@ const BlogSection: React.FC = () => {
           </div>
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
+            className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
           >
-            View All
-            <ArrowRight className="w-4 h-4" />
+            <span className="relative z-10">View All</span>
+
+            <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+
+            <ArrowRight className="-rotate-45 w-4 h-4 relative z-10" />
           </Link>
         </div>
 

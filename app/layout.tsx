@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import { cormorant, dmSans } from "@/lib/fonts";
 import Navbar from "@/components/navbar";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow flex-1">{children}</main>
         <Footer />
+        <ScrollToTop /> {/* Add ScrollToTop here */}
       </body>
     </html>
   );
