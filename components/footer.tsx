@@ -194,7 +194,7 @@ const Footer = () => {
               <p className="text-[#cccccc] text-[14px] leading-[21px] hover:underline">
                 Copyright © 2025 Euston University. All rights reserved. -
                 Developed by{" "}
-                <a href="/" className="underline text-[#890c25]">
+                <a href="/" className="underline ">
                   CodersTriangle
                 </a>
               </p>
