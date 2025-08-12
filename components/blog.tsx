@@ -23,7 +23,7 @@ const blogs: Blog[] = [
     excerpt: "You'll find something to spark your curiosity and enhance",
     author: "Jon Adam",
     date: "Oct 29, 2023",
-    image: "/blog1.jpg",
+    image: "/blog1.webp",
     link: "/blog-details",
   },
   {
@@ -32,7 +32,7 @@ const blogs: Blog[] = [
     excerpt: "You'll find something to spark your curiosity and enhance",
     author: "Jon Adam",
     date: "Oct 29, 2023",
-    image: "/blog2.jpg",
+    image: "/blog2.webp",
     link: "/blog-details",
   },
 ];

@@ -17,21 +17,21 @@ const campusLifeItems: CampusLife[] = [
     title: "World-Class Academic Programmes",
     description:
       "Euston University is structured around forward-thinking faculties and programs that address local, national, and global challenges.",
-    image: "/our-story1.jpg",
+    image: "/our-story1.webp",
     link: "/campus-life",
   },
   {
     title: "Technology-Driven Learning Environment",
     description:
       "At Euston University, we understand that the future of education is digital and dynamic.",
-    image: "/our-story2.jpg",
+    image: "/our-story2.webp",
     link: "/campus-life",
   },
   {
     title: "Global Connections, Local Relevance",
     description:
       "We foster academic partnerships, faculty exchanges, research collaborations, and virtual exchanges with institutions across Africa, Europe, and North America",
-    image: "/our-story3.jpg",
+    image: "/our-story3.webp",
     link: "/athletics",
   },
 ];

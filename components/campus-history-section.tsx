@@ -68,7 +68,7 @@ const CampusHistorySection: React.FC = () => {
             <div className="relative mt-12 lg:mt-0">
               <div className="relative">
                 <Image
-                  src="/our-story1.jpg"
+                  src="/our-story1.webp"
                   alt="Campus video thumbnail"
                   width={600}
                   height={400}

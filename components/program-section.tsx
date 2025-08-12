@@ -17,28 +17,28 @@ const programs: Program[] = [
     title: "Faculty of Allied Health Sciences",
     description:
       "Embark on a journey of knowledge discovery, and growth at Unipix University.",
-    image: "/our-story1.jpg",
+    image: "/our-story1.webp",
     link: "/faculties/faculty-of-allied-health-sciences",
   },
   {
     title: "Faculty of Natural and Applied Sciences",
     description:
       "Embark on a journey of knowledge discovery, and growth at Unipix University.",
-    image: "/our-story2.jpg",
+    image: "/our-story2.webp",
     link: "/faculties/faculty-of-natural-and-applied-sciences",
   },
   {
     title: "Faculty of Computing",
     description:
       "Embark on a journey of knowledge discovery, and growth at Unipix University.",
-    image: "/our-story3.jpg",
+    image: "/our-story3.webp",
     link: "/faculties/faculty-of-computing",
   },
   {
     title: "Faculty of Arts, Management and Social Sciences",
     description:
       "Embark on a journey of knowledge discovery, and growth at Unipix University.",
-    image: "/our-story4.jpg",
+    image: "/our-story4.webp",
     link: "/faculties/faculty-of-arts-management-and-social-sciences",
   },
 ];
