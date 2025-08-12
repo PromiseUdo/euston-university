@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MaxWidthWrapper from "./max-width-wrapper";
+import { ArrowRight } from "lucide-react";
 
 const slides = [
   {
@@ -85,11 +86,12 @@ const Hero = () => {
                     {/* <button className="text-center uppercase bg-[#890c25] h-[44px] px-12 py-2 text-[14px] text-[#ffffff] tracking-[2px] font-medium">
                       {slides[currentSlide].primaryButton}
                     </button> */}
-                    <button className="relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group">
+                    <button className="inline-flex  gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group">
                       <span className="relative z-10">
                         {slides[currentSlide].primaryButton}
                       </span>
-                      <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+                      <span className=" absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+                      <ArrowRight className="w-4 h-4 text-white relative z-10" />
                     </button>
 
                     {/* <button className="text-center text-white uppercase bg-transparent h-[44px] px-10 py-2 text-[14px] tracking-[2px]">
