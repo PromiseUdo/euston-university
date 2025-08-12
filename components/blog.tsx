@@ -24,7 +24,7 @@ const blogs: Blog[] = [
     author: "Jon Adam",
     date: "Oct 29, 2023",
     image: "/blog1.webp",
-    link: "/blog-details",
+    link: "/news/1",
   },
   {
     category: "Marketing",
@@ -33,7 +33,7 @@ const blogs: Blog[] = [
     author: "Jon Adam",
     date: "Oct 29, 2023",
     image: "/blog2.webp",
-    link: "/blog-details",
+    link: "/news/2",
   },
 ];
 
