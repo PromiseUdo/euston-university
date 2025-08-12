@@ -85,7 +85,7 @@ const CampusLifeSection: React.FC = () => {
               {campusLifeItems.map((item, index) => (
                 <div
                   key={index}
-                  className="relative bg-white  h-48 border border-gray-300 overflow-hidden group"
+                  className="relative bg-white  h-44 border border-gray-300 overflow-hidden group"
                 >
                   {/* Background Image */}
                   <div

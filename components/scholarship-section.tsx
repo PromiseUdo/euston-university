@@ -3,6 +3,8 @@
 import React from "react";
 import MaxWidthWrapper from "./max-width-wrapper";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const ScholarshipSection = () => {
   const router = useRouter();
@@ -32,12 +34,14 @@ const ScholarshipSection = () => {
             </p>
           </div>
           <div className="">
-            <button
-              onClick={() => router.push("/contact")}
-              className="text-center uppercase bg-[#ffffff] h-[44px] px-4 py-2 text-[14px] text-[#292929] tracking-[2px]"
+            <Link
+              href="/contact"
+              className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
             >
-              contact us
-            </button>
+              <span className="relative z-10">Contact Us</span>
+
+              <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+            </Link>
           </div>
         </div>
       </MaxWidthWrapper>

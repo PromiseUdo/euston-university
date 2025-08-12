@@ -20,24 +20,24 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Chinwe O.",
-    designation: "Class of 2025",
+    designation: "Nursing Undergraduate",
     text: "Euston University is more than a school — it's where I discovered my purpose. The focus on real-world skills and ethical leadership set me on a path to make meaningful impact.",
     image: "/testifier1.jpg",
-    rating: 4,
+    rating: 5,
   },
   {
     name: "Emeka N.",
     designation: "Business Administration Student",
     text: "The culture of innovation and character development here is unmatched. Euston didn’t just educate me — it transformed the way I see the world",
     image: "/testifier2.jpg",
-    rating: 4,
+    rating: 5,
   },
   {
     name: "Grace A.",
     designation: "Computer Science Undergraduate",
     text: "At Euston, I’ve grown academically and personally. The supportive community and hands-on learning truly prepare us to lead with confidence and integrity.",
     image: "/testifier3.jpg",
-    rating: 4,
+    rating: 5,
   },
 ];
 
