@@ -34,7 +34,7 @@ const About: React.FC = () => {
                 height={477}
                 quality={90}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="w-full h-[477px] object-cover"
+                className="w-full h-[400px] md:h-[477px] object-cover"
               />
             </div>
           </div>
