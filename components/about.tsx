@@ -34,15 +34,26 @@ const About: React.FC = () => {
                 height={477}
                 quality={90}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="w-full h-[400px] md:h-[477px] object-cover"
+                className="w-full h-[18.5rem] md:h-[477px] object-cover"
               />
             </div>
+
+            {/* <div className="flex-1">
+              <Image
+                src="/our-story6.webp"
+                alt="About right"
+                width={300}
+                height={400}
+                quality={90} // Improve image quality
+                className="w-full h-full  object-cover"
+              />
+            </div> */}
           </div>
 
           {/* Right Column */}
           <div className="flex flex-col gap-6">
             {/* Subheading with Icon */}
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <Image
                 src="/e-cap-pix.svg"
                 alt="Cap icon"
@@ -53,7 +64,7 @@ const About: React.FC = () => {
               <span className="text-sm font-medium uppercase text-gray-600 tracking-wider">
                 Knowledge Meets Innovation
               </span>
-            </div>
+            </div> */}
 
             {/* Title */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading">
