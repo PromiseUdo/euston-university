@@ -8,14 +8,14 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "/slide1.png",
+    image: "/slide1.webp",
     headline: "Built to excel and shine",
     subheading: "Euston University",
     primaryButton: "Apply",
     secondaryButton: "Learn more",
   },
   {
-    image: "/slide2.jpg",
+    image: "/slide2.webp",
     headline: "Designed for the 21st Century Learner",
     subheading:
       "Euston University offers a bold departure from the traditional university model.",
@@ -23,7 +23,7 @@ const slides = [
     secondaryButton: "Learn more",
   },
   {
-    image: "/slide3.png",
+    image: "/slide3.webp",
     headline: "World-Class Faculty and Learning Infrastructure",
     subheading:
       "Euston University prides itself on attracting seasoned academics & industry professionals.",
