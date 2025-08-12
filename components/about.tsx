@@ -27,11 +27,13 @@ const About: React.FC = () => {
             {/* Right Image */}
             <div className="flex-1">
               <Image
-                src="/about__h2-2.png"
+                src="/our-story6.webp"
                 alt="About right"
-                width={300}
-                height={400}
-                className="w-full h-auto  object-cover"
+                width={716} // Scaled to maintain 3:2 aspect ratio (477 * 1.5)
+                height={477}
+                quality={90}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="w-full h-[477px] object-cover"
               />
             </div>
           </div>

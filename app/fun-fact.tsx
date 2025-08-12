@@ -13,7 +13,7 @@ const FunFact: React.FC = () => {
               {/* Fact 1 */}
               <div className="flex-1 text-center border-r border-gray-300 sm:last:border-r-0">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-heading">
-                  90%
+                  100%
                 </h2>
                 <p className="mt-2 text-base text-gray-600">
                   Graduation success rate
