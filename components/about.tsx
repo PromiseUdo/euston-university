@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import MaxWidthWrapper from "./max-width-wrapper";
 import Image from "next/image";
+import Link from "next/link";
 
 const About: React.FC = () => {
   return (
@@ -136,13 +137,24 @@ const About: React.FC = () => {
             </div> */}
 
             {/* Button */}
-            <a
+            {/* <Link
               href="/faculties"
-              className="inline-flex w-fit items-center gap-2 text-center uppercase bg-[#890c25] h-[44px] px-6 py-3 text-[14px] text-[#ffffff] tracking-[2px] transition-colors"
+              className="font-medium overflow-hidden inline-flex w-fit items-center gap-2 text-center uppercase bg-[#890c25] h-[44px] px-6 py-3 text-[14px] text-[#ffffff] tracking-[2px] transition-colors"
             >
-              View Our Programs
+              <span className="relative z-10">View Our Programs</span>
+              <span className=" absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+
               <ArrowRight className="-rotate-45 w-4 h-4" />
-            </a>
+            </Link> */}
+
+            <Link
+              href="/faculties"
+              className="inline-flex relative w-fit items-center gap-2 text-center uppercase bg-[#890c25] h-[44px] px-6 py-3 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group"
+            >
+              <span className="relative z-10">View Our Programs</span>
+              <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+              <ArrowRight className="-rotate-45 w-4 h-4 text-white relative z-10" />
+            </Link>
           </div>
         </div>
       </MaxWidthWrapper>
