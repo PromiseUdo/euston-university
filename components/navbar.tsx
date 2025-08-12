@@ -561,7 +561,7 @@ const Navbar = () => {
     { href: "/faculties", label: "Faculty" },
     { href: "/", label: "About Us" },
     { href: "/", label: "FAQ" },
-    { href: "/blogs", label: "News" },
+    { href: "/news", label: "News" },
     { href: "/contact", label: "Contact" },
   ];
 
