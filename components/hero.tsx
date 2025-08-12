@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MaxWidthWrapper from "./max-width-wrapper";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const slides = [
   {
@@ -108,20 +109,26 @@ const Hero = () => {
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
                   Undergraduate
                 </p>
-                <p className="font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
+                <Link
+                  href="/faculties"
+                  className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal"
+                >
                   Browse the undergraduate programs
-                </p>
+                </Link>
 
                 <hr className="py-[10px] max-w-[300px] mt-3 border-gray-500 hover:border-[#890c25] transition-border" />
               </div>
-              <div className="flex flex-col gap-[0.5rem] md:gap-[0.875rem]">
+              <div className="flex group flex-col gap-[0.5rem] md:gap-[0.875rem]">
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
                   University News
                 </p>
-                <p className="font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
+                <Link
+                  href="/blogs"
+                  className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal"
+                >
                   Browse the latest updates
-                </p>
-                <hr className="py-[10px] mt-3 max-w-[300px] border-gray-500 hover:border-[#890c25] transition-border" />
+                </Link>
+                <hr className="py-[10px] mt-3 max-w-[300px] border-gray-500 group-hover:border-[#890c25] transition-border" />
               </div>
             </div>
           </div>
