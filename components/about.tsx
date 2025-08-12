@@ -58,6 +58,20 @@ const About: React.FC = () => {
             </h2>
 
             {/* Description */}
+            <div className="flex items-start gap-3">
+              <Image
+                src="/mission.svg"
+                alt="Mission icon"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
+              <div>
+                <p className="text-base font-medium text-gray-900">
+                  University Mission Statement
+                </p>
+              </div>
+            </div>
             <p className="text-base text-gray-700 leading-relaxed">
               At Euston University, we envision a future where knowledge knows
               no borders and education empowers individuals to transform their
@@ -66,6 +80,21 @@ const About: React.FC = () => {
               inclusivity, and social responsibility. We aim to be a leading
               research-intensive academic institution, renowned for excellence.{" "}
             </p>
+            <div className="flex items-start gap-3">
+              <Image
+                src="/vission.svg"
+                alt="Vision icon"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
+              <div>
+                <p className="text-base font-medium text-gray-900">
+                  University Vision Achievement
+                </p>
+              </div>
+            </div>
+
             <p className="text-base text-gray-700 leading-relaxed">
               Our vision is to be a leading institution that fosters innovation,
               inclusivity, and excellence in education, empowering students to
@@ -73,7 +102,7 @@ const About: React.FC = () => {
             </p>
 
             {/* Mission and Vision */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
                 <Image
                   src="/mission.svg"
@@ -102,7 +131,7 @@ const About: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Button */}
             <a
