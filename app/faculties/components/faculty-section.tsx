@@ -102,7 +102,7 @@ const FacultySection: React.FC = () => {
                 )}
               </div>
               <div className="p-4 flex justify-between items-center">
-                <h5 className="text-base hover:underline font-medium text-foreground font-heading">
+                <h5 className="text-[15px] hover:underline font-medium text-foreground font-body">
                   <Link
                     href={item.href}
                     className=" transition-colors"
@@ -126,7 +126,7 @@ const FacultySection: React.FC = () => {
         {/* Load More */}
         <div className="text-center mt-12">
           <Link
-            href="/faculty"
+            href="/faculties"
             className="inline-flex items-center px-6 py-3 bg-[#890c25] text-primary-foreground font-semibold font-body fill-from-left "
             aria-label="Load more faculty and staff"
           >
