@@ -120,7 +120,7 @@ const DepartmentListSection: React.FC<DepartmentListSectionProps> = ({
           {departments.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-300 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="bg-white border border-gray-300  overflow-hidden hover:shadow-md transition-shadow duration-300"
             >
               <div className="relative">
                 <Link
@@ -135,10 +135,10 @@ const DepartmentListSection: React.FC<DepartmentListSectionProps> = ({
                 </Link>
               </div>
               <div className="p-4 flex justify-between items-center">
-                <h5 className="text-lg font-medium text-gray-900 font-heading">
+                <h5 className=" font-medium text-gray-900 font-heading">
                   <Link
                     href={item.href}
-                    className="hover:text-blue-600 transition-colors"
+                    className="hover:text-[890c25] transition-colors"
                     aria-label={`View ${item.title} details`}
                   >
                     {item.title}

@@ -74,8 +74,7 @@ const faculties: FacultyData[] = [
       "To be a hub of technological innovation, producing leaders in computing who drive digital transformation globally.",
     departments: [
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/09.jpg",
+        thumbnail: "/computing.webp",
         title: "BSc Computer Science",
         href: "/faculties/faculty-of-computing",
       },
@@ -86,38 +85,32 @@ const faculties: FacultyData[] = [
         href: "/faculties/faculty-of-computing",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/11.jpg",
+        thumbnail: "/data-science.webp",
         title: "BSc Data Science",
         href: "/faculties/faculty-of-computing",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/ict.webp",
         title: "BSc Information and Communication Technology (ICT)",
         href: "/faculties/faculty-of-computing",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/it.webp",
         title: "BSc Information Systems",
         href: "/faculties/faculty-of-computing",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/is.webp",
         title: "BSc Information Technology",
         href: "/faculties/faculty-of-computing",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/software.webp",
         title: "BSc Software Engineering",
         href: "/faculties/faculty-of-computing",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/ai.webp",
         title: "BSc Artificial Intelligence",
         href: "/faculties/faculty-of-computing",
       },
@@ -166,50 +159,42 @@ const faculties: FacultyData[] = [
       "To be a hub of technological innovation, producing leaders in computing who drive digital transformation globally.",
     departments: [
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/09.jpg",
+        thumbnail: "/biology.webp",
         title: "BSc Biology",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/10.jpg",
+        thumbnail: "/health-sciences.webp",
         title: "BSc Microbiology",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/11.jpg",
+        thumbnail: "/chemistry.webp",
         title: "BSc Chemistry",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/maths.webp",
         title: "BSc Mathematics",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/statistics.webp",
         title: "BSc Statistics",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/physics.webp",
         title: "BSc Physics",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/physics-electronics.webp",
         title: "BSc Physics with Electronics",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/forensic.webp",
         title: "BSc Forensic Science",
         href: "/faculties/faculty-of-natural-and-applied-sciences",
       },
@@ -258,74 +243,62 @@ const faculties: FacultyData[] = [
       "To be a hub of technological innovation, producing leaders in computing who drive digital transformation globally.",
     departments: [
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/09.jpg",
+        thumbnail: "/accountant.webp",
         title: "BSc Accounting",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/10.jpg",
+        thumbnail: "/economics.webp",
         title: "BSc Economics",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/11.jpg",
+        thumbnail: "/finance.webp",
         title: "BSc Finance",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/boss.webp",
         title: "BSc Entrepreneurship and Innovation",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/business-admin.webp",
         title: "BSc Business Administration",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/public-admin.webp",
         title: "BSc Public Administration",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/procure.webp",
         title: "BSc Procurement Management",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/logistics.webp",
         title: "BSc Logistics and Supply Chain Management",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/criminology.webp",
         title: "BSc Criminology and Security Studies",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/tourism.webp",
         title: "BSc Hospitality and Tourism Management",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/international-studies.webp",
         title: "BA History and International Studies",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
       {
-        thumbnail:
-          "https://html.themewant.com/unipix/assets/images/course/12.jpg",
+        thumbnail: "/french.webp",
         title: "BA French",
         href: "/faculties/faculty-of-arts-management-and-social-sciences",
       },
