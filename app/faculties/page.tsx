@@ -13,7 +13,7 @@ const page = () => {
       <PageHeader
         title="Our Faculties"
         breadcrumbItems={breadcrumbItems}
-        backgroundImage="https://html.themewant.com/unipix/assets/images/banner/breadcrumb.jpg"
+        backgroundImage="/health-sciences.webp"
       />
       <FacultySection />
     </div>
