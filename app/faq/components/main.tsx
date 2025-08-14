@@ -7,29 +7,106 @@ import FAQAccordion from "./faq-accordion";
 
 const faqItems = [
   {
-    question: "What is the duration of the Africana Studies program?",
+    question: "When does admissions begin?",
     answer:
-      "The B.A. in Africana Studies is typically a 4-year undergraduate program.",
+      "You can apply online through our admissions portal. Visit the Admissions page for more details and requirements.",
   },
   {
-    question: "What are the admission requirements?",
+    question: "Where is Euston University located?",
     answer:
-      "Admission requires a high school diploma or equivalent with a minimum GPA of 2.5. Additional requirements may include letters of recommendation and a personal statement.",
+      "We offer undergraduate, postgraduate, and professional programs across various disciplines. Check our Programs page for the full list.",
   },
   {
-    question: "Are there any study abroad opportunities?",
+    question:
+      "Is Euston University approved by the National Universities Commision (NUC)",
     answer:
-      "Yes, we offer study abroad programs in several African countries as well as locations significant to the African diaspora.",
+      "Yes, we offer scholarships and financial aid to eligible students. Visit our Financial Aid page for more information.",
   },
   {
-    question: "What career paths can I pursue with this degree?",
+    question: "What academic programmes are offered at Euston University?",
     answer:
-      "Graduates pursue careers in education, public policy, community development, international relations, and cultural institutions, among others.",
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
   },
   {
-    question: "Is financial aid available for this program?",
+    question: "What are the facilities on campus like?",
     answer:
-      "Yes, we offer various scholarships, grants, and work-study opportunities specifically for Africana Studies students.",
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "Does the university offer accomodation for students?",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "Are there scholarship opportunities for students?",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "What makes Euston University unique?",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "What is the motto of the university?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "What is the vision of Euston University?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "What is the mission of Euston University?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "Who founded Euston University?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "Is the university faith-based or secular?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question:
+      "Does Euston University offer entrepreneurial or vocational training?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "Are international students welcome?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "Does the university have blended learning models?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "How can I contact the university for inquiries?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "How does Euston University support community development?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "Can I apply to work at Euston University?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
+  },
+  {
+    question: "What security measures are in place on campus?  ",
+    answer:
+      "You can reach our support team via the Contact Us page or by emailing support@euston.edu.",
   },
 ];
 

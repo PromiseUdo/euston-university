@@ -70,7 +70,10 @@ const BlogSection: React.FC = () => {
             >
               <div className="blog-card">
                 {/* Thumbnail */}
-                <Link href={item.href} aria-label={`Read more about ${item.title}`}>
+                <Link
+                  href={item.href}
+                  aria-label={`Read more about ${item.title}`}
+                >
                   <img
                     src={item.thumbnail}
                     alt={`${item.title} thumbnail`}
@@ -95,10 +98,10 @@ const BlogSection: React.FC = () => {
                       </Link>
                     </div>
                   </div>
-                  <h5 className="text-xl font-medium text-gray-900 font-heading mb-4">
+                  <h5 className="text-[15px] font-medium text-gray-900 font-body mb-4">
                     <Link
                       href={item.href}
-                      className="hover:text-blue-600 transition-colors"
+                      className="hover:text-[#890c25] transition-colors "
                       aria-label={`Read more about ${item.title}`}
                     >
                       {item.title}
@@ -125,8 +128,6 @@ const BlogSection: React.FC = () => {
           >
             Load More
           </Link>
-
-         
         </div>
       </MaxWidthWrapper>
     </section>
