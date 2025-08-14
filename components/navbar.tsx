@@ -763,12 +763,12 @@ interface MenuSection {
 }
 
 const coursesCategory: CourseCategory[] = [
-  { title: "Facultiy of Allied Health Sciences", href: "/safety-helmet.svg" },
-  { title: "Faculty of Natural and Applied Sciences", href: "/manager.svg" },
-  { title: "Faculty of Computing", href: "/human-resources.svg" },
+  { title: "Facultiy of Allied Health Sciences", href: "/" },
+  { title: "Faculty of Natural and Applied Sciences", href: "/" },
+  { title: "Faculty of Computing", href: "/" },
   {
     title: "Faculty of Arts, Management and Social Sciences",
-    href: "/medal.svg",
+    href: "/",
   },
 ];
 
