@@ -19,7 +19,7 @@ const facultyItems: FacultyItem[] = [
     href: "/faculties/faculty-of-allied-health-sciences",
   },
   {
-    thumbnail: "https://html.themewant.com/unipix/assets/images/course/02.jpg",
+    thumbnail: "/applied-sciences.webp",
     title: "Faculty of Natural and Applied Sciences",
     href: "/faculties/faculty-of-natural-and-applied-sciences",
   },

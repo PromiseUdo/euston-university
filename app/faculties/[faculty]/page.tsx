@@ -158,7 +158,7 @@ const faculties: FacultyData[] = [
   {
     slug: "faculty-of-natural-and-applied-sciences",
     title: "Faculty of Natural and Applied Sciences",
-    header: "/health-sciences.webp",
+    header: "/applied-sciences.webp",
 
     mission:
       "To empower students with cutting-edge computational skills and innovative thinking to solve real-world problems through technology.",
