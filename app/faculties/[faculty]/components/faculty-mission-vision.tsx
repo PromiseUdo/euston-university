@@ -78,7 +78,7 @@ const FacultyMissionVision: React.FC<FacultyMissionVisionProps> = ({
           {/* Image Section */}
           <figure className="mt-5 md:mt-0">
             <img
-              src="https://html.themewant.com/unipix/assets/images/faculty/09.jpg"
+              src="/our-story6.webp"
               alt="Faculty mission and vision illustration"
               className="w-full max-w-full h-auto rounded-md"
             />

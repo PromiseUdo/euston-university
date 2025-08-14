@@ -133,9 +133,9 @@ const LecturerSection: React.FC<LecturerSectionProps> = ({ lecturers }) => {
     <section className="py-20 bg-white">
       <MaxWidthWrapper>
         <div className="mb-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading capitalize">
+           <h3 className="text-[33px] leading-[33px] font-semibold text-gray-900 font-heading">
             Faculty Teaching Lecturers
-          </h2>
+          </h3>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {lecturers.map((item, index) => (

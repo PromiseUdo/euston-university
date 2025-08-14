@@ -1090,7 +1090,7 @@ const Navbar = () => {
                   </motion.div>
                 </div>
                 <Link
-                  href="/courses"
+                  href="/faculties"
                   className="text-white text-[15px] leading-[15px] hover:text-safetyYellow transition-colors duration-200"
                 >
                   Faculty

@@ -14,7 +14,7 @@ interface FacultyItem {
 
 const facultyItems: FacultyItem[] = [
   {
-    thumbnail: "https://html.themewant.com/unipix/assets/images/course/01.jpg",
+    thumbnail: "/health-sciences.webp",
     title: "Faculty of Allied Health Sciences",
     href: "/faculties/faculty-of-allied-health-sciences",
   },

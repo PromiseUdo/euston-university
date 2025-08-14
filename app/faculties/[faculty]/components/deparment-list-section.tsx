@@ -112,7 +112,7 @@ const DepartmentListSection: React.FC<DepartmentListSectionProps> = ({
     <section className="py-20 bg-white">
       <MaxWidthWrapper>
         <div className="text-center mb-10">
-          <h3 className="text-3xl font-semibold text-gray-900 font-heading">
+          <h3 className="text-[33px] leading-[33px] font-semibold text-gray-900 font-heading">
             Faculty Programmes
           </h3>
         </div>
