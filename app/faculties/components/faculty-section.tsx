@@ -113,10 +113,10 @@ const FacultySection: React.FC = () => {
                 </h5>
                 <Link
                   href={item.href}
-                  className="text-primary hover:text-accent transition-colors"
+                  className="text-primary border rounded-full p-1 group hover:bg-[#890c25] duration-300 border-[#cccccc] aspect-square  transition-colors"
                   aria-label={`View ${item.title} details`}
                 >
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 group-hover:text-white transition-colors duration-300" />
                 </Link>
               </div>
             </article>
