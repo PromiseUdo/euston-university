@@ -135,7 +135,7 @@ const DepartmentListSection: React.FC<DepartmentListSectionProps> = ({
                 </Link>
               </div>
               <div className="p-4 flex justify-between items-center">
-                <h5 className=" font-medium text-gray-900 font-heading">
+                <h5 className=" font-medium text-gray-900 font-body text-[15px]">
                   <Link
                     href={item.href}
                     className="hover:text-[890c25] transition-colors"
