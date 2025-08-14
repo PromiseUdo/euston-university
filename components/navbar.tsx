@@ -557,9 +557,9 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/", label: "Academics" },
+    { href: "/admissions", label: "Admissions" },
     { href: "/faculties", label: "Faculty" },
-    { href: "/", label: "About Us" },
+    { href: "/about", label: "About Us" },
     { href: "/faq", label: "FAQ" },
     { href: "/news", label: "News" },
     { href: "/contact", label: "Contact" },

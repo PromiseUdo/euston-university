@@ -1,7 +1,138 @@
+// "use client";
+
+// import React from "react";
+// import { ArrowRight, Check } from "lucide-react";
+// import MaxWidthWrapper from "./max-width-wrapper";
+// import Link from "next/link";
+
+// interface CampusLife {
+//   title: string;
+//   description: string;
+//   image: string;
+//   link: string;
+// }
+
+// const campusLifeItems: CampusLife[] = [
+//   {
+//     title: "World-Class Academic Programmes",
+//     description:
+//       "Euston University is structured around forward-thinking faculties and programs that address local, national, and global challenges.",
+//     image: "/our-story1.webp",
+//     link: "/campus-life",
+//   },
+//   {
+//     title: "Technology-Driven Learning Environment",
+//     description:
+//       "At Euston University, we understand that the future of education is digital and dynamic.",
+//     image: "/our-story2.webp",
+//     link: "/campus-life",
+//   },
+//   {
+//     title: "Global Connections, Local Relevance",
+//     description:
+//       "We foster academic partnerships, faculty exchanges, research collaborations, and virtual exchanges with institutions across Africa, Europe, and North America",
+//     image: "/our-story3.webp",
+//     link: "/athletics",
+//   },
+// ];
+
+// const whyUs = [
+//   "Commitment to Innovation and Research",
+//   "Founded on Purpose",
+//   "Deep Community Engagement",
+//   "Inclusive, Safe, and Empowering",
+//   "Strategic Location and Global Linkages",
+//   "Vision-Driven Leadership",
+//   "Entrepreneurship and Employability Focus",
+//   "Experienced Purpose-Driven Faculty",
+//   "Holistic Student Development",
+//   "A Culture of Excellence Built to Excel",
+// ];
+
+// const CampusLifeSection: React.FC = () => {
+//   return (
+//     <>
+//       <section className="py-20 bg-white">
+//         <MaxWidthWrapper>
+//           <div className="grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-6">
+//             {/* Left Section */}
+//             <div className="relative">
+//               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading mb-6">
+//                 Why Euston University
+//               </h2>
+//               <p className="text-base md:text-lg text-gray-600 mb-8">
+//                 At Euston University, choosing us is not just about pursuing a
+//                 degree; it is about stepping into a transformative journey that
+//                 shapes the mind, heart, and character.
+//               </p>
+//               <div className="relative">
+//                 <ul className="list-none pl-4 space-y-2 text-base text-gray-600">
+//                   {whyUs.map((item, index) => (
+//                     <li key={index} className="relative pl-6 flex items-start">
+//                       <Check
+//                         className="absolute left-[-20px] top-1 w-4 h-4 text-[#181818]"
+//                         aria-hidden="true"
+//                       />
+//                       {item}
+//                     </li>
+//                   ))}
+//                 </ul>
+//               </div>
+//             </div>
+
+//             {/* Right Section */}
+//             <div className="space-y-6">
+//               {campusLifeItems.map((item, index) => (
+//                 <div
+//                   key={index}
+//                   className="relative bg-white  h-44 border border-gray-300 overflow-hidden group"
+//                 >
+//                   {/* Background Image */}
+//                   <div
+//                     className="absolute inset-0 bg-cover bg-top opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out transform -translate-x-full group-hover:translate-x-0"
+//                     style={{ backgroundImage: `url(${item.image})` }}
+//                   />
+//                   {/* Overlay */}
+//                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" />
+//                   <div className="relative flex items-center justify-between p-6 h-full z-10">
+//                     <div className="flex-1">
+//                       <h4 className="text-xl font-semibold text-gray-900 font-heading mb-2">
+//                         <Link
+//                           href={item.link}
+//                           className="hover:text-blue-600 transition-colors group-hover:text-white"
+//                         >
+//                           {item.title}
+//                         </Link>
+//                       </h4>
+//                       <p className="text-base text-[#737477] group-hover:text-white">
+//                         {item.description}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </MaxWidthWrapper>
+//       </section>
+
+//       {/* Custom Styles for Animation */}
+//       <style jsx global>{`
+//         .group:hover .transform {
+//           transform: translateX(0);
+//         }
+//       `}</style>
+//     </>
+//   );
+// };
+
+// export default CampusLifeSection;
+
+
 "use client";
 
 import React from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import MaxWidthWrapper from "./max-width-wrapper";
 import Link from "next/link";
 
@@ -66,14 +197,22 @@ const CampusLifeSection: React.FC = () => {
                 shapes the mind, heart, and character.
               </p>
               <div className="relative">
-                <ul className="list-none pl-4 space-y-2 text-base text-gray-600">
+                <ul className="list-none space-y-3 text-base text-gray-600">
                   {whyUs.map((item, index) => (
-                    <li key={index} className="relative pl-6 flex items-start">
-                      <Check
-                        className="absolute left-[-20px] top-1 w-4 h-4 text-[#181818]"
-                        aria-hidden="true"
-                      />
-                      {item}
+                    <li key={index} className="flex items-start">
+                      <svg 
+                        className="h-5 w-5 text-[#890c25] flex-shrink-0 mt-1 mr-3" 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 20 20" 
+                        fill="currentColor"
+                      >
+                        <path 
+                          fillRule="evenodd" 
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
+                          clipRule="evenodd" 
+                        />
+                      </svg>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -85,7 +224,7 @@ const CampusLifeSection: React.FC = () => {
               {campusLifeItems.map((item, index) => (
                 <div
                   key={index}
-                  className="relative bg-white  h-44 border border-gray-300 overflow-hidden group"
+                  className="relative bg-white h-44 border border-gray-300 overflow-hidden group"
                 >
                   {/* Background Image */}
                   <div
