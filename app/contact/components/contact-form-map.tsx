@@ -39,7 +39,7 @@ const ContactFormMap: React.FC = () => {
       <MaxWidthWrapper>
         <div className="grid grid-cols-1 items-center md:grid-cols-2 gap-6">
           {/* Contact Form */}
-          <div className="shadow   p-[20px]  pt-[50px]  lg:p-[50px] flex flex-col gap-[1.25rem]">
+          <div className="shadow   p-[20px]  lg:pt-[50px]   lg:p-[50px] flex flex-col gap-[1.25rem]">
             <h2 className="text-3xl font-bold font-heading">Leave A Message</h2>
             <div className="pb-[20px] leading-[22.5px] text-[15px]">
               <p>Fill the form bellow to send us a message</p>
