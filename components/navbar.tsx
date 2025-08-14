@@ -1027,7 +1027,7 @@ const Navbar = () => {
                     ></div>
                     <div className="max-w-7xl mx-auto grid grid-cols-3 p-8 gap-6">
                       <div>
-                        <h3 className="font-semibold text-[#6d6d6d] border-b border-[#cccccc] text-lg mb-6">
+                        <h3 className="font-semibold text-[#6d6d6d] border-b pb-1 border-[#cccccc] text-lg mb-6">
                           Faculties
                         </h3>
                         <ul className="space-y-3">
@@ -1047,7 +1047,7 @@ const Navbar = () => {
                         </ul>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#6d6d6d] border-b border-[#cccccc] text-lg mb-6">
+                        <h3 className="font-semibold text-[#6d6d6d] pb-1 border-b border-[#cccccc] text-lg mb-6">
                           {popularCourses.heading}
                         </h3>
                         <ul className="space-y-3">
@@ -1064,7 +1064,7 @@ const Navbar = () => {
                         </ul>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#6d6d6d] border-b border-[#cccccc] text-lg mb-6">
+                        <h3 className="font-semibold text-[#6d6d6d] pb-1 border-b border-[#cccccc] text-lg mb-6">
                           {gustoTrainings.heading}
                         </h3>
                         <ul className="space-y-3">
