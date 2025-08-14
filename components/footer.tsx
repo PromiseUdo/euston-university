@@ -3,10 +3,12 @@ import MaxWidthWrapper from "./max-width-wrapper";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
+import { FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa6"; // Font Awesome 6 icons
+
 const Footer = () => {
   return (
     <>
-      <div className="w-full mt-20 bg-[#181818] pt-[30px] pb-[40px]  lg:pb-[10px] ">
+      <div className="w-full mt-20 bg-[#181818] pt-[30px] ">
         <MaxWidthWrapper>
           <div className="relative py-[10px] pt-[20px] pb-[50px]  flex items-center justify-center">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center w-full">
@@ -32,20 +34,18 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <hr />
+          <hr className="border-gray-500  " />
           <div className="w-full pb-[80px] pt-[50px] grid grid-cols-1 md:grid-cols-4 gap-[40px]">
             {/* First Column */}
             <div className="flex flex-col gap-4">
-              <div className="flex-shrink-0">
+              <div className=" flex">
                 <Image
-                  src="/logo.png" // Replace with your logo path
+                  src="/logo.png"
                   alt="Euston University Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "205.42px", height: "49.69px" }}
+                  width={205}
+                  height={50}
                   unoptimized
-                  className="object-contain max-w-[150px] sm:max-w-full"
+                  className="w-[205px] h-auto object-contain"
                 />
               </div>
               <p className="text-gray-400 text-[14px] leading-[21px] mb-2">
@@ -189,64 +189,68 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="pt-[20px] w-full flex flex-col gap-4 md:gap-0 md:flex-row md:items-center justify-between">
-            <div>
-              <p className="text-[#cccccc] text-[14px] leading-[21px] hover:underline">
-                Copyright © 2025 Euston University. All rights reserved. -
-                Developed by{" "}
-                <a href="/" className="underline ">
-                  CodersTriangle
-                </a>
-              </p>
-            </div>
+          {/* Lower part of the footer */}
+        </MaxWidthWrapper>
 
-            <div>
-              {/* social media icon pngs in a row */}
-              <div className="flex items-center gap-4">
-                {/* <a href="#" className="text-white">
-                  <Image
-                    src="/facebook.png"
-                    alt="Facebook"
-                    width={8.12}
-                    height={15}
-                  />
-                </a> */}
-                <a href="#" className="text-white">
-                  <Image
-                    src="/twitter.png"
-                    alt="Twitter"
-                    width={15}
-                    height={15}
-                  />
-                </a>
-                <a href="#" className="text-white">
-                  <Image
-                    src="/linkedin.png"
-                    alt="Instagram"
-                    width={15}
-                    height={14.9}
-                  />
-                </a>
-                <a href="#" className="text-white">
-                  <Image
-                    src="/youtube.png"
-                    alt="Instagram"
-                    width={17}
-                    height={15}
-                  />
-                </a>
-                <a href="#" className="text-white">
-                  <Image
-                    src="/instagram.png"
-                    alt="Instagram"
-                    width={15}
-                    height={15}
-                  />
-                </a>
+        <div className="py-[40px] bg-[#0A0A0A] w-full ">
+          <MaxWidthWrapper>
+            <div className="w-full flex flex-col gap-6 items-center justify-center">
+              <div>
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-[#890c25] transition-colors duration-300"
+                    aria-label="Twitter"
+                  >
+                    <FaTwitter size={25} />
+                  </a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-[#890c25] transition-colors duration-300"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin size={25} />
+                  </a>
+                  <a
+                    href="https://youtube.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-[#890c25] transition-colors duration-300"
+                    aria-label="YouTube"
+                  >
+                    <FaYoutube size={25} />
+                  </a>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-[#890c25] transition-colors duration-300"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram size={25} />
+                  </a>
+                </div>
+              </div>
+              <div>
+                <p className="text-[#cccccc] text-center text-[14px] leading-[21px] ">
+                  Copyright © 2025 Euston University. All rights reserved. -
+                  Developed by{" "}
+                  <a
+                    target="_blank"
+                    href="https://coderstriangle.com"
+                    className="underline"
+                  >
+                    CodersTriangle
+                  </a>
+                </p>
               </div>
             </div>
-          </div>
-        </MaxWidthWrapper>
+          </MaxWidthWrapper>
+        </div>
       </div>
     </>
   );

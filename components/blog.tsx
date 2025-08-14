@@ -52,7 +52,7 @@ const BlogSection: React.FC = () => {
             </p>
           </div>
           <Link
-            href="/blogs"
+            href="/news"
             className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
           >
             <span className="relative z-10">View All</span>
@@ -85,7 +85,7 @@ const BlogSection: React.FC = () => {
               {/* col 2 */}
               <div className="p-6">
                 <Link
-                  href="#"
+                  href="/news/abc"
                   className="inline-block text-sm font-medium bg-blue-100 text-blue-600 px-3 hover:text-blue-800 uppercase tracking-wider mb-2"
                 >
                   {blog.category}

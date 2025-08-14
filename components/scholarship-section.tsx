@@ -12,9 +12,9 @@ const ScholarshipSection = () => {
     <div
       className="relative mt-20  items-center justify-center  flex py-[70px]"
       style={{
-        backgroundImage: "url('/scholarship-bg.webp')",
+        backgroundImage: "url('/students-celebratng.webp')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
       }}
     >
       {/* Overlay */}
