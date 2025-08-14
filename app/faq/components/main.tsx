@@ -39,9 +39,9 @@ const Main = () => {
       <MaxWidthWrapper>
         <div className="text-[#292929] w-full grid grid-cols-12 ">
           <div className="col-span-12 md:col-span-9  pr-0 md:pr-[20px]">
-            <h1 className="text-3xl font-bold mb-8 font-heading">
+            <h2 className="text-3xl font-bold mb-8 font-heading">
               Frequently Asked Questions
-            </h1>
+            </h2>
             <FAQAccordion items={faqItems} />
           </div>
           <div className="mt-12 md:mt-0 col-span-12 md:col-span-3 p-[10px] pt-0 pb-[127.09px] flex flex-col">

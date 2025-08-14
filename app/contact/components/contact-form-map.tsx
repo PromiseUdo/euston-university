@@ -39,52 +39,50 @@ const ContactFormMap: React.FC = () => {
       <MaxWidthWrapper>
         <div className="grid grid-cols-1 items-center md:grid-cols-2 gap-6">
           {/* Contact Form */}
-        <div className="shadow   p-[20px]  pt-[50px]  lg:p-[50px] flex flex-col gap-[1.25rem]">
-              <h3 className="text-[30px] leading-[30px] font-heading ">
-                Leave A Message
-              </h3>
-              <div className="pb-[20px] leading-[22.5px] text-[15px]">
-                <p>Fill the form bellow to send us a message</p>
-              </div>
-              <form className="flex flex-col gap-[20px]">
-                <div className="grid grid-cols-2 gap-[20px]">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-[20px]">
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Your Phone"
-                    className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
-                  />
-                </div>
-                <div className="w-full">
-                  <textarea
-                    placeholder="Your Comment"
-                    className="border border-[#EAEAEA] outline-none w-full h-[150px] placeholder:text-[#C2C2C2] p-[16px] pl-[21px]"
-                  ></textarea>
-                </div>
-
-                <div className="w-full">
-                  <button className="bg-[#890c25] text-white w-full py-[10px] tracking-[2px] text-[14px] uppercase">
-                    Send message
-                  </button>
-                </div>
-              </form>
+          <div className="shadow   p-[20px]  pt-[50px]  lg:p-[50px] flex flex-col gap-[1.25rem]">
+            <h2 className="text-3xl font-bold font-heading">Leave A Message</h2>
+            <div className="pb-[20px] leading-[22.5px] text-[15px]">
+              <p>Fill the form bellow to send us a message</p>
             </div>
+            <form className="flex flex-col gap-[20px]">
+              <div className="grid grid-cols-2 gap-[20px]">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
+                />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-[20px]">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
+                />
+                <input
+                  type="text"
+                  placeholder="Your Phone"
+                  className="border border-[#EAEAEA] outline-none h-[53px] placeholder:text-[#C2C2C2] pt-[17px] pr-[16px] pb-[16px] pl-[21px]"
+                />
+              </div>
+              <div className="w-full">
+                <textarea
+                  placeholder="Your Comment"
+                  className="border border-[#EAEAEA] outline-none w-full h-[150px] placeholder:text-[#C2C2C2] p-[16px] pl-[21px]"
+                ></textarea>
+              </div>
+
+              <div className="w-full">
+                <button className="bg-[#890c25] text-white w-full py-[10px] tracking-[2px] text-[14px] uppercase">
+                  Send message
+                </button>
+              </div>
+            </form>
+          </div>
 
           {/* Map */}
           <div className="bg-white border border-gray-300 overflow-hidden h-full transition-shadow duration-300">

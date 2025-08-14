@@ -14,23 +14,19 @@ interface ContactItem {
 const contactItems: ContactItem[] = [
   {
     icon: <MapPin className="w-12 h-12 text-[#890c25]" />,
-    content: (
-      <>
-        Kilometer 10 Abakaliki-Enugu Expressway, <br />
-        Ebonyi State
-      </>
-    ),
+    content: <>Kilometer 10 Abakaliki-Enugu Expressway, Ebonyi State</>,
   },
   {
     icon: <Phone className="w-12 h-12 text-[#890c25]" />,
-    links: [
-      { href: "tel:+2348138863143", label: "+234 (0)813 886 3143" },
-    ],
+    links: [{ href: "tel:+2348138863143", label: "+234 (0)813 886 3143" }],
   },
   {
     icon: <Mail className="w-12 h-12 text-[#890c25]" />,
     links: [
-      { href: "mailto:info@eustonuniversity.edu.ng", label: "info@eustonuniversity.edu.ng" },
+      {
+        href: "mailto:info@eustonuniversity.edu.ng",
+        label: "info@eustonuniversity.edu.ng",
+      },
     ],
   },
 ];
@@ -48,7 +44,7 @@ const ContactInfo: React.FC = () => {
           {contactItems.map((item, index) => (
             <div
               key={index}
-              className="bg-[#F6F6F6] border border-gray-300 rounded-lg p-6 w-full max-w-sm flex flex-col items-center gap-6 justify-center hover:shadow-md transition-shadow duration-300"
+              className="bg-[#F6F6F6] border border-gray-300  p-6 w-full max-w-sm flex flex-col items-center gap-6 justify-center hover:shadow-md transition-shadow duration-300"
             >
               <div className="flex-shrink-0">{item.icon}</div>
               <div className="flex-1">
@@ -58,7 +54,7 @@ const ContactInfo: React.FC = () => {
                       <Link
                         key={i}
                         href={link.href}
-                        className="block text-base text-gray-600 hover:text-blue-600 transition-colors"
+                        className="block text-[15px] text-center text-gray-600 hover:text-[#890c25] transition-colors"
                         aria-label={
                           link.href.startsWith("tel:")
                             ? `Call ${link.label}`
@@ -70,7 +66,9 @@ const ContactInfo: React.FC = () => {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-base text-gray-600">{item.content}</p>
+                  <p className="text-[15px] text-center text-gray-600">
+                    {item.content}
+                  </p>
                 )}
               </div>
             </div>
