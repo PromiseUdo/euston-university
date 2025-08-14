@@ -177,7 +177,7 @@ const Main = () => {
                         <h3 className="text-xl font-semibold mb-2">
                           {step.title}
                         </h3>
-                        <p>{step.description}</p>
+                        <p className="text-[15px]">{step.description}</p>
                       </div>
                     </div>
                   </div>
