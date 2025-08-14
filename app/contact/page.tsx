@@ -14,11 +14,10 @@ const page = () => {
       <PageHeader
         title="Contact Us"
         breadcrumbItems={breadcrumbItems}
-        backgroundImage="https://html.themewant.com/unipix/assets/images/banner/breadcrumb.jpg"
+        backgroundImage="/contactus.avif"
       />
-      <ContactFormMap/>
-<ContactInfo/>
-
+      <ContactFormMap />
+      <ContactInfo />
     </div>
   );
 };
