@@ -24,12 +24,12 @@ const facultyItems: FacultyItem[] = [
     href: "/faculties/faculty-of-natural-and-applied-sciences",
   },
   {
-    thumbnail: "https://html.themewant.com/unipix/assets/images/course/03.jpg",
+    thumbnail: "computing.webp",
     title: "Faculty of Computing",
     href: "/faculties/faculty-of-computing",
   },
   {
-    thumbnail: "https://html.themewant.com/unipix/assets/images/course/03.jpg",
+    thumbnail: "/business.webp",
     title: "Faculty of Arts, Management and Social Sciences",
     href: "/faculties/faculty-of-arts-management-and-social-sciences",
   },

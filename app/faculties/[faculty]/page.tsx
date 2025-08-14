@@ -66,7 +66,7 @@ const faculties: FacultyData[] = [
   {
     slug: "faculty-of-computing",
     title: "Faculty of Computing",
-    header: "/health-sciences.webp",
+    header: "/computing.webp",
 
     mission:
       "To empower students with cutting-edge computational skills and innovative thinking to solve real-world problems through technology.",
@@ -250,7 +250,7 @@ const faculties: FacultyData[] = [
   {
     slug: "faculty-of-arts-management-and-social-sciences",
     title: "Faculty of Arts, Management and Social Sciences",
-    header: "/health-sciences.webp",
+    header: "/business.webp",
 
     mission:
       "To empower students with cutting-edge computational skills and innovative thinking to solve real-world problems through technology.",
