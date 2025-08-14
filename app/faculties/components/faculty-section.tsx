@@ -102,10 +102,10 @@ const FacultySection: React.FC = () => {
                 )}
               </div>
               <div className="p-4 flex justify-between items-center">
-                <h5 className="text-lg font-medium text-foreground font-heading">
+                <h5 className="text-base hover:underline font-medium text-foreground font-heading">
                   <Link
                     href={item.href}
-                    className="hover:text-accent transition-colors"
+                    className=" transition-colors"
                     aria-label={`View ${item.title} details`}
                   >
                     {item.title}

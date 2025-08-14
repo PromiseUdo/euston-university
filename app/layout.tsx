@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Euston University",
   description:
     "Official website of Euston University, supporting education and innovation.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
