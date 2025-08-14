@@ -13,7 +13,7 @@ const page = () => {
       <PageHeader
         title="FAQ"
         breadcrumbItems={breadcrumbItems}
-        backgroundImage="https://html.themewant.com/unipix/assets/images/banner/breadcrumb.jpg"
+        backgroundImage="/faq.webp"
       />
       <Main />
     </div>

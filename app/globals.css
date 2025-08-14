@@ -94,3 +94,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* If using CSS */
+.accordion-button {
+  transition: all 0.2s ease;
+}
+
+.accordion-button:hover {
+  color: #3b82f6; /* blue-500 */
+}
