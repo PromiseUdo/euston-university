@@ -13,7 +13,7 @@ const Main = () => {
             {/* Main About us */}
           </div>
           <div className="mt-12 md:mt-0 col-span-12 md:col-span-3 p-[10px] pt-0 pb-[127.09px] flex flex-col">
-            <div className="sticky top-[20px] flex flex-col gap-[30px]">
+            <div className="sticky top-[85px] flex flex-col gap-[30px]">
               <CategoryMenu />
               <DepartmentContactInfo
                 department="B.A. in Africana Studies"
