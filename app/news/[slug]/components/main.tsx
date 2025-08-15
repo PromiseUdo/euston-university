@@ -201,7 +201,7 @@ const Main = () => {
               <CategoryMenu />
               <DepartmentContactInfo
                 department="B.A. in Africana Studies"
-                email="barry.Unipix@info.com"
+                email="info@eustonuniversity.edu.ng"
                 phone="664-254-251"
                 socials={{
                   facebook: "#",

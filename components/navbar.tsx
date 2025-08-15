@@ -546,11 +546,14 @@ import {
   Twitter,
   Facebook,
   Linkedin,
+  Search,
 } from "lucide-react";
 import MaxWidthWrapper from "./max-width-wrapper";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -589,39 +592,43 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-[#890c25] py-[15px]">
-      <MaxWidthWrapper>
-        <div className="flex items-center justify-between">
-          <div className="flex-shrink-0">
-            <Link href="/" passHref>
-              <Image
-                src="/logo.png"
-                alt="Euston University Logo"
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "205.42px", height: "49.69px" }}
-                unoptimized
-                className="object-contain max-w-[150px] sm:max-w-full"
-              />
-            </Link>
-          </div>
-
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-medium text-white text-[15px] leading-[15px] hover:text-gray-300 transition-colors duration-200"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-[32px]">
+    <>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#890c25] py-[15px]">
+        <MaxWidthWrapper>
+          <div className="flex items-center justify-between">
             <div className="flex-shrink-0">
-              <a href="#" aria-label="Search">
+              <Link href="/" passHref>
+                <Image
+                  src="/logo.png"
+                  alt="Euston University Logo"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "205.42px", height: "49.69px" }}
+                  unoptimized
+                  className="object-contain max-w-[150px] sm:max-w-full"
+                />
+              </Link>
+            </div>
+
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="font-medium text-white text-[15px] leading-[15px] hover:text-gray-300 transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-[32px]">
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="flex-shrink-0"
+                aria-label="Search"
+              >
                 <Image
                   src="/search-icon.png"
                   alt="Search"
@@ -629,110 +636,138 @@ const Navbar = () => {
                   height={20}
                   className="object-contain"
                 />
-              </a>
-            </div>
+              </button>
 
-            <div className="md:hidden">
-              <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger asChild>
-                  <button
-                    className="relative z-50 flex flex-col items-center justify-center w-10 h-10"
-                    onClick={toggleMenu}
-                    aria-label="Toggle menu"
+              <div className="md:hidden">
+                <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                  <SheetTrigger asChild>
+                    <button
+                      className="relative z-50 flex flex-col items-center justify-center w-10 h-10"
+                      onClick={toggleMenu}
+                      aria-label="Toggle menu"
+                    >
+                      {isOpen ? (
+                        <X className="h-6 w-6 text-white" />
+                      ) : (
+                        <Menu className="h-6 w-6 text-white" />
+                      )}
+                    </button>
+                  </SheetTrigger>
+                  <SheetContent
+                    side="right"
+                    className="bg-[#890c25] text-white w-[280px] sm:w-[320px] p-6 overflow-y-auto"
                   >
-                    {isOpen ? (
-                      <X className="h-6 w-6 text-white" />
-                    ) : (
-                      <Menu className="h-6 w-6 text-white" />
-                    )}
-                  </button>
-                </SheetTrigger>
-                <SheetContent
-                  side="right"
-                  className="bg-[#890c25] text-white w-[280px] sm:w-[320px] p-6 overflow-y-auto"
-                >
-                  <div className="flex flex-col min-h-full">
-                    {/* Logo at Top Center */}
-                    <div className="flex justify-center mb-6">
-                      <Link href="/" passHref>
-                        <Image
-                          src="/logo.png"
-                          alt="Euston University Logo"
-                          width={0}
-                          height={0}
-                          sizes="100vw"
-                          style={{ width: "150px", height: "36.35px" }}
-                          unoptimized
-                          className="object-contain"
-                        />
-                      </Link>
-                    </div>
-
-                    {/* Navigation Links */}
-                    <nav className="flex flex-col gap-4">
-                      {navLinks.map((link) => (
-                        <Link
-                          key={link.label}
-                          href={link.href}
-                          className="text-lg font-medium hover:text-gray-200 transition-colors duration-200 rounded-md px-2 py-1 hover:bg-[#a1122f]/50"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {link.label}
+                    <div className="flex flex-col min-h-full">
+                      {/* Logo at Top Center */}
+                      <div className="flex justify-center mb-6">
+                        <Link href="/" passHref>
+                          <Image
+                            src="/logo.png"
+                            alt="Euston University Logo"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "150px", height: "36.35px" }}
+                            unoptimized
+                            className="object-contain"
+                          />
                         </Link>
-                      ))}
-                    </nav>
-
-                    {/* Contact Information */}
-                    <div className="mt-8 border-t border-gray-400/50 pt-6">
-                      <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
-                        Contact Us
-                      </h3>
-                      <div className="mt-4 flex flex-col gap-3">
-                        <a
-                          href="tel:+1234567890"
-                          className="flex items-center gap-2 text-sm hover:text-gray-200 transition-colors duration-200"
-                        >
-                          <Phone className="h-5 w-5" />
-                          +1 (234) 567-890
-                        </a>
-                        <a
-                          href="mailto:info@eustonuniversity.edu"
-                          className="flex items-center gap-2 text-sm hover:text-gray-200 transition-colors duration-200"
-                        >
-                          <Mail className="h-5 w-5" />
-                          info@eustonuniversity.edu
-                        </a>
                       </div>
-                    </div>
 
-                    {/* Social Media Links */}
-                    <div className="mt-6 border-t border-gray-400/50 pt-6 pb-6">
-                      <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
-                        Follow Us
-                      </h3>
-                      <div className="mt-4 flex gap-4">
-                        {socialLinks.map((link) => (
-                          <a
+                      {/* Navigation Links */}
+                      <nav className="flex flex-col gap-4">
+                        {navLinks.map((link) => (
+                          <Link
                             key={link.label}
                             href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-gray-200 transition-colors duration-200"
-                            aria-label={link.label}
+                            className="text-lg font-medium hover:text-gray-200 transition-colors duration-200 rounded-md px-2 py-1 hover:bg-[#a1122f]/50"
+                            onClick={() => setIsOpen(false)}
                           >
-                            {link.icon}
-                          </a>
+                            {link.label}
+                          </Link>
                         ))}
+                      </nav>
+
+                      {/* Contact Information */}
+                      <div className="mt-8 border-t border-gray-400/50 pt-6">
+                        <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
+                          Contact Us
+                        </h3>
+                        <div className="mt-4 flex flex-col gap-3">
+                          <a
+                            href="tel:+1234567890"
+                            className="flex items-center gap-2 text-sm hover:text-gray-200 transition-colors duration-200"
+                          >
+                            <Phone className="h-5 w-5" />
+                            +1 (234) 567-890
+                          </a>
+                          <a
+                            href="mailto:info@eustonuniversity.edu"
+                            className="flex items-center gap-2 text-sm hover:text-gray-200 transition-colors duration-200"
+                          >
+                            <Mail className="h-5 w-5" />
+                            info@eustonuniversity.edu
+                          </a>
+                        </div>
+                      </div>
+
+                      {/* Social Media Links */}
+                      <div className="mt-6 border-t border-gray-400/50 pt-6 pb-6">
+                        <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
+                          Follow Us
+                        </h3>
+                        <div className="mt-4 flex gap-4">
+                          {socialLinks.map((link) => (
+                            <a
+                              key={link.label}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-gray-200 transition-colors duration-200"
+                              aria-label={link.label}
+                            >
+                              {link.icon}
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SheetContent>
-              </Sheet>
+                  </SheetContent>
+                </Sheet>
+              </div>
             </div>
           </div>
-        </div>
-      </MaxWidthWrapper>
-    </div>
+        </MaxWidthWrapper>
+      </div>
+
+      {isSearchOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 bg-[#252424] h-screen w-full flex items-center justify-center"
+        >
+          <button
+            onClick={() => setIsSearchOpen(false)}
+            className="absolute top-6 right-6 text-white p-2 aspect-square rounded-full border border-[#cccccc]"
+            aria-label="Close search"
+          >
+            <X className="h-8 w-8" />
+          </button>
+          <div className="relative w-full max-w-2xl px-4">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-full py-4 pr-16 pl-6 text-white bg-transparent border border-[#cccccc] rounded-full focus:outline-none focus:ring-2 focus:ring-white/50 text-lg"
+                autoFocus
+              />
+              <Search className="absolute right-6 top-1/2 transform -translate-y-1/2 h-6 w-6 text-white" />
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </>
   );
 };
 
@@ -1147,7 +1182,6 @@ export default Navbar;
 //                 >
 //                   <Search className="text-[#ffffff] group-hover:text-[#191919] h-5 w-5" />
 //                 </Button>
-//                 <Button
 //                   variant="ghost"
 //                   className="p-2 group aspect-square hover:bg-gray-100 flex-shrink-0 transition-colors duration-300"
 //                   onClick={() => setIsMenuOpen(!isMenuOpen)}
