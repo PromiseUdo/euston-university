@@ -15,8 +15,9 @@ const MissionSection = () => {
         {/* Timeline Content */}
         <div className="relative">
           {/* Vertical Separator Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 border-0 bottom-0 w-px bg-gray-300 transform -translate-x-1/2"></div>
-
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 transform -translate-x-1/2">
+            <div className="h-full w-px bg-gray-300 mx-auto"></div>
+          </div>{" "}
           {/* Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Side */}
