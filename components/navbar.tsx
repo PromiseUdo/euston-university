@@ -1500,7 +1500,7 @@ const Navbar = () => {
     setAboutOpen(!aboutOpen);
   };
   const navLinks = [
-    { href: "/portal", label: "Portal" },
+    { href: "/", label: "Portal" },
     { href: "/admissions", label: "Admissions" },
     { href: "/faculties", label: "Faculty" },
     { href: "/news", label: "News" },
