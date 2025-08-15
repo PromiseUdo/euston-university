@@ -19,7 +19,7 @@ const AboutUniversity = () => {
             </div>
             <div className="md:w-2/3 lg:w-8/12 md:pl-8">
               <p className="text-[15px] text-gray-600">
-                Welcome to Unipix University, where knowledge meets inspiration,
+                Welcome to Euston University, where knowledge meets inspiration,
                 and every individual's educational journey is valued.
                 Established in 1971, our university has been a bastion of
                 learning, innovation, and community for 51 years.
@@ -38,7 +38,7 @@ const AboutUniversity = () => {
               <div className="relative w-full h-80 lg:h-[500px] xl:h-[600px]">
                 <Image
                   src="/our-story6.webp"
-                  alt="Unipix University Campus"
+                  alt="Euston University Campus"
                   fill
                   className="object-cover "
                 />
@@ -56,7 +56,7 @@ const AboutUniversity = () => {
                   </div>
                   <div className="w-12 h-12 relative">
                     <Image
-                      src="https://html.themewant.com/unipix/assets/images/icon/11.svg"
+                      src="https://html.themewant.com/Euston/assets/images/icon/11.svg"
                       alt="Students icon"
                       fill
                       className="filter brightness-0 invert"
@@ -68,11 +68,11 @@ const AboutUniversity = () => {
                 <div className="flex items-center gap-6 bg-[#890c25] p-6 text-white flex-1">
                   <div className="flex-1">
                     <h3 className="text-4xl font-bold">16,214</h3>
-                    <p className="mt-2">Unipix University Faculty and Staff</p>
+                    <p className="mt-2">Euston University Faculty and Staff</p>
                   </div>
                   <div className="w-12 h-12 relative">
                     <Image
-                      src="https://html.themewant.com/unipix/assets/images/icon/12.svg"
+                      src="https://html.themewant.com/Euston/assets/images/icon/12.svg"
                       alt="Faculty icon"
                       fill
                       className="filter brightness-0 invert"
@@ -84,11 +84,11 @@ const AboutUniversity = () => {
                 <div className="flex items-center gap-6 bg-[#890c25] p-6  text-white flex-1">
                   <div className="flex-1">
                     <h3 className="text-4xl font-bold">300k</h3>
-                    <p className="mt-2">Unipix Alumni Worldwide</p>
+                    <p className="mt-2">Euston Alumni Worldwide</p>
                   </div>
                   <div className="w-12 h-12 relative">
                     <Image
-                      src="https://html.themewant.com/unipix/assets/images/icon/13.svg"
+                      src="https://html.themewant.com/Euston/assets/images/icon/13.svg"
                       alt="Alumni icon"
                       fill
                       className="filter brightness-0 invert"

@@ -13,7 +13,7 @@ const HistorySection = () => {
               <div className="relative w-full aspect-[4/3]  overflow-hidden">
                 <Image
                   src="/our-story6.webp"
-                  alt="Unipix University History"
+                  alt="Euston University History"
                   fill
                   className="object-cover"
                 />
@@ -24,17 +24,17 @@ const HistorySection = () => {
             <div className="lg:w-1/2">
               <div className=" mx-auto lg:mx-0">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-                  The history of Unipix
+                  The history of Euston University
                 </h2>
                 <div className="space-y-6 text-gray-600">
                   <p>
-                    On September 8, 1971, Unipix, the first college in the
+                    On September 8, 1971, Euston, the first college in the
                     American colonies, was founded in Cambridge, Massachusetts.
-                    Unipix University was officially founded by a vote by the
+                    Euston University was officially founded by a vote by the
                     Great and General Court of the Massachusetts Bay Colony.
                   </p>
                   <p>
-                    Unipix endowment started with John Unipix initial donation
+                    Euston endowment started with John Euston initial donation
                     of 400 books and half his estate, but in 1721, Thomas Hollis
                     began the now standard practice of requiring that a donation
                     be used for a specific purpose when he donated money for "a
