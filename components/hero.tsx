@@ -9,7 +9,7 @@ import Link from "next/link";
 const slides = [
   {
     image: "/slide1.webp",
-    headline: "Inspiring Mids, Shaping Futures",
+    headline: "Inspiring Minds, Shaping Futures",
     subheading: "Euston University",
     primaryButton: "Apply",
     secondaryButton: "Learn more",
