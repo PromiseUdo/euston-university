@@ -22,7 +22,7 @@ const CampusTourSection = () => {
       <section className="rts-campus-tour py-20 bg-[#f6f6f6]">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center">
-            <h2 className="section-title text-center text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            <h2 className="font-heading section-title text-center text-3xl md:text-4xl font-bold text-gray-900 mb-12">
               Our Campus Tour
             </h2>
             <div className="w-full">
