@@ -1,39 +1,122 @@
-import React from "react";
-import MaxWidthWrapper from "@/components/max-width-wrapper";
-import CategoryMenu from "@/app/news/[slug]/components/category-menu";
-import DepartmentContactInfo from "@/app/news/[slug]/components/department-contact-info";
-import OtherFaculties from "@/app/news/[slug]/components/other-faculties";
+"use client";
 
-const Main = () => {
+import React from "react";
+import Image from "next/image";
+import MaxWidthWrapper from "@/components/max-width-wrapper";
+
+const AboutUniversity = () => {
   return (
-    <div className="mt-10">
+    <section className="py-20 bg-white">
       <MaxWidthWrapper>
-        <div className="text-[#292929] w-full grid grid-cols-12 ">
-          <div className="col-span-12 md:col-span-9  pr-0 md:pr-[20px]">
-            {/* Main About us */}
+        <div className=" mx-auto">
+          {/* Title and Description Section with Vertical Line */}
+          <div className="flex flex-col md:flex-row mb-12">
+            <div className="md:w-1/3 lg:w-4/12 md:pr-8 relative">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 md:mb-0">
+                About University
+              </h3>
+              <div className="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-gray-300"></div>
+            </div>
+            <div className="md:w-2/3 lg:w-8/12 md:pl-8">
+              <p className="text-[15px] text-gray-600">
+                Welcome to Unipix University, where knowledge meets inspiration,
+                and every individual's educational journey is valued.
+                Established in 1971, our university has been a bastion of
+                learning, innovation, and community for 51 years.
+              </p>
+            </div>
           </div>
-          <div className="mt-12 md:mt-0 col-span-12 md:col-span-3 p-[10px] pt-0 pb-[127.09px] flex flex-col">
-            <div className="sticky top-[85px] flex flex-col gap-[30px]">
-              <CategoryMenu />
-              <DepartmentContactInfo
-                department="B.A. in Africana Studies"
-                email="info@eustonuniversity.edu.ng"
-                phone="664-254-251"
-                socials={{
-                  facebook: "#",
-                  instagram: "#",
-                  linkedin: "#",
-                  pinterest: "#",
-                  youtube: "#",
-                }}
-              />
-              <OtherFaculties />
+
+          <div className=" my-10">
+            <hr />
+          </div>
+
+          {/* Image and Stats Section */}
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Image Column */}
+            <div className="lg:w-7/12 xl:w-8/12">
+              <div className="relative w-full h-80 lg:h-[500px] xl:h-[600px]">
+                <Image
+                  src="/our-story6.webp"
+                  alt="Unipix University Campus"
+                  fill
+                  className="object-cover "
+                />
+              </div>
+            </div>
+
+            {/* Stats Column */}
+            <div className="lg:w-5/12 xl:w-4/12 flex flex-col">
+              <div className="space-y-4 flex flex-col h-full lg:min-h-[500px] xl:min-h-[600px]">
+                {/* Stat 1 */}
+                <div className="flex items-center gap-6 bg-[#890c25] p-6  text-white flex-1">
+                  <div className="flex-1">
+                    <h3 className="text-4xl font-bold">20,000</h3>
+                    <p className="mt-2">undergraduate and graduate students</p>
+                  </div>
+                  <div className="w-12 h-12 relative">
+                    <Image
+                      src="https://html.themewant.com/unipix/assets/images/icon/11.svg"
+                      alt="Students icon"
+                      fill
+                      className="filter brightness-0 invert"
+                    />
+                  </div>
+                </div>
+
+                {/* Stat 2 */}
+                <div className="flex items-center gap-6 bg-[#890c25] p-6 text-white flex-1">
+                  <div className="flex-1">
+                    <h3 className="text-4xl font-bold">16,214</h3>
+                    <p className="mt-2">Unipix University Faculty and Staff</p>
+                  </div>
+                  <div className="w-12 h-12 relative">
+                    <Image
+                      src="https://html.themewant.com/unipix/assets/images/icon/12.svg"
+                      alt="Faculty icon"
+                      fill
+                      className="filter brightness-0 invert"
+                    />
+                  </div>
+                </div>
+
+                {/* Stat 3 */}
+                <div className="flex items-center gap-6 bg-[#890c25] p-6  text-white flex-1">
+                  <div className="flex-1">
+                    <h3 className="text-4xl font-bold">300k</h3>
+                    <p className="mt-2">Unipix Alumni Worldwide</p>
+                  </div>
+                  <div className="w-12 h-12 relative">
+                    <Image
+                      src="https://html.themewant.com/unipix/assets/images/icon/13.svg"
+                      alt="Alumni icon"
+                      fill
+                      className="filter brightness-0 invert"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </MaxWidthWrapper>
-    </div>
+
+      {/* Custom CSS for height matching */}
+      <style jsx>{`
+        @media (min-width: 1024px) {
+          .flex-col.h-full {
+            height: 100%;
+            justify-content: space-between;
+          }
+          .flex-col.h-full > div {
+            flex: 1 1 0;
+            display: flex;
+            align-items: center;
+          }
+        }
+      `}</style>
+    </section>
   );
 };
 
-export default Main;
+export default AboutUniversity;

@@ -1,6 +1,10 @@
 import PageHeader from "@/components/page-hero";
 import React from "react";
 import Main from "./components/main";
+import AboutUniversity from "./components/main";
+import HistorySection from "./components/history";
+import FunFactSection from "./components/fun-fact";
+import MissionSection from "./components/mission-section";
 
 const page = () => {
   const breadcrumbItems = [
@@ -15,7 +19,11 @@ const page = () => {
         breadcrumbItems={breadcrumbItems}
         backgroundImage="/contactus.avif"
       />
-      <Main />
+      {/* <Main /> */}
+      <AboutUniversity />
+      <HistorySection />
+      <FunFactSection />
+      <MissionSection />
     </div>
   );
 };
