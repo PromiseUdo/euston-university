@@ -11,13 +11,13 @@ import Main from "./components/main";
 const page = () => {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about", isActive: true },
+    { label: "Why Choose Us", href: "/why-choose-us", isActive: true },
   ];
 
   return (
     <div>
       <PageHeader
-        title="About Us"
+        title="Why Choose Us"
         breadcrumbItems={breadcrumbItems}
         backgroundImage="/contactus.avif"
       />

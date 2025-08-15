@@ -152,7 +152,7 @@ const blogs: Blog[] = [
       "A team young physics students has developed a solar-hybrid system that reduces energy costs by 60% for rural communities...",
     author: "John Patrick",
     date: "Oct 29, 2024",
-    image: "/public-admin.webp",
+    image: "/blog5.jpg",
     link: "/news/1",
   },
   {
@@ -162,7 +162,7 @@ const blogs: Blog[] = [
       "500 students will receive free certification in data analytics and AI through this groundbreaking industry collaboration",
     author: "Desmond Edem",
     date: "Oct 29, 2025",
-    image: "/public-admin.webp",
+    image: "/blog4.jpg",
     link: "/news/2",
   },
 ];
