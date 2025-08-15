@@ -4,7 +4,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper";
 
 const HistorySection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <MaxWidthWrapper>
         <div className=" mx-auto ">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
@@ -23,10 +23,10 @@ const HistorySection = () => {
             {/* Content Column */}
             <div className="lg:w-1/2">
               <div className=" mx-auto lg:mx-0">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 font-heading">
                   The history of Euston University
                 </h2>
-                <div className="space-y-6 text-gray-600">
+                <div className="space-y-6 text-[#737477] ">
                   <p>
                     On September 8, 1971, Euston, the first college in the
                     American colonies, was founded in Cambridge, Massachusetts.

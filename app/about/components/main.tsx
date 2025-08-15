@@ -6,7 +6,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper";
 
 const AboutUniversity = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <MaxWidthWrapper>
         <div className=" mx-auto">
           {/* Title and Description Section with Vertical Line */}
@@ -27,7 +27,7 @@ const AboutUniversity = () => {
             </div>
           </div>
 
-          <div className=" my-10">
+          <div className=" my-20">
             <hr />
           </div>
 

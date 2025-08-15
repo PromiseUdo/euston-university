@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const MissionSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Title Section */}
         <div className="flex justify-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-heading">
             Mission and Values
           </h2>
         </div>
@@ -30,7 +30,7 @@ const MissionSection = () => {
                     </h5>
                     <div className="hidden md:block w-16 h-px bg-gray-300 ml-4 -mr-12"></div>
                   </div>
-                  <p className="text-gray-600 mt-2 text-center md:text-right  text-[15px]  mr-8">
+                  <p className="text-[#737477] mt-2 text-center md:text-right  text-[15px]  mr-8">
                     Celebrating a rich tapestry of backgrounds, perspectives,
                     and talents
                   </p>
@@ -55,7 +55,7 @@ const MissionSection = () => {
                     </h5>
                     <div className="hidden md:block w-16 h-px bg-gray-300 ml-4 -mr-12"></div>
                   </div>
-                  <p className="text-gray-600 mt-2 text-center md:text-right text-[15px]  mr-8">
+                  <p className="text-[#737477] mt-2 text-center md:text-right text-[15px]  mr-8">
                     Encouraging creativity, critical thinking, and a spirit of
                     innovation
                   </p>
@@ -82,7 +82,7 @@ const MissionSection = () => {
                       Excellence
                     </h5>
                   </div>
-                  <p className="text-gray-600 mt-2 text-center md:text-left text-[15px]   ml-8 ">
+                  <p className="text-[#737477] mt-2 text-center md:text-left text-[15px]   ml-8 ">
                     Striving for academic and research excellence in all
                     endeavors
                   </p>
@@ -106,7 +106,7 @@ const MissionSection = () => {
                       Academic Excellence
                     </h5>
                   </div>
-                  <p className="text-gray-600 mt-2 text-center md:text-left text-[15px]   ml-8">
+                  <p className="text-[#737477] mt-2 text-center md:text-left text-[15px]   ml-8">
                     Our commitment to academic excellence is reflected in the
                     diverse range
                   </p>
