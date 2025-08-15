@@ -7,7 +7,7 @@ const HistorySection = () => {
     <section className="py-16 md:py-20 bg-white">
       <MaxWidthWrapper>
         <div className=" mx-auto ">
-          <div className="flex flex-col lg:flex-row gap-8 items-center">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Image Column */}
             <div className="lg:w-1/2">
               <div className="relative w-full aspect-[4/3]  overflow-hidden">
