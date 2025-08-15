@@ -8,18 +8,12 @@ import Image from "next/image";
 
 const Main = () => {
   const requirements = [
-    "$90 nonrefundable application fee or fee waiver request",
-    "ACT or SAT test scores (test optional)",
-    "School Report form and counselor letter of recommendation",
-    "Official transcript(s) or academic results",
-    "Letters of recommendation from two teachers",
-    "Midyear transcript (due by February 15)",
-    "$90 nonrefundable application fee or fee waiver request",
-    "ACT or SAT test scores (test optional)",
-    "School Report form and counselor letter of recommendation",
-    "Official transcript(s) or academic results",
-    "Letters of recommendation from two teachers",
-    "Midyear transcript (due by February 15)",
+    "₦___ non-refundable application fee or fee waiver request",
+    "JAMB UTME result or equivalent (test optional)",
+    "Completed School Report Form and letter of recommendation from school counselor/principal",
+    "Official secondary school transcript(s) or WAEC/NECO/NABTEB results",
+    "Two letters of recommendation from subject teachers",
+    "Mid-year transcript or updated academic results (due by 15 February)",
   ];
 
   const applicationSteps = [
