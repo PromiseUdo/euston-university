@@ -109,12 +109,9 @@ const Hero = () => {
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
                   Enabling Environment
                 </p>
-                <Link
-                  href="/faculties"
-                  className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal"
-                >
+                <p className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
                   An engaging, lively learning atmosphere
-                </Link>
+                </p>
 
                 <hr className="py-[10px] max-w-[300px] mt-3 border-gray-500 hover:border-[#890c25] transition-border" />
               </div>
@@ -122,12 +119,9 @@ const Hero = () => {
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
                   Result Validation
                 </p>
-                <Link
-                  href="/blogs"
-                  className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal"
-                >
+                <p className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal">
                   We ensure transparency in our educational system
-                </Link>
+                </p>
                 <hr className="py-[10px] mt-3 max-w-[300px] border-gray-500 group-hover:border-[#890c25] transition-border" />
               </div>
             </div>
