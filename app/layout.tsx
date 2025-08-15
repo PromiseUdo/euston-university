@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import { cormorant, dmSans } from "@/lib/fonts";
 import Navbar from "@/components/navbar";
 import ScrollToTop from "@/components/scroll-to-top";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
+      <Head>
+        <link rel="preload" href="/slide1.webp" as="image" />
+        <link rel="preload" href="/slide2.webp" as="image" />
+        <link rel="preload" href="/slide3.webp" as="image" />
+      </Head>
+
       <body className="font-dm-sans flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow flex-1">{children}</main>

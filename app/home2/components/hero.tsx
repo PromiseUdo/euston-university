@@ -5,6 +5,7 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
+import Image from "next/image";
 
 const slides = [
   {
@@ -70,7 +71,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 12000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -116,6 +117,18 @@ const HeroSlider = () => {
             alt="Hero background"
             className="h-full w-full object-cover"
           />
+
+          {/* <Image
+            src={slides[currentSlide].image}
+            alt="Hero background"
+            fill
+            priority={currentSlide === 0} // Prioritize first image
+            className="object-cover"
+            quality={85} // Reduce quality slightly for faster loads
+            sizes="100vw"
+            loading={currentSlide === 0 ? "eager" : "lazy"}
+          /> */}
+
           {/* Uniform overlay applied directly on each slide */}
           <div className="absolute inset-0 bg-black/60" />
         </motion.div>
