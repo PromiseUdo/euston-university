@@ -749,10 +749,10 @@ const Navbar = () => {
         >
           <button
             onClick={() => setIsSearchOpen(false)}
-            className="absolute top-6 right-6 text-white p-2 aspect-square rounded-full border border-[#cccccc]"
+            className="absolute top-6 right-6 text-white p-1.5 aspect-square rounded-full border border-[#cccccc]"
             aria-label="Close search"
           >
-            <X className="h-8 w-8" />
+            <X className="h-4 w-4" />
           </button>
           <div className="relative w-full max-w-2xl px-4">
             <div className="relative">

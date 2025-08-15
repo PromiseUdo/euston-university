@@ -6,6 +6,7 @@ import HistorySection from "./components/history";
 import FunFactSection from "./components/fun-fact";
 import MissionSection from "./components/mission-section";
 import CampusTourSection from "./components/campus-history";
+import TestimonialSection from "./components/testimonial";
 
 const page = () => {
   const breadcrumbItems = [
@@ -26,6 +27,7 @@ const page = () => {
       <FunFactSection />
       <MissionSection />
       <CampusTourSection />
+      <TestimonialSection />
     </div>
   );
 };
