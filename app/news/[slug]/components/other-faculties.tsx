@@ -10,13 +10,19 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { label: "Faculty of Allied Health Sciences", href: "/blog-details" },
-  { label: "Faculty of Natural and Applied Sciences", href: "/blog-details" },
-  { label: "Faculty of Computing", href: "/blog-details" },
+  {
+    label: "Faculty of Allied Health Sciences",
+    href: "/faculties/faculty-of-allied-health-sciences",
+  },
+  {
+    label: "Faculty of Natural and Applied Sciences",
+    href: "/faculties/faculty-of-natural-and-applied-sciences",
+  },
+  { label: "Faculty of Computing", href: "/faculties/faculty-of-computing" },
   { label: "Scholarship", href: "/blog-details" },
   {
     label: "Faculty of Arts, Management, and Social Sciences",
-    href: "/blog-details",
+    href: "/faculties/faculty-of-arts-management-and-social-sciences",
   },
 ];
 
@@ -35,7 +41,7 @@ const OtherFaculties: React.FC = () => {
             >
               <Link
                 href={item.href}
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                className="flex items-center text-gray-600 hover:text-[#890c25] transition-colors duration-300"
                 aria-label={item.label}
               >
                 <span className="mr-2.5">
