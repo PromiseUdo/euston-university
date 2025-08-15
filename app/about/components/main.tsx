@@ -27,7 +27,7 @@ const AboutUniversity = () => {
             </div>
           </div>
 
-          <div className=" my-20">
+          <div className=" my-10">
             <hr />
           </div>
 
@@ -56,7 +56,7 @@ const AboutUniversity = () => {
                   </div>
                   <div className="w-12 h-12 relative">
                     <Image
-                      src="https://html.themewant.com/Euston/assets/images/icon/11.svg"
+                      src="/07.svg"
                       alt="Students icon"
                       fill
                       className="filter brightness-0 invert"
@@ -72,7 +72,7 @@ const AboutUniversity = () => {
                   </div>
                   <div className="w-12 h-12 relative">
                     <Image
-                      src="https://html.themewant.com/Euston/assets/images/icon/12.svg"
+                      src="/06.svg"
                       alt="Faculty icon"
                       fill
                       className="filter brightness-0 invert"
@@ -88,7 +88,7 @@ const AboutUniversity = () => {
                   </div>
                   <div className="w-12 h-12 relative">
                     <Image
-                      src="https://html.themewant.com/Euston/assets/images/icon/13.svg"
+                      src="/07.svg"
                       alt="Alumni icon"
                       fill
                       className="filter brightness-0 invert"
