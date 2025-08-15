@@ -10,11 +10,11 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { label: "Course Curriculum", href: "/blog-details" },
-  { label: "Program Faculty", href: "/blog-details" },
-  { label: "Study Aboard", href: "/blog-details" },
-  { label: "Scholarship", href: "/blog-details" },
-  { label: "Education Expo", href: "/blog-details" },
+  { label: "Course Curriculum", href: "/" },
+  { label: "Program Faculty", href: "/" },
+  { label: "Study Aboard", href: "/" },
+  { label: "Scholarship", href: "/" },
+  { label: "Education Expo", href: "/" },
 ];
 
 const CategoryMenu: React.FC = () => {

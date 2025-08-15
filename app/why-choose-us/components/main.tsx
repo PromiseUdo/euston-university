@@ -287,7 +287,7 @@ const Main = () => {
               <DepartmentContactInfo
                 department="B.A. in Africana Studies"
                 email="info@eustonuniversity.edu.ng"
-                phone="664-254-251"
+                phone="+2348138863143"
                 socials={{
                   facebook: "#",
                   instagram: "#",
