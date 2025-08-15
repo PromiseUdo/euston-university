@@ -224,7 +224,7 @@ const BlogSection: React.FC = () => {
                   <h3 className="text-xl font-semibold text-gray-900 font-heading mb-3 line-clamp-2">
                     <Link
                       href={blog.link}
-                      className="hover:text-blue-600 transition-colors"
+                      className="hover:text-[#890c25] transition-colors"
                     >
                       {blog.title}
                     </Link>
