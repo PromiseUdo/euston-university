@@ -60,7 +60,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/90" />
 
       {/* Content */}
       <MaxWidthWrapper className="h-full">
