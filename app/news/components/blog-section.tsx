@@ -17,7 +17,7 @@ const blogItems: BlogItem[] = [
   {
     thumbnail: "/public-admin.webp",
     date: "October 28, 2024",
-    author: "John Patrick",
+    author: "/blog5.jpg",
     title: "Nigerian Researchers Discover Sustainable Energy Solution",
     href: "/news/1",
   },
@@ -29,7 +29,7 @@ const blogItems: BlogItem[] = [
     href: "/news/1",
   },
   {
-    thumbnail: "/public-admin.webp",
+    thumbnail: "/blog4.jpg",
     date: "November 28, 2023",
     author: "Desmond Edem",
     title: "Annual Cultural Day Celebrates Nigeria's Diversity",
