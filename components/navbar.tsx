@@ -560,6 +560,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/", label: "Portal" },
     { href: "/admissions", label: "Admissions" },
     { href: "/faculties", label: "Faculty" },
     { href: "/about", label: "About Us" },

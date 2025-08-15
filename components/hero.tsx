@@ -27,7 +27,7 @@ const slides = [
     headline: "World-Class Faculty and Learning Infrastructure",
     subheading: "Euston University",
 
-    primaryButton: "Apply",
+    primaryButton: "Faculty",
     secondaryButton: "Learn more",
   },
 ];
