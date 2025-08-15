@@ -804,7 +804,7 @@ const Navbar = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   // Check if current route is /home2
-  const isHome2 = pathname === "/home2";
+  const isHome2 = pathname === "/";
 
   // Handle scroll effect
   useEffect(() => {
