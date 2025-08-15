@@ -21,7 +21,7 @@ const Main = () => {
       number: "01",
       title: "Create an Account",
       description:
-        "Take the time to explore the diverse range of undergraduate and graduate programs offered at Unipix University",
+        "Take the time to explore the diverse range of undergraduate and graduate programs offered at Euston University",
       image: "/our-story1.webp",
       icon: "/07.svg",
     },
@@ -54,7 +54,7 @@ const Main = () => {
 
             <div className="relative w-full h-64 md:h-96 lg:h-[500px] overflow-hidden mb-8">
               <Image
-                src="/our-story6.webp"
+                src="/admission.jpg"
                 alt="School campus overview"
                 fill
                 className="object-cover"

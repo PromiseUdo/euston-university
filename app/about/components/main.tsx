@@ -37,7 +37,7 @@ const AboutUniversity = () => {
             <div className="lg:w-7/12 xl:w-8/12">
               <div className="relative w-full h-80 lg:h-[500px] xl:h-[600px]">
                 <Image
-                  src="/our-story6.webp"
+                  src="/aboutus.jpg"
                   alt="Euston University Campus"
                   fill
                   className="object-cover "

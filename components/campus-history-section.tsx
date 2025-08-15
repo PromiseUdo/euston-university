@@ -38,7 +38,7 @@ const CampusHistorySection: React.FC = () => {
                     in the heart of a woman who has spent her life empowering
                     the forgotten, uplifting the vulnerable, and transforming
                     communities through selfless action. That woman is Mrs.
-                    Eunice Ukamaka Egwu—the founder and promoter of Euston
+                    Eunice Ukamaka Egwu, the founder and promoter of Euston
                     University and the compassionate force behind the renowned
                     Widowcare Foundation.
                   </p>

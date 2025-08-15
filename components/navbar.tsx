@@ -531,11 +531,257 @@
 
 // // export default Navbar;
 
+// "use client";
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import React, { useState } from "react";
+// import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+// import {
+//   Menu,
+//   X,
+//   Phone,
+//   Mail,
+//   Instagram,
+//   Twitter,
+//   Facebook,
+//   Linkedin,
+//   Search,
+// } from "lucide-react";
+// import MaxWidthWrapper from "./max-width-wrapper";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const Navbar = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [isSearchOpen, setIsSearchOpen] = useState(false);
+//   const toggleMenu = () => {
+//     setIsOpen(!isOpen);
+//   };
+
+//   const navLinks = [
+//     { href: "/", label: "Home" },
+//     { href: "/", label: "Portal" },
+//     { href: "/admissions", label: "Admissions" },
+//     { href: "/faculties", label: "Faculty" },
+//     { href: "/about", label: "About Us" },
+//     { href: "/faq", label: "FAQ" },
+//     { href: "/news", label: "News" },
+//     { href: "/contact", label: "Contact" },
+//   ];
+
+//   const socialLinks = [
+//     {
+//       href: "https://instagram.com",
+//       label: "Instagram",
+//       icon: <Instagram className="h-5 w-5" />,
+//     },
+//     {
+//       href: "https://twitter.com",
+//       label: "Twitter",
+//       icon: <Twitter className="h-5 w-5" />,
+//     },
+//     {
+//       href: "https://facebook.com",
+//       label: "Facebook",
+//       icon: <Facebook className="h-5 w-5" />,
+//     },
+//     {
+//       href: "https://linkedin.com",
+//       label: "LinkedIn",
+//       icon: <Linkedin className="h-5 w-5" />,
+//     },
+//   ];
+
+//   return (
+//     <>
+//       <div className="fixed top-0 left-0 right-0 z-50 bg-[#890c25] py-[15px]">
+//         <MaxWidthWrapper>
+//           <div className="flex items-center justify-between">
+//             <div className="flex-shrink-0">
+//               <Link href="/" passHref>
+//                 <Image
+//                   src="/logo.png"
+//                   alt="Euston University Logo"
+//                   width={0}
+//                   height={0}
+//                   sizes="100vw"
+//                   style={{ width: "205.42px", height: "49.69px" }}
+//                   unoptimized
+//                   className="object-contain max-w-[150px] sm:max-w-full"
+//                 />
+//               </Link>
+//             </div>
+
+//             <div className="hidden md:flex items-center gap-8">
+//               {navLinks.map((link) => (
+//                 <Link
+//                   key={link.label}
+//                   href={link.href}
+//                   className="font-medium text-white text-[15px] leading-[15px] hover:text-gray-300 transition-colors duration-200"
+//                 >
+//                   {link.label}
+//                 </Link>
+//               ))}
+//             </div>
+
+//             <div className="flex items-center gap-[32px]">
+//               <button
+//                 onClick={() => setIsSearchOpen(true)}
+//                 className="flex-shrink-0"
+//                 aria-label="Search"
+//               >
+//                 <Image
+//                   src="/search-icon.png"
+//                   alt="Search"
+//                   width={20}
+//                   height={20}
+//                   className="object-contain"
+//                 />
+//               </button>
+
+//               <div className="md:hidden">
+//                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
+//                   <SheetTrigger asChild>
+//                     <button
+//                       className="relative z-50 flex flex-col items-center justify-center w-10 h-10"
+//                       onClick={toggleMenu}
+//                       aria-label="Toggle menu"
+//                     >
+//                       {isOpen ? (
+//                         <X className="h-6 w-6 text-white" />
+//                       ) : (
+//                         <Menu className="h-6 w-6 text-white" />
+//                       )}
+//                     </button>
+//                   </SheetTrigger>
+//                   <SheetContent
+//                     side="right"
+//                     className="bg-[#890c25] text-white w-[280px] sm:w-[320px] p-6 overflow-y-auto"
+//                   >
+//                     <div className="flex flex-col min-h-full">
+//                       {/* Logo at Top Center */}
+//                       <div className="flex justify-center mb-6">
+//                         <Link href="/" passHref>
+//                           <Image
+//                             src="/logo.png"
+//                             alt="Euston University Logo"
+//                             width={0}
+//                             height={0}
+//                             sizes="100vw"
+//                             style={{ width: "150px", height: "36.35px" }}
+//                             unoptimized
+//                             className="object-contain"
+//                           />
+//                         </Link>
+//                       </div>
+
+//                       {/* Navigation Links */}
+//                       <nav className="flex flex-col gap-4">
+//                         {navLinks.map((link) => (
+//                           <Link
+//                             key={link.label}
+//                             href={link.href}
+//                             className="text-lg font-medium hover:text-gray-200 transition-colors duration-200 rounded-md px-2 py-1 hover:bg-[#a1122f]/50"
+//                             onClick={() => setIsOpen(false)}
+//                           >
+//                             {link.label}
+//                           </Link>
+//                         ))}
+//                       </nav>
+
+//                       {/* Contact Information */}
+//                       <div className="mt-8 border-t border-gray-400/50 pt-6">
+//                         <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
+//                           Contact Us
+//                         </h3>
+//                         <div className="mt-4 flex flex-col gap-3">
+//                           <a
+//                             href="tel:+1234567890"
+//                             className="flex items-center gap-2 text-sm hover:text-gray-200 transition-colors duration-200"
+//                           >
+//                             <Phone className="h-5 w-5" />
+//                             +1 (234) 567-890
+//                           </a>
+//                           <a
+//                             href="mailto:info@eustonuniversity.edu"
+//                             className="flex items-center gap-2 text-sm hover:text-gray-200 transition-colors duration-200"
+//                           >
+//                             <Mail className="h-5 w-5" />
+//                             info@eustonuniversity.edu
+//                           </a>
+//                         </div>
+//                       </div>
+
+//                       {/* Social Media Links */}
+//                       <div className="mt-6 border-t border-gray-400/50 pt-6 pb-6">
+//                         <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
+//                           Follow Us
+//                         </h3>
+//                         <div className="mt-4 flex gap-4">
+//                           {socialLinks.map((link) => (
+//                             <a
+//                               key={link.label}
+//                               href={link.href}
+//                               target="_blank"
+//                               rel="noopener noreferrer"
+//                               className="hover:text-gray-200 transition-colors duration-200"
+//                               aria-label={link.label}
+//                             >
+//                               {link.icon}
+//                             </a>
+//                           ))}
+//                         </div>
+//                       </div>
+//                     </div>
+//                   </SheetContent>
+//                 </Sheet>
+//               </div>
+//             </div>
+//           </div>
+//         </MaxWidthWrapper>
+//       </div>
+
+//       {isSearchOpen && (
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           className="fixed inset-0 z-50 bg-[#252424] h-screen w-full flex items-center justify-center"
+//         >
+//           <button
+//             onClick={() => setIsSearchOpen(false)}
+//             className="absolute top-6 right-6 text-white p-1.5 aspect-square rounded-full border border-[#cccccc]"
+//             aria-label="Close search"
+//           >
+//             <X className="h-4 w-4" />
+//           </button>
+//           <div className="relative w-full max-w-2xl px-4">
+//             <div className="relative">
+//               <input
+//                 type="text"
+//                 placeholder="Search..."
+//                 className="w-full py-4 pr-16 pl-6 text-white bg-transparent border border-[#cccccc] rounded-full focus:outline-none focus:ring-2 focus:ring-white/50 text-lg"
+//                 autoFocus
+//               />
+//               <Search className="absolute right-6 top-1/2 transform -translate-y-1/2 h-6 w-6 text-white" />
+//             </div>
+//           </div>
+//         </motion.div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default Navbar;
+
+// view new
+
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import React, { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Menu,
@@ -552,8 +798,30 @@ import MaxWidthWrapper from "./max-width-wrapper";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  // Check if current route is /home2
+  const isHome2 = pathname === "/home2";
+
+  // Handle scroll effect
+  useEffect(() => {
+    if (!isHome2) {
+      setHasScrolled(true); // Always show solid background for non-home2 routes
+      return;
+    }
+
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setHasScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHome2]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -594,7 +862,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#890c25] py-[15px]">
+      {/* Navbar */}
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 py-[15px] transition-all duration-300 ${
+          hasScrolled ? "bg-[#890c25]" : "bg-transparent"
+        }`}
+      >
         <MaxWidthWrapper>
           <div className="flex items-center justify-between">
             <div className="flex-shrink-0">
@@ -617,7 +890,7 @@ const Navbar = () => {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="font-medium text-white text-[15px] leading-[15px] hover:text-gray-300 transition-colors duration-200"
+                  className="font-medium text-[15px] leading-[15px] text-white hover:text-gray-300 transition-colors duration-200"
                 >
                   {link.label}
                 </Link>
@@ -659,7 +932,6 @@ const Navbar = () => {
                     className="bg-[#890c25] text-white w-[280px] sm:w-[320px] p-6 overflow-y-auto"
                   >
                     <div className="flex flex-col min-h-full">
-                      {/* Logo at Top Center */}
                       <div className="flex justify-center mb-6">
                         <Link href="/" passHref>
                           <Image
@@ -675,7 +947,6 @@ const Navbar = () => {
                         </Link>
                       </div>
 
-                      {/* Navigation Links */}
                       <nav className="flex flex-col gap-4">
                         {navLinks.map((link) => (
                           <Link
@@ -689,7 +960,6 @@ const Navbar = () => {
                         ))}
                       </nav>
 
-                      {/* Contact Information */}
                       <div className="mt-8 border-t border-gray-400/50 pt-6">
                         <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
                           Contact Us
@@ -712,7 +982,6 @@ const Navbar = () => {
                         </div>
                       </div>
 
-                      {/* Social Media Links */}
                       <div className="mt-6 border-t border-gray-400/50 pt-6 pb-6">
                         <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-100">
                           Follow Us
@@ -741,33 +1010,36 @@ const Navbar = () => {
         </MaxWidthWrapper>
       </div>
 
-      {isSearchOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-[#252424] h-screen w-full flex items-center justify-center"
-        >
-          <button
-            onClick={() => setIsSearchOpen(false)}
-            className="absolute top-6 right-6 text-white p-1.5 aspect-square rounded-full border border-[#cccccc]"
-            aria-label="Close search"
+      {/* Search Modal */}
+      <AnimatePresence>
+        {isSearchOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-[#252424] h-screen w-full flex items-center justify-center"
           >
-            <X className="h-4 w-4" />
-          </button>
-          <div className="relative w-full max-w-2xl px-4">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full py-4 pr-16 pl-6 text-white bg-transparent border border-[#cccccc] rounded-full focus:outline-none focus:ring-2 focus:ring-white/50 text-lg"
-                autoFocus
-              />
-              <Search className="absolute right-6 top-1/2 transform -translate-y-1/2 h-6 w-6 text-white" />
+            <button
+              onClick={() => setIsSearchOpen(false)}
+              className="absolute top-6 right-6 text-white p-1.5 aspect-square rounded-full border border-[#cccccc]"
+              aria-label="Close search"
+            >
+              <X className="h-4 w-4" />
+            </button>
+            <div className="relative w-full max-w-2xl px-4">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full py-4 pr-16 pl-6 text-white bg-transparent border border-[#cccccc] rounded-full focus:outline-none focus:ring-2 focus:ring-white/50 text-lg"
+                  autoFocus
+                />
+                <Search className="absolute right-6 top-1/2 transform -translate-y-1/2 h-6 w-6 text-white" />
+              </div>
             </div>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

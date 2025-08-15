@@ -50,13 +50,13 @@ const ProgramSection: React.FC = () => {
         {/* Title Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading mb-4 sm:mb-0">
-            Our Programs
+            Our Faculties
           </h2>
           <Link
             href="/faculties"
             className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
           >
-            <span className="relative z-10">More Programs</span>
+            <span className="relative z-10">Explore</span>
 
             <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
 

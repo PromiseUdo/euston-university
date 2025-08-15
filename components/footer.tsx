@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             {/* Second Column */}
             <div className="flex flex-col gap-2">
-              <h4 className="text-white text-[30px] underline leading-[30px] font-heading font-bold  pb-[20px]">
+              <h4 className="text-white text-[30px]  leading-[30px] font-heading font-bold  pb-[20px]">
                 Our Campus
               </h4>
               <a
@@ -105,14 +105,14 @@ const Footer = () => {
             </div>
             {/* Third Column */}
             <div className="flex flex-col gap-2">
-              <h4 className="text-white underline text-[30px] leading-[30px] font-heading font-bold  pb-[20px]">
+              <h4 className="text-white  text-[30px] leading-[30px] font-heading font-bold  pb-[20px]">
                 Academics
               </h4>
               <a
                 href="#"
                 className="text-gray-400 text-[14px] leading-[21px] hover:underline"
               >
-                Canvas
+                Portal
               </a>
               <a
                 href="#"
@@ -147,7 +147,7 @@ const Footer = () => {
             </div>
             {/* Fourth Column */}
             <div className="flex flex-col gap-2">
-              <h4 className="text-white underline text-[30px] leading-[30px] font-heading font-bold  pb-[20px]">
+              <h4 className="text-white  text-[30px] leading-[30px] font-heading font-bold  pb-[20px]">
                 Campus Life
               </h4>
               <a

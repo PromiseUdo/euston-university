@@ -26,7 +26,7 @@ const FunFact: React.FC = () => {
                   Top 10
                 </h2>
                 <p className="mt-2 text-base text-gray-600">
-                  Colleges that Create Futures
+                  Universities that Create Futures
                 </p>
               </div>
 
