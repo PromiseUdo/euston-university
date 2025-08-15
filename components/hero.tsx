@@ -9,7 +9,7 @@ import Link from "next/link";
 const slides = [
   {
     image: "/slide1.webp",
-    headline: "Built to excel and shine",
+    headline: "Inspiring Mids, Shaping Futures",
     subheading: "Euston University",
     primaryButton: "Apply",
     secondaryButton: "Learn more",
@@ -107,26 +107,26 @@ const Hero = () => {
             <div className="col-span-12  md:col-span-4 flex flex-col gap-[1rem] md:gap-[2.4rem]">
               <div className="flex flex-col gap-[0.625rem] md:gap-[1.0625rem]">
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
-                  Undergraduate
+                  Enabling Environment
                 </p>
                 <Link
                   href="/faculties"
                   className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal"
                 >
-                  Browse the undergraduate programs
+                  An engaging, lively learning atmosphere
                 </Link>
 
                 <hr className="py-[10px] max-w-[300px] mt-3 border-gray-500 hover:border-[#890c25] transition-border" />
               </div>
               <div className="flex group flex-col gap-[0.5rem] md:gap-[0.875rem]">
                 <p className="font-body font-medium text-[26px] leading-[15px] tracking-normal">
-                  University News
+                  Result Validation
                 </p>
                 <Link
                   href="/blogs"
                   className="hover:underline font-body font-medium text-[15px] leading-[31.2px] tracking-normal"
                 >
-                  Browse the latest updates
+                  We ensure transparency in our educational system
                 </Link>
                 <hr className="py-[10px] mt-3 max-w-[300px] border-gray-500 group-hover:border-[#890c25] transition-border" />
               </div>
