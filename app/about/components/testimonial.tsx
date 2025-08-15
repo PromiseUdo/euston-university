@@ -42,7 +42,7 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <section className="rts-testimonial py-20 bg-[#f6f6f6]">
+    <section className="rts-testimonial py-20 bg-[#ffffff]">
       <div className="container mx-auto px-4">
         <div className="rts-testimonial-box bg-white border border-[#FFE4EA] p-8 md:p-12 lg:p-16">
           <div className="testimonial-item flex flex-col lg:flex-row gap-8 lg:gap-16">
