@@ -1503,9 +1503,9 @@ const Navbar = () => {
     { href: "/", label: "Portal" },
     { href: "/admissions", label: "Admissions" },
     { href: "/faculties", label: "Faculty" },
+    { href: "/faq", label: "FAQ" },
     { href: "/news", label: "News" },
     { href: "/contact", label: "Contact" },
-    { href: "/faq", label: "FAQ" },
   ];
 
   const aboutLinks = [
