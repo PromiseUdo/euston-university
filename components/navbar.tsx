@@ -1922,6 +1922,7 @@ const Navbar = () => {
   ];
 
   const facultyLinks = [
+    { href: "/faculties", label: "Faculties" },
     { href: "/faculties/faculty-of-allied-health-sciences", label: "Allied Health Sciences" },
     { href: "/faculties/faculty-of-natural-and-applied-sciences", label: "Natural and Applied Sciences" },
     { href: "/faculties/faculty-of-computing", label: "Computing" },
