@@ -11,7 +11,7 @@ const slides = [
   {
     image: "/slide1.webp",
     headline: "Inspiring Minds, Shaping Futures",
-    subheading: "Drason Global Limited",
+    subheading: "Euston University",
     primaryButton: "Apply",
     secondaryButton: "Learn more",
   },
