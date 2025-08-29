@@ -21,23 +21,23 @@ const Main = () => {
       number: "01",
       title: "Create an Account",
       description:
-        "Take the time to explore the diverse range of undergraduate and graduate programs offered at Euston University",
+        "Visit our website at www.eustonuniversity.edu.ng and click on ‘Apply Now’. Sign up to create your account and begin the application process.",
       image: "/our-story1.webp",
       icon: "/07.svg",
     },
     {
       number: "02",
-      title: "Online Application",
+      title: "Complete Online Application",
       description:
-        "Complete and submit your application through our online portal with all required documents",
+        "Fill out the online application form carefully, upload all required documents, and pay the application fee securely through the portal.",
       image: "/our-story3.webp",
       icon: "/06.svg",
     },
     {
       number: "03",
-      title: "Programs & Requirements",
+      title: "Screening & Communication",
       description:
-        "Review specific program requirements and ensure you meet all criteria before applying",
+        "Once your application is submitted, screening details and further instructions will be communicated to you via email.",
       image: "/our-story2.webp",
       icon: "/06.svg",
     },
