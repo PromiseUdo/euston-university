@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import MaxWidthWrapper from "../../../components/max-width-wrapper";
+import MaxWidthWrapper from "./max-width-wrapper";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 

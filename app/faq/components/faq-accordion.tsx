@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface FAQItem {
   question: string;
-  answer: string;
+  answer: string | string[];
 }
 
 interface FAQAccordionProps {
@@ -24,37 +24,29 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className={`
-             border
-            ${activeIndex === index ? "border-[#890c25]" : "border-gray-200"}
-            transition-colors duration-200
-          `}
+          className={`border ${
+            activeIndex === index ? "border-[#890c25]" : "border-gray-200"
+          } transition-colors duration-200`}
         >
           <button
-            className={`
-              flex justify-between items-center w-full p-4
-              text-left font-medium text-lg focus:outline-none
-              rounded-lg
-            `}
+            className="flex justify-between items-center w-full p-4 text-left font-medium text-lg focus:outline-none rounded-lg"
             onClick={() => toggleAccordion(index)}
             aria-expanded={activeIndex === index}
             aria-controls={`faq-content-${index}`}
           >
             <span>{item.question}</span>
-            {/* Changed the icon container to have a circular border */}
             <motion.span
               className="ml-4 h-8 w-8 aspect-square flex items-center justify-center rounded-full border border-gray-300"
               animate={{
                 rotate: activeIndex === index ? 45 : 0,
-                // Added border color change animation
-                borderColor: activeIndex === index ? "#d1d5db" : "#d1d5db",
+                borderColor: "#d1d5db",
               }}
               transition={{ duration: 0.2 }}
             >
               {activeIndex === index ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4" // Made icon slightly smaller to fit in circle
+                  className="h-4 w-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -69,7 +61,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4" // Made icon slightly smaller to fit in circle
+                  className="h-4 w-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -94,7 +86,17 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
                 transition={{ duration: 0.2 }}
                 className="overflow-hidden"
               >
-                <div className="px-4 pb-4 text-gray-600">{item.answer}</div>
+                <div className="px-4 pb-4 text-gray-600">
+                  {Array.isArray(item.answer) ? (
+                    <ul className="list-disc ml-6 space-y-1">
+                      {item.answer.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{item.answer}</p>
+                  )}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

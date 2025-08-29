@@ -147,7 +147,7 @@ const CampusHistorySection: React.FC = () => {
               <X className="w-6 h-6" />
             </button>
             <LiteYoutubeEmbed
-              id=""
+              id="wTDU71RhjHE"
               noCookie={true}
               imageAltText="Campus video thumbnail"
               iframeTitle="Unipix University Campus History Video"

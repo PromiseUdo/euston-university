@@ -1919,14 +1919,24 @@ const Navbar = () => {
     { href: "/about", label: "About Us" },
     { href: "/our-story", label: "Our Story" },
     { href: "/why-choose-us", label: "Why Choose Us" },
+    { href: "/gallery", label: "Gallery" },
   ];
 
   const facultyLinks = [
     { href: "/faculties", label: "Faculties" },
-    { href: "/faculties/faculty-of-allied-health-sciences", label: "Allied Health Sciences" },
-    { href: "/faculties/faculty-of-natural-and-applied-sciences", label: "Natural and Applied Sciences" },
+    {
+      href: "/faculties/faculty-of-allied-health-sciences",
+      label: "Allied Health Sciences",
+    },
+    {
+      href: "/faculties/faculty-of-natural-and-applied-sciences",
+      label: "Natural and Applied Sciences",
+    },
     { href: "/faculties/faculty-of-computing", label: "Computing" },
-    { href: "/faculties/faculty-of-arts-management-and-social-sciences", label: "Arts, Management and Social Sciences" },
+    {
+      href: "/faculties/faculty-of-arts-management-and-social-sciences",
+      label: "Arts, Management and Social Sciences",
+    },
   ];
 
   const socialLinks = [
@@ -1956,9 +1966,7 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <div
-        className={`fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 ${
-          hasScrolled ? "bg-[#890c25] shadow-lg" : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 bg-[#890c25] shadow-lg `}
       >
         <MaxWidthWrapper>
           <div className="flex items-center justify-between">
@@ -2007,7 +2015,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-xl z-50 overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl z-50 overflow-hidden"
                     >
                       {aboutLinks.map((link) => (
                         <Link
@@ -2062,7 +2070,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-xl z-50 overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-48 bg-white  shadow-xl z-50 overflow-hidden"
                     >
                       {facultyLinks.map((link) => (
                         <Link

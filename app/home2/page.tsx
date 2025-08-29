@@ -7,7 +7,7 @@ import CampusHistorySection from "@/components/campus-history-section";
 import CampusLifeSection from "@/components/why-us";
 import FunFact from "../fun-fact";
 import Feedback from "../student-feedback";
-import Hero from "./components/hero";
+import Hero from "../../components/hero";
 
 export default function Home() {
   return (

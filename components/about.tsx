@@ -11,10 +11,9 @@ const About: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       <MaxWidthWrapper>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-center">
           {/* Left Column */}
-          <div className="flex  items-center flex-row gap-4">
-            {/* Left Image */}
+          {/* <div className="flex  items-center flex-row gap-4">
             <div className="flex-1">
               <Image
                 src="/mission1.webp"
@@ -25,12 +24,11 @@ const About: React.FC = () => {
               />
             </div>
 
-            {/* Right Image */}
             <div className="flex-1">
               <Image
                 src="/our-story6.webp"
                 alt="About right"
-                width={716} // Scaled to maintain 3:2 aspect ratio (477 * 1.5)
+                width={716} 
                 height={477}
                 quality={90}
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -38,16 +36,16 @@ const About: React.FC = () => {
               />
             </div>
 
-            {/* <div className="flex-1">
-              <Image
-                src="/our-story6.webp"
-                alt="About right"
-                width={300}
-                height={400}
-                quality={90} // Improve image quality
-                className="w-full h-full  object-cover"
-              />
-            </div> */}
+          </div> */}
+
+          <div className="relative w-full h-[400px] md:h-[600px] lg:h-full">
+            <Image
+              src="/IMG_0001.webp"
+              alt="Our Story"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
 
           {/* Right Column */}
@@ -72,28 +70,7 @@ const About: React.FC = () => {
             </h2>
 
             {/* Description */}
-            <div className="flex items-start gap-3">
-              <Image
-                src="/mission.svg"
-                alt="Mission icon"
-                width={40}
-                height={40}
-                className="w-10 h-10"
-              />
-              <div>
-                <p className="text-base font-medium text-gray-900">
-                  University Mission Statement
-                </p>
-              </div>
-            </div>
-            <p className="text-base text-[#737477] leading-relaxed">
-              At Euston University, we envision a future where knowledge knows
-              no borders and education empowers individuals to transform their
-              immediate environment and the world. Our aim is to become a pillar
-              of academic excellence, engendering a culture of innovation,
-              inclusivity, and social responsibility. We aim to be a leading
-              research-intensive academic institution, renowned for excellence.{" "}
-            </p>
+
             <div className="flex items-start gap-3">
               <Image
                 src="/vission.svg"
@@ -103,9 +80,7 @@ const About: React.FC = () => {
                 className="w-10 h-10"
               />
               <div>
-                <p className="text-base font-medium text-gray-900">
-                  University Vision Achievement
-                </p>
+                <p className="text-base font-medium text-gray-900">Vision</p>
               </div>
             </div>
 
@@ -113,6 +88,26 @@ const About: React.FC = () => {
               Our vision is to be a leading institution that fosters innovation,
               inclusivity, and excellence in education, empowering students to
               thrive in a global society.
+            </p>
+            <div className="flex items-start gap-3">
+              <Image
+                src="/mission.svg"
+                alt="Mission icon"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
+              <div>
+                <p className="text-base font-medium text-gray-900">Mission</p>
+              </div>
+            </div>
+            <p className="text-base text-[#737477] leading-relaxed">
+              At Euston University, we envision a future where knowledge knows
+              no borders and education empowers individuals to transform their
+              immediate environment and the world. Our aim is to become a pillar
+              of academic excellence, engendering a culture of innovation,
+              inclusivity, and social responsibility. We aim to be a leading
+              research-intensive academic institution, renowned for excellence.{" "}
             </p>
 
             {/* Mission and Vision */}
