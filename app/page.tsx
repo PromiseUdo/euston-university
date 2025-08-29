@@ -45,6 +45,7 @@ import Hero from "@/components/hero";
 import FunFact from "./fun-fact";
 import Feedback from "./student-feedback";
 import MasonryGallery from "@/components/masonry-gallery";
+import AdmissionModal from "@/components/admissional-modal";
 
 export default function Home() {
   return (
@@ -65,6 +66,7 @@ export default function Home() {
       {/* insert a parallax image section */}
       <MasonryGallery />
       <BlogSection />
+      <AdmissionModal />
     </main>
   );
 }

@@ -1,0 +1,214 @@
+/* components/AdmissionModal.module.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 16px;
+}
+
+.modalOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  transform: translateY(40px) scale(0.95);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalOverlay.active .modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modalHeader {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  padding: 20px 24px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.modalHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding-right: 40px; /* Space for close button */
+}
+
+.modalBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modalBody p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.modalIcon {
+  font-size: 48px;
+  color: #d32f2f;
+  margin: 12px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalIcon::after {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background: rgba(211, 47, 47, 0.1);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btnApply {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 auto;
+  min-height: 54px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.btnApply:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(211, 47, 47, 0.6);
+}
+
+.btnApply:active {
+  transform: translateY(1px);
+}
+
+.btnApply::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-30deg);
+  top: 0;
+  left: -40px;
+  transition: left 0.5s ease;
+}
+
+.btnApply:hover::after {
+  left: calc(100% + 40px);
+}
+
+.btnClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.btnClose:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 480px) {
+  .modalHeader {
+    padding: 18px 20px;
+  }
+
+  .modalHeader h2 {
+    font-size: 1.3rem;
+  }
+
+  .modalBody {
+    padding: 20px;
+  }
+
+  .btnApply {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    min-height: 50px;
+  }
+
+  .btnClose {
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .modalIcon {
+    font-size: 42px;
+  }
+
+  .modalIcon::after {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 360px) {
+  .modalHeader h2 {
+    font-size: 1.2rem;
+  }
+
+  .btnApply {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+}

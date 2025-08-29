@@ -1,6 +1,7 @@
 import PageHeader from "@/components/page-hero";
 import React from "react";
 import Main from "./components/main";
+import AdmissionModal from "@/components/admissional-modal";
 
 const page = () => {
   const breadcrumbItems = [
@@ -15,7 +16,7 @@ const page = () => {
         breadcrumbItems={breadcrumbItems}
         backgroundImage="/slide3.webp"
       />
-
+      <AdmissionModal />
       <Main />
     </div>
   );
