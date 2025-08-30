@@ -8,12 +8,11 @@ import Image from "next/image";
 
 const Main = () => {
   const requirements = [
-    "₦___ non-refundable application fee or fee waiver request",
-    "JAMB UTME result or equivalent (test optional)",
-    "Completed School Report Form and letter of recommendation from school counselor/principal",
-    "Official secondary school transcript(s) or WAEC/NECO/NABTEB results",
-    "Two letters of recommendation from subject teachers",
-    "Mid-year transcript or updated academic results (due by 15 February)",
+    "Candidates must possess a minimum of five (5) credit passes in relevant subjects, including English Language and Mathematics, at not more than two sittings in WAEC, NECO, or equivalent examinations.",
+    "JAMB UTME candidates must have chosen Euston University as their first or second choice and obtained the prescribed cut-off mark.",
+    "Direct Entry candidates with relevant qualifications may also apply.",
+    "Candidates who did not choose Euston University should urgently do a change of institution via the JAMB portal",
+    
   ];
 
   const applicationSteps = [
@@ -64,7 +63,7 @@ const Main = () => {
             </div>
 
             <h2 className="text-3xl font-bold mb-8 font-heading">
-              Requirements and Deadlines
+              Requirements
             </h2>
 
             {/* Requirements List */}

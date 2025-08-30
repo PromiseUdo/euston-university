@@ -40,7 +40,7 @@ const About: React.FC = () => {
 
           <div className="relative w-full h-[400px] md:h-[600px] lg:h-full">
             <Image
-              src="/IMG_0001.webp"
+              src="/IMG_0016.webp"
               alt="Our Story"
               fill
               className="object-cover"
