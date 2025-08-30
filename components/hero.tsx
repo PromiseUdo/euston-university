@@ -8,14 +8,14 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "/slide1.webp",
+    image: "/slide11.webp",
     headline: "Inspiring Minds, Shaping Futures",
     subheading: "Euston University",
     primaryButton: "Apply",
     secondaryButton: "Learn more",
   },
   {
-    image: "/slide2.webp",
+    image: "/slide22.webp",
     headline: "Designed for the 21st Century Learner",
     subheading: "Euston University",
 

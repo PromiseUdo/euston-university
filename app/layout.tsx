@@ -26,8 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <Head>
-        <link rel="preload" href="/slide1.webp" as="image" />
-        <link rel="preload" href="/slide2.webp" as="image" />
+        <link rel="preload" href="/slide11.webp" as="image" />
+        <link rel="preload" href="/slide22.webp" as="image" />
         <link rel="preload" href="/slide3.webp" as="image" />
       </Head>
 
