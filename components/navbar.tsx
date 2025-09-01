@@ -2615,7 +2615,7 @@ const Navbar = () => {
                   onClick={togglePortal}
                   className="flex items-center gap-1 font-medium text-sm text-white hover:text-gray-200 transition-colors duration-200 px-2 py-1"
                 >
-                  Portal
+                  Student Portal
                   <motion.span
                     animate={{ rotate: portalOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
