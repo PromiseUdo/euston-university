@@ -33,7 +33,7 @@ const CTA = () => {
           </div>
           <div className="">
             <Link
-              href="/contact"
+              href="https://portal.eu.ctlearn.net"
               className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
             >
               <span className="relative z-10">Apply Now</span>

@@ -187,7 +187,7 @@ const HeroSlider = () => {
                 className="flex justify-center gap-4"
               >
                 <Link
-                  href="#"
+                  href="https://portal.eu.ctlearn.net"
                   className="inline-flex gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2.5 text-[14px] text-white tracking-[2px] font-medium overflow-hidden group"
                 >
                   <span className="relative z-10">
