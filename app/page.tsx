@@ -46,10 +46,12 @@ import FunFact from "./fun-fact";
 import Feedback from "./student-feedback";
 import MasonryGallery from "@/components/masonry-gallery";
 import AdmissionModal from "@/components/admissional-modal";
+import PreloadHeroImage from "@/components/preload-hero-slides";
 
 export default function Home() {
   return (
     <main className="">
+      <PreloadHeroImage />
       <Hero />
       <About />
       <FunFact />
