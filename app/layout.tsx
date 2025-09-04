@@ -6,6 +6,7 @@ import { cormorant, dmSans } from "@/lib/fonts";
 import Navbar from "@/components/navbar";
 import ScrollToTop from "@/components/scroll-to-top";
 import Head from "next/head";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className="font-dm-sans flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow flex-1">{children}</main>
+        <Toaster />
         <Footer />
         <ScrollToTop /> {/* Add ScrollToTop here */}
       </body>

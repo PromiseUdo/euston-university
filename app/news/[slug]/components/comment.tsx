@@ -1,49 +1,47 @@
+import Image from "next/image";
 import React from "react";
 
-const CommentForm = () => {
+interface CommentProps {
+  author: string;
+  comment: string;
+  timestamp: string;
+}
+
+const Comment: React.FC<CommentProps> = ({ author, comment, timestamp }) => {
+  const date = new Date(timestamp);
+  const isValidDate = !isNaN(date.getTime());
+
+  const formattedDate = isValidDate
+    ? date.toLocaleDateString("en-AU", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "Africa/Lagos",
+      })
+    : "Date unavailable";
+
+  if (!isValidDate) {
+    console.warn(`Invalid timestamp received: ${timestamp}`);
+  }
+
   return (
-    <>
-      <hr className="py-[20px]" />
-      <div className="flex flex-col gap-[16px]  text-[#292929]">
-        <h4 className="text-[32px] font-heading leading-[38.4px] font-bold text-[#292929]">
-          Share your opinion here!
-        </h4>
-        {/* <p className="text-[15px] leading-[22.5px]">
-          Your email address will not be published. Required fields are marked *
-        </p> */}
-
-        <form className="flex flex-col gap-[16px]">
-          <div className="grid grid-cols-2 gap-4">
-            <input
-              placeholder="Enter your name"
-              type="text"
-              className=" px-4 p-1 w-full border h-[40.5px] border-[#EAEAEA] outline-none"
-            />
-            <input
-              placeholder="Enter your email"
-              type="email"
-              className="px-4 p-1 w-full border h-[40.5px] border-[#EAEAEA] outline-none"
-            />
-          </div>
-          <input
-            placeholder="Enter your subject"
-            type="text"
-            className="px-4 p-1 w-full border h-[40.5px] border-[#EAEAEA] outline-none"
-          />
-          <textarea
-            placeholder="Enter your message"
-            className="px-4 p-1 h-[198px] w-full border border-[#EAEAEA] outline-none"
-          />
-
-          <div>
-            <button className="bg-[#890c25] py-[15px] px-[25px]  leading-[14px] text-center  text-white">
-              Submit Review
-            </button>
-          </div>
-        </form>
+    <div className="w-full flex flex-col gap-[6px]">
+      <div className="flex items-center gap-[11px]">
+        <Image
+          src="/commenter1.png"
+          height={64}
+          width={64}
+          alt="Commenter profile picture"
+          className="rounded-full"
+        />
+        <div className="flex flex-col gap-[5px]">
+          <p className="font-bold text-[#1E1E1E]">{author}</p>
+          <p className="text-[14px] text-[#4E4D4D]">{formattedDate}</p>
+        </div>
       </div>
-    </>
+      <p className="ml-2.5 text-[#1E1E1E] leading-[28px]">{comment}</p>
+    </div>
   );
 };
 
-export default CommentForm;
+export default Comment;

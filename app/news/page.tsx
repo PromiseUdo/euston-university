@@ -1,8 +1,18 @@
 import React from "react";
 import PageHeader from "@/components/page-hero";
 import BlogSection from "./components/blog-section";
+import { getData } from "@/components/blog";
+import { Suspense } from "react";
+import { LoaderCircle } from "lucide-react";
 
-const page = () => {
+const Page = async ({
+  searchParams,
+}: {
+  searchParams: { search?: string };
+}) => {
+  const searchQuery = searchParams.search || "";
+  const [blogPosts] = await getData(searchQuery);
+
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "News", href: "/news", isActive: true },
@@ -15,9 +25,31 @@ const page = () => {
         breadcrumbItems={breadcrumbItems}
         backgroundImage="/news.webp"
       />
-      <BlogSection />
+      {/* <BlogSection /> */}
+
+      <Suspense
+        fallback={
+          // <MaxWidthWrapper>
+          <div className="py-8 flex flex-col items-center gap-4">
+            <LoaderCircle
+              className="h-8 w-8 animate-spin text-primary"
+              aria-hidden="true"
+            />
+            <p className="text-lg font-medium text-foreground">
+              Loading posts...
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Please wait while we fetch the latest posts.
+            </p>
+          </div>
+          // </MaxWidthWrapper>
+        }
+      >
+        <BlogSection posts={blogPosts.items} searchQuery={searchQuery} />
+      </Suspense>
     </div>
   );
 };
+export const revalidate = 60;
 
-export default page;
+export default Page;

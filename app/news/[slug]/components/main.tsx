@@ -1,6 +1,6 @@
 import React from "react";
 
-import CommentForm from "./comment";
+import CommentForm from "./comment-form";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import CategoryList from "./category-list";
 import ContactUs from "./contact-us";
@@ -11,6 +11,9 @@ import Link from "next/link";
 import { Clock, Tags, User } from "lucide-react";
 import Image from "next/image";
 import BlogTagsShareWrapper from "./blog-tags-share";
+import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import CommentsAndList from "./comments";
 
 const downloads = [
   "Brochure Department",
@@ -18,185 +21,93 @@ const downloads = [
   "Journals Departments",
   "Alumni Departments",
 ];
+interface BlogPostClientProps {
+  items: any;
+}
 
-const Main = () => {
+const richTextOptions = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+      const { title, description, file } = node?.data?.target?.fields;
+
+      const { url, contentType } = file;
+      const mimeGroup = contentType?.split("/")[0];
+
+      switch (mimeGroup) {
+        case "image":
+          return (
+            <div className="w-full md:w-[50%] my-4 mx-auto h-[20rem] relative aspect-square">
+              <Image
+                title={title ? title : "ll"}
+                alt={"lkkl"}
+                src={"https:" + url}
+                fill
+                className=" object-cover"
+              />
+            </div>
+          );
+        default:
+          return (
+            <span style={{ backgroundColor: "red", color: "white" }}>
+              {" "}
+              {contentType} embedded asset{" "}
+            </span>
+          );
+      }
+    },
+
+    [BLOCKS.HEADING_2]: (node: any, children: any) => {
+      return (
+        <h2 className="mt-6 text-2xl md:text-3xl font-semibold">{children}</h2>
+      );
+    },
+    [BLOCKS.HEADING_3]: (node: any, children: any) => {
+      return (
+        <h2 className="mt-4 text-base md:text-lg font-semibold">{children}</h2>
+      );
+    },
+    [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
+      return (
+        <p className="mt-2 text-base leading-relaxed font-normal">{children}</p>
+      );
+    },
+    [INLINES.HYPERLINK]: (node: any, children: any) => {
+      return (
+        <a className="hover:underline font-semibold text-voks-secondary">
+          {children}
+        </a>
+      );
+    },
+  },
+};
+
+const Main: React.FC<BlogPostClientProps> = ({ items }) => {
   return (
     <div className="mt-10">
       <MaxWidthWrapper>
         <div className="text-[#292929] w-full grid grid-cols-12">
-          <div className="col-span-9 pr-[20px]">
+          <div className="col-span-12 md:col-span-9 pr-[20px]">
             <div className="w-full flex flex-col p-[10px] gap-[20px] pt-0">
-              <figure className="mb-8">
-                <Image
-                  src={"/our-story1.jpg"}
-                  alt="Blog post featured image"
-                  width={1200}
-                  height={600}
-                  className="w-full h-64 md:h-96 object-cover "
-                />
-              </figure>
-
-              {/* Article Meta */}
-              <div
-                className="flex flex-wrap items-center gap-4 text-gray-600 font-body"
-                role="contentinfo"
-              >
-                <Link
-                  href={""}
-                  className="flex items-center hover:text-blue-600 transition-colors"
-                  aria-label={`View posts by Desmond`}
-                >
-                  <User className="w-4 h-4 mr-2" />
-                  Desmond
-                </Link>
-                <span className="flex items-center">
-                  <Clock className="w-4 h-4 mr-2" />
-                  12/12/2025
-                </span>
-                <Link
-                  href={""}
-                  className="flex items-center hover:text-blue-600 transition-colors"
-                  aria-label={`View posts with tag Education`}
-                >
-                  <Tags className="w-4 h-4 mr-2" />
-                  Education
-                </Link>
+              <div className="w-full !text-[15px]">
+                {documentToReactComponents(
+                  items[0]?.fields?.postBody,
+                  richTextOptions
+                )}
               </div>
-
-              <h2 className=" text-[30px] leading-[30px] font-bold font-heading">
-                A Global MBA For The Next Generation Of Business Leaders
-              </h2>
-
-              <p className="text-[15px] leading-[22.5px]">
-                Quisque consectetur convallis ex, quis tincidunt ligula placerat
-                et. Nam quis leo sed tortor blandit commodo. Quisque ultrices,
-                justo non convallis accumsan, ante magna ornare sapien, quis
-                venenatis diam libero nec orci. Aenean semper interdum odio in
-                dictum. Nunc sed augue lorem. Duis nec sollicitudin orci.
-                Vivamus lectus metus, efficitur non arcu id, pulvinar
-                sollicitudin ipsum. 
-              </p>
-
-              <p className="text-[15px] leading-[22.5px]">
-                Proin ullamcorper pretium orci. Donec nec scelerisque leo. Nam
-                massa dolor, imperdiet nec consequat a, congue id sem. Maecenas
-                malesuada faucibus finibus. Donec vitae libero porttitor,
-                laoreet sapien a, ultrices leo. Duis dictum vestibulum ante
-                vitae ullamcorper. Phasellus ullamcorper, odio vitae eleifend
-                ultricies, lectus orci congue magna vestibulum ante vitaevitae
-                eleifend ultricies.
-              </p>
-
-              <div className="grid grid-cols-6 gap-[20px] h-[255px]">
-                <div className="col-span-4">
-                  {/* insert and image  */}
-                  <img
-                    src="/our-story1.jpg"
-                    alt="Description"
-                    className="w-full h-[255px] object-cover"
-                  />
-                </div>
-                <div className="col-span-2">
-                  <img
-                    src="/our-story2.jpg"
-                    alt="Description"
-                    className="w-full h-[255px] object-cover"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 h-[260px]">
-                <div className="col-span-1">
-                  {/* insert and image  */}
-                  <img
-                    src="/our-story3.jpg"
-                    alt="Description"
-                    className="w-full h-[260px] object-cover"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <p className="text-[15px] leadng-[22.5px]">
-                  Proin ullamcorper pretium orci. Donec nec scelerisque leo. Nam
-                  massa dolor, imperdiet nec consequat a, congue id sem.
-                  Maecenas malesuada faucibus finibus. Donec vitae libero
-                  porttitor, laoreet sapien a, ultrices leo. Duis dictum
-                  vestibulum ante vitae ullamcorper. Donec vitae libero
-                  porttitor, laoreet sapien a, ultrices leo.
-                </p>
-              </div>
-
-              <h3 className="font-heading text-[30px] leading-[30px] font-bold">
-                Latest News Rankings Cap A Strong Year In Academic
-              </h3>
-
-              <div className="">
-                <img
-                  src="/our-story4.jpg"
-                  alt="Our Story Image"
-                  className="h-[563px] w-full object-cover"
-                />
-              </div>
-              <p className="text-[15px] leadng-[22.5px]">
-                Quisque consectetur convallis ex, quis tincidunt ligula placerat
-                et. Nam quis leo sed tortor blandit commodo. Quisque ultrices,
-                justo non convallis accumsan, ante magna ornare sapien, quis
-                venenatis diam libero nec orci. Aenean semper interdum odio in
-                dictum. Nunc sed augue lorem. Duis nec sollicitudin orci.
-                Vivamus lectus metus, efficitur non arcu id, pulvinar
-                sollicitudin ipsum. 
-              </p>
-
-              {/* tags */}
-              {/* <div className="flex justify-between">
-                <div className="flex flex-col gap-[20px]">
-                  <h3 className="font-heading text-[24px] leading-[28.8px]">
-                    Tags:
-                  </h3>
-                  <p className="text-[15px] leading-[22.5px] text-[#009D47]">
-                    Seminar,Student
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-[20px] content-between">
-                  <h3 className="font-heading text-[24px] leading-[28.8px]">
-                    Share:
-                  </h3>
-                  <div className="flex items-between gap-[10px]">
-                    <button className="bg-[#3B5999] text-white  px-4 outline-none flex items-center gap-2">
-                      <img
-                        src="/facebook-white.png"
-                        alt="Facebook"
-                        className="w-[15px] h-[15px]"
-                      />
-                      <span>Facebook</span>
-                    </button>
-                    <button className="bg-[#55ACEE]  text-white px-4 py-2 outline-none flex items-center gap-2">
-                      <img
-                        src="/twitter-white.png"
-                        alt="Twitter"
-                        className="w-[15px] h-[15px]"
-                      />
-                      <span>Twitter</span>
-                    </button>
-                    <button className="bg-[#0077B5]  text-white px-4 outline-none flex items-center gap-2">
-                      <img
-                        src="/linkedin-white.png"
-                        alt="Facebook"
-                        className="w-[15px] h-[15px]"
-                      />
-                      <span> Linkedin</span>
-                    </button>
-                  </div>
-                </div>
-              </div> */}
-              <BlogTagsShareWrapper />
+              <BlogTagsShareWrapper
+                slug={items[0]?.fields?.slug}
+                title={items[0]?.fields?.title}
+                tags={items[0]?.fields?.tags}
+                category={items[0]?.fields?.category}
+              />
             </div>
-            <CommentForm />
+            <CommentsAndList postId={items[0]?.sys?.id} />
+
+            {/* <CommentForm postId={items[0]?.sys?.id} /> */}
             {/* <LatestNews /> */}
           </div>
           {/* Keep col 2 fixed on the screen in such a way that column 1 will completly to the end before this column 2 scroll togehter with it again*/}
-          <div className="col-span-3 p-[10px] pt-0 pb-[127.09px] flex flex-col">
+          <div className="col-span-12 md:col-span-3 p-[10px] pt-0 pb-[127.09px] flex flex-col">
             <div className="sticky top-[20px] flex flex-col gap-[30px]">
               <CategoryMenu />
               <DepartmentContactInfo
