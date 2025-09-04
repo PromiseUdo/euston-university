@@ -26,7 +26,7 @@ const PostCard = ({ post }: PostCardProps) => {
 
   // Safely access slug, fallback to a default or disable link
   const slug = post?.fields?.slug || null;
-  const href = slug ? `/blog/${slug}` : "#"; // Fallback to "#" if no slug
+  const href = slug ? `/news/${slug}` : "#"; // Fallback to "#" if no slug
 
   const readTime = readingTime(postBodyText).text;
 
