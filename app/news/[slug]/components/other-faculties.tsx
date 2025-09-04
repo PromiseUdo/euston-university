@@ -41,7 +41,7 @@ const OtherFaculties: React.FC = () => {
             >
               <Link
                 href={item.href}
-                className="flex items-center text-gray-600 hover:text-[#890c25] transition-colors duration-300"
+                className="flex items-center text-gray-700 hover:text-[#890c25] transition-colors duration-300"
                 aria-label={item.label}
               >
                 <span className="mr-2.5">
