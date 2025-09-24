@@ -30,7 +30,7 @@ import Main from "./components/main";
 import AdmissionModal from "@/components/admissional-modal";
 import { createClient } from "contentful";
 
-export async function getData(searchQuery: string = "") {
+async function getData(searchQuery: string = "") {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID!,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY!,
