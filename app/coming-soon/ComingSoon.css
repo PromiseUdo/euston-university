@@ -1,0 +1,210 @@
+/* Import a modern font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+.parent {
+  min-height: 100vh;
+  background-image: url("/IMG_0001.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgba(137, 12, 37, 0.8) 0%,
+    rgba(137, 12, 37, 0.6) 50%,
+    rgba(137, 12, 37, 0.4) 100%
+  );
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  position: relative;
+}
+
+.back-button {
+  /* position: absolute; */
+  /* top: 20px;
+  left: 20px; */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #ffffff;
+  color: #890c25;
+  transform: translateY(-2px);
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: #ffd700; /* Gold accent for emphasis */
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.time-block {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 80px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+.time-block:hover {
+  transform: scale(1.05);
+}
+
+.time-block span:first-child {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.time-block span:last-child {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.newsletter-form input::placeholder {
+  color: #666;
+}
+
+.newsletter-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background: #ffd700;
+  color: #890c25;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #e6c200;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .timer {
+    gap: 1rem;
+  }
+
+  .time-block {
+    min-width: 60px;
+    padding: 0.8rem;
+  }
+
+  .time-block span:first-child {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .back-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .timer {
+    flex-wrap: wrap;
+  }
+}

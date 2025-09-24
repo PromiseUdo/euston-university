@@ -1,14 +1,23 @@
+"use client";
 import React from "react";
 import MaxWidthWrapper from "./max-width-wrapper";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 import { FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa6"; // Font Awesome 6 icons
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  // conditionally apply mt-20 if NOT on /coming-soon
+  const containerClasses = `w-full bg-[#181818] pt-[30px] ${
+    pathname !== "/coming-soon" ? "mt-20" : ""
+  }`;
+
   return (
     <>
-      <div className="w-full mt-20 bg-[#181818] pt-[30px] ">
+      <div className={containerClasses}>
         <MaxWidthWrapper>
           <div className="relative py-[10px] pt-[20px] pb-[50px]  flex items-center justify-center">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center w-full">
