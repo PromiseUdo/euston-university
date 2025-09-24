@@ -18,7 +18,7 @@ const AdmissionModal: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       toggleModal(true);
-    }, 3000);
+    }, 6000);
 
     return () => clearTimeout(timer); // Cleanup on unmount
   }, [toggleModal]);
