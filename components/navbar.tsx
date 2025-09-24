@@ -135,11 +135,8 @@ const Navbar = () => {
   ];
 
   const portalLinks = [
-    // { href: "https://portal.eu.ctlearn.net", label: "Admissional Portal" },
     { href: "/coming-soon", label: "Admissional Portal" },
-    // { href: "https://myEU.ctlearn.net", label: "myEU VLMS" },
     { href: "/coming-soon", label: "myEU VLMS" },
-    { href: "https://edupay.eu.ctlearn.net", label: "Edu Pay" },
     { href: "/coming-soon", label: "Edu Pay" },
   ];
 

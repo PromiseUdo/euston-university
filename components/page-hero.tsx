@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import MaxWidthWrapper from "./max-width-wrapper";
 import Breadcrumb from "./breadcrumb";

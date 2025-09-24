@@ -1,5 +1,3 @@
-'use client'
-
 import React from "react";
 import { ArrowRight, User, Calendar } from "lucide-react";
 import MaxWidthWrapper from "./max-width-wrapper";

@@ -5,63 +5,6 @@ import DepartmentContactInfo from "@/app/news/[slug]/components/department-conta
 import OtherFaculties from "@/app/news/[slug]/components/other-faculties";
 import FAQAccordion from "./faq-accordion";
 
-// export const faqItems = [
-//   {
-//     question: "Where is Euston University located?",
-//     answer:
-//       "Euston University is located in Abakaliki, the capital city of Ebonyi State, Nigeria. The serene and accessible environment offers a conducive atmosphere for academic pursuits and personal development.",
-//   },
-//   {
-//     question:
-//       "Is Euston University approved by the National Universities Commission (NUC)?",
-//     answer:
-//       "Yes. Euston University has been officially approved and licensed by the National Universities Commission (NUC) to operate as a private university in Nigeria. All our programmes are designed to meet the academic standards set by the NUC.",
-//   },
-//   {
-//     question: "What academic programmes are offered at Euston University?",
-//     answer: [
-//       "Faculty of Allied Health Sciences – BNSc Nursing Science",
-//       "Faculty of Natural and Applied Sciences – BSc Biology, BSc Microbiology, BSc Chemistry, BSc Biochemistry, BSc Mathematics, BSc Statistics, BSc Physics, BSc Physics with Electronics, BSc Forensic Science",
-//       "Faculty of Computing – BSc Computer Science, BSc Cybersecurity, BSc Data Science, BSc Information and Communications Technology (ICT), BSc Information Systems, BSc Information Technology, BSc Software Engineering, BSc Artificial Intelligence",
-//       "Faculty of Arts, Management and Social Sciences – BSc Accounting, BSc Economics, BSc Finance, BSc Entrepreneurship and Innovation, BSc Business Administration, BSc Public Administration, BSc Procurement Management, BSc Logistics and Supply Chain Management, BSc Criminology and Security Studies, BSc Hospitality and Tourism Management, BA History and International Studies, BA French",
-//     ],
-//   },
-//   {
-//     question: "What makes Euston University unique?",
-//     answer:
-//       "Our uniqueness lies in our vision-driven leadership, innovative curriculum, global partnerships, and deep commitment to social impact. Inspired by the humanitarian legacy of our founder, we are a university that fuses academic excellence with empathy, purpose, and action.",
-//   },
-//   {
-//     question: "What are the facilities on campus like?",
-//     answer: [
-//       "State-of-the-art classrooms and ICT-enabled lecture halls",
-//       "A modern library with physical and digital resources",
-//       "Health and wellness facilities",
-//       "Fully equipped science and tech laboratories",
-//       "Student hostels",
-//       "Entrepreneurial and vocational centres",
-//       "A chapel and multipurpose hall",
-//     ],
-//   },
-//   {
-//     question: "How can I contact the university for inquiries?",
-//     answer: [
-//       "Email: info@eustonuniversity.edu.ng",
-//       "Phone: +234 (0)813 886 3143",
-//       "Visit: Euston University Campus, km 10, Abakaliki–Enugu Expressway, Ebonyi State",
-//     ],
-//   },
-//   {
-//     question: "What security measures are in place on campus?",
-//     answer: [
-//       "24/7 security surveillance",
-//       "Secure campus access control",
-//       "Trained security personnel",
-//       "Emergency response systems",
-//     ],
-//   },
-// ];
-
 export const faqItems = [
   {
     question: "Where is Euston University located?",
@@ -198,6 +141,7 @@ const Main = () => {
           <div className="mt-12 md:mt-0 col-span-12 md:col-span-3 p-[10px] pt-0 pb-[127.09px] flex flex-col">
             <div className="sticky top-[85px] flex flex-col gap-[30px]">
               <CategoryMenu />
+              k8
               <DepartmentContactInfo
                 department="B.A. in Africana Studies"
                 email="info@eustonuniversity.edu.ng"

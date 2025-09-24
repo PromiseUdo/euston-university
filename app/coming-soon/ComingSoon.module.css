@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 
-.coming-soon {
+.comingSoon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@
   position: relative;
 }
 
-.back-button {
+.backButton {
   /* position: absolute; */
   /* top: 20px;
   left: 20px; */
@@ -61,18 +61,18 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-h1 {
+.title {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
-h1 span {
+.text {
   color: #ffd700; /* Gold accent for emphasis */
 }
 
-p {
+.desc {
   font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 2rem;
@@ -162,11 +162,11 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  h1 {
+  .title {
     font-size: 2.5rem;
   }
 
-  p {
+  .desc {
     font-size: 1rem;
   }
 
@@ -200,7 +200,7 @@ p {
 }
 
 @media (max-width: 480px) {
-  h1 {
+  .title {
     font-size: 2rem;
   }
 

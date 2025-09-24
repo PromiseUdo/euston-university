@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "./ComingSoon.css";
+import styles from "./ComingSoon.module.css"; // Import CSS Module
 import Link from "next/link";
 
 const ComingSoon = () => {
@@ -38,42 +38,17 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <div className="parent">
-      <div className="coming-soon">
-        <div className="content">
-          <h1>
-            <span>Coming Soon</span>
+    <div className={styles.parent}>
+      <div className={styles.comingSoon}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>
+            <span className={styles.text}>Coming Soon</span>
           </h1>
-          <p>This page is under construction. Stay tuned!</p>
-          {/* <div className="timer">
-            <div className="time-block">
-              <span>{timeLeft.days}</span>
-              <span>Days</span>
-            </div>
-            <div className="time-block">
-              <span>{timeLeft.hours}</span>
-              <span>Hours</span>
-            </div>
-            <div className="time-block">
-              <span>{timeLeft.minutes}</span>
-              <span>Minutes</span>
-            </div>
-            <div className="time-block">
-              <span>{timeLeft.seconds}</span>
-              <span>Seconds</span>
-            </div>
-          </div> */}
-          {/* <form className="newsletter-form">
-            <input
-              type="email"
-              placeholder="Enter your email for updates"
-              required
-              aria-label="Email for newsletter"
-            />
-            <button type="submit">Notify Me</button>
-          </form> */}
+          <p className={styles.desc}>
+            This page is under construction. Stay tuned!
+          </p>
         </div>
-        <Link href="/" className="back-button">
+        <Link href="/" className={styles.backButton}>
           ← Back to Home
         </Link>
       </div>

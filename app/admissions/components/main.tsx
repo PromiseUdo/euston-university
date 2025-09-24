@@ -1,18 +1,18 @@
 "use client";
+
 import React from "react";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
-import CategoryMenu from "@/app/news/[slug]/components/category-menu";
 import DepartmentContactInfo from "@/app/news/[slug]/components/department-contact-info";
 import OtherFaculties from "@/app/news/[slug]/components/other-faculties";
 import Image from "next/image";
+import CategoryMenu from "./category-menu";
 
-const Main = () => {
+const Main = ({ blogPosts }: { blogPosts: any }) => {
   const requirements = [
     "Candidates must possess a minimum of five (5) credit passes in relevant subjects, including English Language and Mathematics, at not more than two sittings in WAEC, NECO, or equivalent examinations.",
     "JAMB UTME candidates must have chosen Euston University as their first or second choice and obtained the prescribed cut-off mark.",
     "Direct Entry candidates with relevant qualifications may also apply.",
     "Candidates who did not choose Euston University should urgently do a change of institution via the JAMB portal",
-    
   ];
 
   const applicationSteps = [
@@ -181,7 +181,7 @@ const Main = () => {
 
           <div className="mt-12 md:mt-0 col-span-12 md:col-span-3 p-[10px] pt-0 pb-[127.09px] flex flex-col">
             <div className="sticky top-[85px] flex flex-col gap-[30px]">
-              <CategoryMenu />
+              <CategoryMenu blogPosts={blogPosts} />{" "}
               <DepartmentContactInfo
                 department="B.A. in Africana Studies"
                 email="info@eustonuniversity.edu.ng"

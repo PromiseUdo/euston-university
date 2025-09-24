@@ -1,37 +1,8 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { createClient } from "contentful";
 
-export async function getData(searchQuery: string = "") {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID!,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY!,
-  });
-
-  const query: any = {
-    content_type: "blogPost",
-  };
-
-  // Add search filter if query exists
-  if (searchQuery.trim()) {
-    query["query"] = searchQuery.trim();
-  }
-
-  const blogPosts = await client.getEntries(query);
-
-  // Sort all posts by createdAt (newest first)
-  blogPosts.items.sort(
-    (a, b) => Date.parse(b.sys.createdAt) - Date.parse(a.sys.createdAt)
-  );
-
-  return [blogPosts];
-}
-
-const CategoryMenu: React.FC = async () => {
-  const [blogPosts] = await getData();
-
-  // 🔹 Categories list from posts
+const CategoryMenu: React.FC<{ blogPosts: any }> = ({ blogPosts }) => {
   const categories: string[] = [
     ...Array.from(
       new Set<string>(
