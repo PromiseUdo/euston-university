@@ -5,7 +5,6 @@ import Footer from "@/components/footer";
 import { cormorant, dmSans } from "@/lib/fonts";
 import Navbar from "@/components/navbar";
 import ScrollToTop from "@/components/scroll-to-top";
-import Head from "next/head";
 import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -67,11 +66,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
-      <Head>
-        <link rel="preload" href="/slide11.webp" as="image" />
+   
+
+
+       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="preconnect" href="https://img.youtube.com" />
+<link rel="preload" href="/slide11.webp" as="image" />
         <link rel="preload" href="/slide22.webp" as="image" />
         <link rel="preload" href="/slide3.webp" as="image" />
-      </Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity", // ✅ correct type
+              name: "Euston University",
+              description:
+                "Official website of Euston University, supporting education and innovation.",
+              url: "https://eustonuniversity.org/",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Abakaliki",
+                addressRegion: "South East",
+                addressCountry: "Nigeria",
+              },
+              telephone: "+2348138863143", // Replace with actual phone
+              serviceType: [
+                "Tertiary Education",
+                "University",
+                "Technology",
+                "Undergraduate Degree in Nigeria",
+              ],
+            }),
+          }}
+        />
+      </head>
 
       <body className="font-dm-sans flex flex-col min-h-screen">
         <Navbar />
