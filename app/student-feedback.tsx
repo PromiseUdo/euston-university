@@ -76,7 +76,7 @@ const Feedback: React.FC = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded shadow-md p-6">
+                <div className="bg-white rounded-none shadow-md p-6">
                   {/* Rating Stars */}
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: 5 }).map((_, i) => (
