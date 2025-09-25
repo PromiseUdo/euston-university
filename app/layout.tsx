@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
     description:
       "Official website of Euston University, supporting education and innovation.",
-    images: ["/slide11.webp"],
+    images: ["/favicon.png"],
     url: "https://www.eustonuniversity.org/",
   },
 };
