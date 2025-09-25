@@ -13,24 +13,52 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 
+// export const metadata: Metadata = {
+//   title:
+//     "Euston University",
+//   description:
+//     "Official website of Euston University, supporting education and innovation.",
+//   icons: {
+//     icon: "/favicon.png",
+//   },
+//   openGraph: {
+//     title: "Euston University",
+
+//     description:
+//       "Official website of Euston University, supporting education and innovation.",
+//     images: ["/favicon.png"],
+//     url: "https://www.eustonuniversity.org/",
+//   },
+// };
+
+
 export const metadata: Metadata = {
-  title:
-    "Euston University",
-  description:
-    "Official website of Euston University, supporting education and innovation.",
+  title: "Euston University",
+  description: "Official website of Euston University, supporting education and innovation.",
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
     title: "Euston University",
-
-    description:
-      "Official website of Euston University, supporting education and innovation.",
-    images: ["/favicon.png"],
+    description: "Official website of Euston University, supporting education and innovation.",
     url: "https://www.eustonuniversity.org/",
+    siteName: "Euston University",
+    images: [
+      {
+        url: "/favicon.png", // ✅ big preview image
+        width: 1200,
+        height: 630,
+        alt: "Euston University Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image", // ✅ ensures big preview on Twitter/WhatsApp
+    title: "Euston University",
+    description: "Official website of Euston University, supporting education and innovation.",
+    images: ["/favicon.png"],
   },
 };
-
 
 export default function RootLayout({
   children,
