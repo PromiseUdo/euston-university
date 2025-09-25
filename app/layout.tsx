@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Official website of Euston University, supporting education and innovation.",
+    title: "Euston University",
 
     description:
       "Official website of Euston University, supporting education and innovation.",
