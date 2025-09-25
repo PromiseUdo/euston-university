@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Euston University",
     images: [
       {
-        url: "/favicon.png", // ✅ big preview image
+        url: "/slide11.webp", // ✅ big preview image
         width: 1200,
         height: 630,
         alt: "Euston University Logo",
