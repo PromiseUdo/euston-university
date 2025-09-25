@@ -127,7 +127,7 @@ const FacultySection: React.FC = () => {
         <div className="text-center mt-12">
           <Link
             href="/faculties"
-            className="inline-flex items-center px-6 py-3 bg-[#890c25] text-primary-foreground font-semibold font-body fill-from-left "
+            className="inline-flex items-center px-6 py-3 rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] text-primary-foreground font-semibold font-body fill-from-left "
             aria-label="Load more faculty and staff"
           >
             Load More

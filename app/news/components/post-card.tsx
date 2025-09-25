@@ -69,7 +69,7 @@ const PostCard = ({ post, className, readTime }: PostCardProps) => {
         <div className="mt-auto">
           <Link
             href={href}
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white uppercase tracking-wider transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] font-semibold text-white uppercase tracking-wider transition-colors"
             aria-label={`Read more about ${post?.fields?.title}`}
           >
             Read More

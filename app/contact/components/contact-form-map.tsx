@@ -77,7 +77,7 @@ const ContactFormMap: React.FC = () => {
               </div>
 
               <div className="w-full">
-                <button className="bg-[#890c25] text-white w-full py-[10px] tracking-[2px] text-[14px] uppercase">
+                <button className="rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] text-white w-full py-[10px] tracking-[2px] text-[14px] uppercase">
                   Send message
                 </button>
               </div>
