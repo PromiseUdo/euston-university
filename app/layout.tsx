@@ -10,14 +10,27 @@ import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
+
 export const metadata: Metadata = {
-  title: "Euston University",
+  title:
+    "Euston University",
   description:
     "Official website of Euston University, supporting education and innovation.",
   icons: {
     icon: "/favicon.png",
   },
+  openGraph: {
+    title: "Official website of Euston University, supporting education and innovation.",
+
+    description:
+      "Official website of Euston University, supporting education and innovation.",
+    images: ["/slide11.webp"],
+    url: "https://www.eustonuniversity.org/",
+  },
 };
+
 
 export default function RootLayout({
   children,
