@@ -72,7 +72,7 @@ const BlogSection: React.FC = async () => {
           </div>
           <Link
             href="/news"
-            className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white uppercase tracking-wider transition-colors"
+            className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] font-semibold text-white uppercase tracking-wider transition-colors"
           >
             <span className="relative z-10">View All</span>
             <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>

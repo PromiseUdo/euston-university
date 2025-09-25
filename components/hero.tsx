@@ -87,7 +87,7 @@ const Hero = () => {
                     {/* <button className="text-center uppercase bg-[#890c25] h-[44px] px-12 py-2 text-[14px] text-[#ffffff] tracking-[2px] font-medium">
                       {slides[currentSlide].primaryButton}
                     </button> */}
-                    <button className="inline-flex  gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2.5 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group">
+                    <button className="inline-flex rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2.5 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group">
                       <span className="relative z-10">
                         {slides[currentSlide].primaryButton}
                       </span>

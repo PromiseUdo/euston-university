@@ -155,7 +155,7 @@ const About: React.FC = () => {
 
             <Link
               href="/faculties"
-              className="inline-flex relative w-fit items-center gap-2 text-center uppercase bg-[#890c25] h-[44px] px-6 py-3 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group"
+              className="inline-flex  relative w-fit items-center gap-2 text-center uppercase  rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] h-[44px] px-6 py-3 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group"
             >
               <span className="relative z-10">View Our Programs</span>
               <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>

@@ -54,7 +54,7 @@ const ProgramSection: React.FC = () => {
           </h2>
           <Link
             href="/faculties"
-            className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white  uppercase tracking-wider  transition-colors"
+            className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] font-semibold text-white  uppercase tracking-wider  transition-colors"
           >
             <span className="relative z-10">Explore</span>
 
