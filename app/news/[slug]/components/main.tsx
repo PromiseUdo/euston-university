@@ -25,62 +25,133 @@ interface BlogPostClientProps {
   items: any;
 }
 
+// const richTextOptions = {
+//   renderNode: {
+//     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+//       const { title, description, file } = node?.data?.target?.fields;
+
+//       const { url, contentType } = file;
+//       const mimeGroup = contentType?.split("/")[0];
+
+//       switch (mimeGroup) {
+//         case "image":
+//           return (
+//             <div className="w-full md:w-[50%] my-4 mx-auto h-[20rem] relative aspect-square">
+//               <Image
+//                 title={title ? title : "ll"}
+//                 alt={"lkkl"}
+//                 src={"https:" + url}
+//                 fill
+//                 className=" object-cover"
+//               />
+//             </div>
+//           );
+//         default:
+//           return (
+//             <span style={{ backgroundColor: "red", color: "white" }}>
+//               {" "}
+//               {contentType} embedded asset{" "}
+//             </span>
+//           );
+//       }
+//     },
+
+//     [BLOCKS.HEADING_2]: (node: any, children: any) => {
+//       return (
+//         <h2 className="mt-6 text-2xl md:text-3xl font-semibold">{children}</h2>
+//       );
+//     },
+//     [BLOCKS.HEADING_3]: (node: any, children: any) => {
+//       return (
+//         <h2 className="mt-4 text-base md:text-lg font-semibold">{children}</h2>
+//       );
+//     },
+//     [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
+//       return (
+//         <p className="mt-2 text-base leading-relaxed font-normal">{children}</p>
+//       );
+//     },
+//     [INLINES.HYPERLINK]: (node: any, children: any) => {
+//       return (
+//         <a className="hover:underline font-semibold text-voks-secondary">
+//           {children}
+//         </a>
+//       );
+//     },
+//   },
+// };
+
 const richTextOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-      const { title, description, file } = node?.data?.target?.fields;
-
-      const { url, contentType } = file;
+      const { title, description, file } = node?.data?.target?.fields || {};
+      const { url, contentType } = file || {};
       const mimeGroup = contentType?.split("/")[0];
 
       switch (mimeGroup) {
         case "image":
           return (
-            <div className="w-full md:w-[50%] my-4 mx-auto h-[20rem] relative aspect-square">
+            <div className="w-full md:w-[50%] my-4 mx-auto relative aspect-square">
               <Image
-                title={title ? title : "ll"}
-                alt={"lkkl"}
+                title={title || ""}
+                alt={description || title || "Embedded image"}
                 src={"https:" + url}
                 fill
-                className=" object-cover"
+                className="object-cover rounded-lg"
               />
             </div>
           );
         default:
           return (
-            <span style={{ backgroundColor: "red", color: "white" }}>
-              {" "}
-              {contentType} embedded asset{" "}
+            <span className="bg-red-500 text-white px-2 py-1 rounded">
+              {contentType} embedded asset
             </span>
           );
       }
     },
 
-    [BLOCKS.HEADING_2]: (node: any, children: any) => {
-      return (
-        <h2 className="mt-6 text-2xl md:text-3xl font-semibold">{children}</h2>
-      );
-    },
-    [BLOCKS.HEADING_3]: (node: any, children: any) => {
-      return (
-        <h2 className="mt-4 text-base md:text-lg font-semibold">{children}</h2>
-      );
-    },
-    [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-      return (
-        <p className="mt-2 text-base leading-relaxed font-normal">{children}</p>
-      );
-    },
-    [INLINES.HYPERLINK]: (node: any, children: any) => {
-      return (
-        <a className="hover:underline font-semibold text-voks-secondary">
-          {children}
-        </a>
-      );
-    },
+    // Headings
+    [BLOCKS.HEADING_2]: (node: any, children: any) => (
+      <h2 className="mt-6 mb-2 text-2xl md:text-3xl font-semibold">
+        {children}
+      </h2>
+    ),
+    [BLOCKS.HEADING_3]: (node: any, children: any) => (
+      <h3 className="mt-4 mb-2 text-lg md:text-xl font-semibold">{children}</h3>
+    ),
+
+    // Paragraphs
+    [BLOCKS.PARAGRAPH]: (node: any, children: any) => (
+      <p className="mt-2 mb-4 text-base leading-relaxed whitespace-pre-line">
+        {children}
+      </p>
+    ),
+
+    // Lists
+    [BLOCKS.UL_LIST]: (node: any, children: any) => (
+      <ul className="list-disc list-outside pl-6 my-4 space-y-2">{children}</ul>
+    ),
+    [BLOCKS.OL_LIST]: (node: any, children: any) => (
+      <ol className="list-decimal list-outside pl-6 my-4 space-y-2">
+        {children}
+      </ol>
+    ),
+    [BLOCKS.LIST_ITEM]: (node: any, children: any) => (
+      <li className="leading-relaxed">{children}</li>
+    ),
+    // Inline links
+    [INLINES.HYPERLINK]: (node: any, children: any) => (
+      <a
+        href={node.data.uri}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-voks-secondary hover:underline font-semibold"
+      >
+        {children}
+      </a>
+    ),
   },
 };
-
 const Main: React.FC<BlogPostClientProps> = ({ items }) => {
   return (
     <div className="mt-10">
