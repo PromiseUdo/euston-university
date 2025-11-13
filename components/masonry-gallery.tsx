@@ -1,355 +1,59 @@
-// "use client";
-// import React from "react";
-// import Masonry from "react-masonry-css";
-// import MaxWidthWrapper from "./max-width-wrapper";
-// import Link from "next/link";
-// import { ArrowRight } from "lucide-react";
+'use client';
 
-// const galleryItems = [
-//   {
-//     id: 1,
-//     src: "/IMG_0173.webp",
-//     alt: "Gallery image 1",
-//     title: "Project 1",
-//     aspectRatio: "600/400",
-//   },
-//   {
-//     id: 2,
-//     src: "/IMG_0060.webp",
-//     alt: "Gallery image 2",
-//     title: "Project 2",
-//     aspectRatio: "600/800",
-//   },
-//   {
-//     id: 3,
-//     src: "/IMG_0098.webp",
-//     alt: "Gallery image 3",
-//     title: "Project 3",
-//     aspectRatio: "600/600",
-//   },
-//   {
-//     id: 4,
-//     src: "/IMG_0135.webp",
-//     alt: "Gallery image 4",
-//     title: "Project 4",
-//     aspectRatio: "600/900",
-//   },
-//   {
-//     id: 5,
-//     src: "/IMG_0014.webp",
-//     alt: "Gallery image 5",
-//     title: "Project 5",
-//     aspectRatio: "600/500",
-//   },
-//   {
-//     id: 6,
-//     src: "/IMG_0216.webp",
-//     alt: "Gallery image 6",
-//     title: "Project 6",
-//     aspectRatio: "600/700",
-//   },
-// ];
-
-// const MasonryGallery = () => {
-//   const breakpointCols = {
-//     default: 3,
-//     1100: 3,
-//     700: 2,
-//   };
-
-//   return (
-//     <section className="py-16 bg-gray-50">
-//       <MaxWidthWrapper>
-//         {/* Header */}
-//         <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
-//           <div className="text-center sm:text-left mb-4 sm:mb-0">
-//             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading mb-4">
-//               Gallery
-//             </h2>
-//             <p className="text-base md:text-lg text-gray-600">
-//               Moments That Define Our Legacy
-//             </p>
-//           </div>
-//           <Link
-//             href="/gallery"
-//             className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white uppercase tracking-wider transition-colors"
-//           >
-//             <span className="relative z-10">View All</span>
-//             <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
-//             <ArrowRight className="-rotate-45 w-4 h-4 relative z-10" />
-//           </Link>
-//         </div>
-
-//         {/* ✅ Masonry for tablet+ */}
-//         <div className="hidden sm:block">
-//           <Masonry
-//             breakpointCols={breakpointCols}
-//             className="flex -ml-4 w-auto"
-//             columnClassName="pl-4"
-//           >
-//             {galleryItems.map((item) => (
-//               <div key={item.id} className="mb-4 group">
-//                 <div
-//                   className="relative w-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300"
-//                   style={{ aspectRatio: item.aspectRatio }}
-//                 >
-//                   <img
-//                     src={item.src}
-//                     alt={item.alt}
-//                     loading="lazy"
-//                     className="absolute inset-0 w-full h-full object-cover"
-//                   />
-//                   <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-//                 </div>
-//               </div>
-//             ))}
-//           </Masonry>
-//         </div>
-
-//         {/* ✅ Simple 2-col grid for mobile */}
-//         <div className="grid grid-cols-2 gap-4 sm:hidden">
-//           {galleryItems.map((item) => (
-//             <div
-//               key={item.id}
-//               className="relative aspect-square overflow-hidden shadow-md"
-//             >
-//               <img
-//                 src={item.src}
-//                 alt={item.alt}
-//                 loading="lazy"
-//                 className="w-full h-full object-cover"
-//               />
-//             </div>
-//           ))}
-//         </div>
-//       </MaxWidthWrapper>
-//     </section>
-//   );
-// };
-
-// export default MasonryGallery;
-
-// "use client";
-
-// import React, { useState } from "react";
-// import Masonry from "react-masonry-css";
-// import MaxWidthWrapper from "./max-width-wrapper";
-// import Link from "next/link";
-// import { ArrowRight } from "lucide-react";
-
-// // ✅ Import Yet Another React Lightbox
-// import Lightbox from "yet-another-react-lightbox";
-// import "yet-another-react-lightbox/styles.css";
-
-// const galleryItems = [
-//   {
-//     id: 1,
-//     src: "/IMG_0173.webp",
-//     alt: "Gallery image 1",
-//     title: "Project 1",
-//     aspectRatio: "600/400",
-//   },
-//   {
-//     id: 2,
-//     src: "/IMG_0060.webp",
-//     alt: "Gallery image 2",
-//     title: "Project 2",
-//     aspectRatio: "600/800",
-//   },
-//   {
-//     id: 3,
-//     src: "/IMG_0098.webp",
-//     alt: "Gallery image 3",
-//     title: "Project 3",
-//     aspectRatio: "600/600",
-//   },
-//   {
-//     id: 4,
-//     src: "/IMG_0135.webp",
-//     alt: "Gallery image 4",
-//     title: "Project 4",
-//     aspectRatio: "600/900",
-//   },
-//   {
-//     id: 5,
-//     src: "/IMG_0014.webp",
-//     alt: "Gallery image 5",
-//     title: "Project 5",
-//     aspectRatio: "600/500",
-//   },
-//   {
-//     id: 6,
-//     src: "/IMG_0216.webp",
-//     alt: "Gallery image 6",
-//     title: "Project 6",
-//     aspectRatio: "600/700",
-//   },
-// ];
-
-// const MasonryGallery = () => {
-//   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-
-//   const breakpointCols = {
-//     default: 3,
-//     1100: 3,
-//     700: 2,
-//   };
-
-//   // ✅ Prepare slides for lightbox
-//   const slides = galleryItems.map((item) => ({
-//     src: item.src,
-//     alt: item.alt,
-//   }));
-
-//   return (
-//     <section className="py-16 bg-gray-50">
-//       <MaxWidthWrapper>
-//         {/* Header */}
-//         <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
-//           <div className="text-center sm:text-left mb-4 sm:mb-0">
-//             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading mb-4">
-//               Gallery
-//             </h2>
-//             <p className="text-base md:text-lg text-gray-600">
-//               Moments That Define Our Legacy
-//             </p>
-//           </div>
-//           <Link
-//             href="/gallery"
-//             className="group overflow-hidden inline-flex relative items-center gap-2 px-6 py-3 text-sm bg-[#890c25] font-semibold text-white uppercase tracking-wider transition-colors"
-//           >
-//             <span className="relative z-10">View All</span>
-//             <span className="absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
-//             <ArrowRight className="-rotate-45 w-4 h-4 relative z-10" />
-//           </Link>
-//         </div>
-
-//         {/* ✅ Masonry for tablet+ */}
-//         <div className="hidden sm:block">
-//           <Masonry
-//             breakpointCols={breakpointCols}
-//             className="flex -ml-4 w-auto"
-//             columnClassName="pl-4"
-//           >
-//             {galleryItems.map((item, index) => (
-//               <div
-//                 key={item.id}
-//                 className="mb-4 group cursor-pointer"
-//                 onClick={() => setLightboxIndex(index)}
-//               >
-//                 <div
-//                   className="relative w-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300"
-//                   style={{ aspectRatio: item.aspectRatio }}
-//                 >
-//                   <img
-//                     src={item.src}
-//                     alt={item.alt}
-//                     loading="lazy"
-//                     className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-//                   />
-//                   <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-//                     {/* <span className="text-white text-sm font-medium">
-//                       {item.title}
-//                     </span> */}
-//                   </div>
-//                 </div>
-//               </div>
-//             ))}
-//           </Masonry>
-//         </div>
-
-//         {/* ✅ Simple 2-col grid for mobile */}
-//         <div className="grid grid-cols-2 gap-4 sm:hidden">
-//           {galleryItems.map((item, index) => (
-//             <div
-//               key={item.id}
-//               className="relative aspect-square overflow-hidden shadow-md cursor-pointer"
-//               onClick={() => setLightboxIndex(index)}
-//             >
-//               <img
-//                 src={item.src}
-//                 alt={item.alt}
-//                 loading="lazy"
-//                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-//               />
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* ✅ Lightbox Component */}
-//         {lightboxIndex !== null && (
-//           <Lightbox
-//             open={lightboxIndex !== null}
-//             index={lightboxIndex}
-//             close={() => setLightboxIndex(null)}
-//             slides={slides}
-//             // Optional customization
-//             controller={{ closeOnBackdropClick: true }}
-//           />
-//         )}
-//       </MaxWidthWrapper>
-//     </section>
-//   );
-// };
-
-// export default MasonryGallery;
-
-"use client";
-
-import React, { useState } from "react";
-import Masonry from "react-masonry-css";
-import MaxWidthWrapper from "./max-width-wrapper";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import React, { useState } from 'react';
+import Masonry from 'react-masonry-css';
+import MaxWidthWrapper from './max-width-wrapper';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 // ✅ Lightbox + plugins
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
 const galleryItems = [
   {
     id: 1,
-    src: "/IMG_0173.webp",
-    alt: "Gallery image 1",
-    title: "Project 1",
-    aspectRatio: "600/400",
+    src: '/IMG_0173.webp',
+    alt: 'Gallery image 1',
+    title: 'Project 1',
+    aspectRatio: '600/400',
   },
   {
     id: 2,
-    src: "/IMG_0060.webp",
-    alt: "Gallery image 2",
-    title: "Project 2",
-    aspectRatio: "600/800",
+    src: '/IMG_0060.webp',
+    alt: 'Gallery image 2',
+    title: 'Project 2',
+    aspectRatio: '600/800',
   },
   {
     id: 3,
-    src: "/IMG_0098.webp",
-    alt: "Gallery image 3",
-    title: "Project 3",
-    aspectRatio: "600/600",
+    src: '/IMG_0098.webp',
+    alt: 'Gallery image 3',
+    title: 'Project 3',
+    aspectRatio: '600/600',
   },
   {
     id: 4,
-    src: "/IMG_0135.webp",
-    alt: "Gallery image 4",
-    title: "Project 4",
-    aspectRatio: "600/900",
+    src: '/IMG_0135.webp',
+    alt: 'Gallery image 4',
+    title: 'Project 4',
+    aspectRatio: '600/900',
   },
   {
     id: 5,
-    src: "/IMG_0014.webp",
-    alt: "Gallery image 5",
-    title: "Project 5",
-    aspectRatio: "600/500",
+    src: '/IMG_0014.webp',
+    alt: 'Gallery image 5',
+    title: 'Project 5',
+    aspectRatio: '600/500',
   },
   {
     id: 6,
-    src: "/IMG_0216.webp",
-    alt: "Gallery image 6",
-    title: "Project 6",
-    aspectRatio: "600/700",
+    src: '/IMG_0216.webp',
+    alt: 'Gallery image 6',
+    title: 'Project 6',
+    aspectRatio: '600/700',
   },
 ];
 
