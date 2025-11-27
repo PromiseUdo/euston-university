@@ -1,33 +1,36 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
-import { ArrowRight, ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import MaxWidthWrapper from "@/components/max-width-wrapper";
-import Image from "next/image";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
+import MaxWidthWrapper from '@/components/max-width-wrapper';
+import Image from 'next/image';
 
 const slides = [
   {
-    image: "/slide1.webp",
-    headline: "Inspiring Minds, Shaping Futures",
-    subheading: "Euston University",
-    primaryButton: "Apply",
-    secondaryButton: "Learn more",
+    image: '/slide1.webp',
+    headline: 'Inspiring Minds, Shaping Futures',
+    subheading: 'Euston University',
+    primaryButton: 'Apply',
+    url: 'https://form.eustonuniversity.org/',
+    secondaryButton: 'Learn more',
   },
   {
-    image: "/slide2.webp",
-    headline: "Designed for the 21st Century Learner",
-    subheading: "Euston University",
-    primaryButton: "Apply",
-    secondaryButton: "Learn more",
+    image: '/slide2.webp',
+    headline: 'Designed for the 21st Century Learner',
+    subheading: 'Euston University',
+    primaryButton: 'Apply',
+    url: 'https://form.eustonuniversity.org/',
+    secondaryButton: 'Learn more',
   },
   {
-    image: "/slide3.webp",
-    headline: "World-Class Faculty and Learning Infrastructure",
-    subheading: "Euston University",
-    primaryButton: "Faculty",
-    secondaryButton: "Learn more",
+    image: '/slide3.webp',
+    headline: 'World-Class Faculty and Learning Infrastructure',
+    subheading: 'Euston University',
+    primaryButton: 'Faculty',
+    url: '/faculties',
+    secondaryButton: 'Learn more',
   },
 ];
 
@@ -44,7 +47,7 @@ const HeroSlider = () => {
       y: 0,
       transition: {
         duration: 1.5,
-        ease: "easeOut" as const,
+        ease: 'easeOut' as const,
       },
     },
   };
@@ -96,32 +99,6 @@ const HeroSlider = () => {
         </button>
       </div>
 
-      {/* Image Slideshow with Zoom Effect */}
-      {/* <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide}
-          className="absolute inset-0 h-full w-full"
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            transition: {
-              opacity: { duration: 0.8 },
-              scale: { duration: 8, ease: "linear" },
-            },
-          }}
-          exit={{ opacity: 0 }}
-        >
-          <img
-            src={slides[currentSlide].image}
-            alt="Hero background"
-            className="h-full w-full object-cover"
-          />
-
-          <div className="absolute inset-0 bg-black/60" />
-        </motion.div>
-      </AnimatePresence> */}
-
       <AnimatePresence mode="sync">
         {slides.map(
           (slide, index) =>
@@ -135,7 +112,7 @@ const HeroSlider = () => {
                   scale: 1,
                   transition: {
                     opacity: { duration: 1 }, // smoother fade
-                    scale: { duration: 8, ease: "linear" },
+                    scale: { duration: 8, ease: 'linear' },
                   },
                 }}
                 exit={{
@@ -188,7 +165,7 @@ const HeroSlider = () => {
               >
                 <Link
                   href="https://portal.eu.ctlearn.net"
-                  className="inline-flex gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2.5 text-[14px] text-white tracking-[2px] font-medium overflow-hidden group"
+                  className="z-50 inline-flex gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2.5 text-[14px] text-white tracking-[2px] font-medium overflow-hidden group"
                 >
                   <span className="relative z-10">
                     {slides[currentSlide].primaryButton}

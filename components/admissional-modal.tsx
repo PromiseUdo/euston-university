@@ -1,9 +1,9 @@
 // components/AdmissionModal.tsx
-"use client";
+'use client';
 
-import { useEffect, useState, useCallback } from "react";
-import { FaFileAlt, FaTimes } from "react-icons/fa";
-import styles from "./admission-modal.module.css";
+import { useEffect, useState, useCallback } from 'react';
+import { FaFileAlt, FaTimes } from 'react-icons/fa';
+import styles from './admission-modal.module.css';
 
 const AdmissionModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const AdmissionModal: React.FC = () => {
   // Function to toggle modal visibility and manage body scroll
   const toggleModal = useCallback((open: boolean) => {
     setIsOpen(open);
-    document.body.style.overflow = open ? "hidden" : "";
+    document.body.style.overflow = open ? 'hidden' : '';
   }, []);
 
   // Show modal after 3 seconds
@@ -33,17 +33,17 @@ const AdmissionModal: React.FC = () => {
   // Close modal on escape key press (accessibility)
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isOpen) {
+      if (e.key === 'Escape' && isOpen) {
         toggleModal(false);
       }
     };
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
   }, [isOpen, toggleModal]);
 
   return (
     <div
-      className={`${styles.modalOverlay} ${isOpen ? styles.active : ""}`}
+      className={`${styles.modalOverlay} ${isOpen ? styles.active : ''}`}
       onClick={handleOverlayClick}
       role="dialog"
       aria-modal="true"
@@ -69,7 +69,7 @@ const AdmissionModal: React.FC = () => {
             now to secure your future at Euston University.
           </p>
           <a
-            href="/coming-soon"
+            href="https://form.eustonuniversity.org/"
             className={styles.btnApply}
             target="_blank"
             rel="noopener noreferrer"

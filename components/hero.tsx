@@ -1,40 +1,44 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import MaxWidthWrapper from "./max-width-wrapper";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import MaxWidthWrapper from './max-width-wrapper';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const slides = [
   {
-    image: "/slide11.webp",
-    headline: "Inspiring Minds, Shaping Futures",
-    subheading: "Euston University",
-    primaryButton: "Apply",
-    secondaryButton: "Learn more",
+    image: '/slide11.webp',
+    headline: 'Inspiring Minds, Shaping Futures',
+    subheading: 'Euston University',
+    primaryButton: 'Apply',
+    secondaryButton: 'Learn more',
+    url: 'https://form.eustonuniversity.org/',
   },
   {
-    image: "/slide22.webp",
-    headline: "Designed for the 21st Century Learner",
-    subheading: "Euston University",
+    image: '/slide22.webp',
+    headline: 'Designed for the 21st Century Learner',
+    subheading: 'Euston University',
+    url: 'https://form.eustonuniversity.org/',
 
-    primaryButton: "Apply",
-    secondaryButton: "Learn more",
+    primaryButton: 'Apply',
+    secondaryButton: 'Learn more',
   },
   {
-    image: "/slide3.webp",
-    headline: "World-Class Faculty and Learning Infrastructure",
-    subheading: "Euston University",
+    image: '/slide3.webp',
+    headline: 'World-Class Faculty and Learning Infrastructure',
+    subheading: 'Euston University',
+    url: '/faculties',
 
-    primaryButton: "Faculty",
-    secondaryButton: "Learn more",
+    primaryButton: 'Faculty',
+    secondaryButton: 'Learn more',
   },
 ];
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  const router = useRouter();
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -87,13 +91,17 @@ const Hero = () => {
                     {/* <button className="text-center uppercase bg-[#890c25] h-[44px] px-12 py-2 text-[14px] text-[#ffffff] tracking-[2px] font-medium">
                       {slides[currentSlide].primaryButton}
                     </button> */}
-                    <button className="inline-flex rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2.5 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group">
+                    <Link
+                      href={slides[currentSlide].url}
+                      target="_blank"
+                      className="inline-flex rounded-[25px] shadow-md bg-[linear-gradient(135deg,#890c25_0%,#b71c1c_100%)] gap-2 items-center relative text-center uppercase bg-[#890c25] h-[44px] px-12 py-2.5 text-[14px] text-[#ffffff] tracking-[2px] font-medium overflow-hidden group"
+                    >
                       <span className="relative z-10">
                         {slides[currentSlide].primaryButton}
                       </span>
                       <span className=" absolute inset-0 bg-[#1A0C2D] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
                       <ArrowRight className="w-4 h-4 text-white relative z-10" />
-                    </button>
+                    </Link>
 
                     {/* <button className="text-center text-white uppercase bg-transparent h-[44px] px-10 py-2 text-[14px] tracking-[2px]">
                       {slides[currentSlide].secondaryButton}
