@@ -13,7 +13,7 @@ const slides = [
     headline: 'Inspiring Minds, Shaping Futures',
     subheading: 'Euston University',
     primaryButton: 'Apply',
-    url: 'https://form.eustonuniversity.org/',
+    url: 'https://form.eustonuniversity.org/register',
     secondaryButton: 'Learn more',
   },
   {
@@ -21,7 +21,7 @@ const slides = [
     headline: 'Designed for the 21st Century Learner',
     subheading: 'Euston University',
     primaryButton: 'Apply',
-    url: 'https://form.eustonuniversity.org/',
+    url: 'https://form.eustonuniversity.org/register',
     secondaryButton: 'Learn more',
   },
   {
