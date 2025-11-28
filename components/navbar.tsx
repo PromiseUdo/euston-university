@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { useState, useEffect, useRef } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React, { useState, useEffect, useRef } from 'react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import {
   Menu,
   X,
@@ -16,9 +16,9 @@ import {
   Linkedin,
   Search,
   ChevronDown,
-} from "lucide-react";
-import MaxWidthWrapper from "./max-width-wrapper";
-import { motion, AnimatePresence } from "framer-motion";
+} from 'lucide-react';
+import MaxWidthWrapper from './max-width-wrapper';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -33,7 +33,7 @@ const Navbar = () => {
   const portalDropdownRef = useRef<HTMLDivElement>(null); // Added ref for Portal dropdown
 
   // Check if current route is home
-  const isHome = pathname === "/";
+  const isHome = pathname === '/';
 
   // Handle scroll effect
   useEffect(() => {
@@ -47,8 +47,8 @@ const Navbar = () => {
       setHasScrolled(isScrolled);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [isHome]);
 
   // Close dropdowns when clicking outside
@@ -74,9 +74,9 @@ const Navbar = () => {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -102,63 +102,63 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { href: "#", label: "Portal" },
-    { href: "/admissions", label: "Admissions" },
-    { href: "#", label: "Faculty" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/news", label: "News" },
-    { href: "/contact", label: "Contact" },
+    { href: '#', label: 'Portal' },
+    { href: '/admissions', label: 'Admissions' },
+    { href: '#', label: 'Faculty' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/news', label: 'News' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   const aboutLinks = [
-    { href: "/about", label: "About Us" },
-    { href: "/our-story", label: "Our Story" },
-    { href: "/why-choose-us", label: "Why Choose Us" },
-    { href: "/gallery", label: "Gallery" },
+    { href: '/about', label: 'About Us' },
+    { href: '/our-story', label: 'Our Story' },
+    { href: '/why-choose-us', label: 'Why Choose Us' },
+    { href: '/gallery', label: 'Gallery' },
   ];
 
   const facultyLinks = [
-    { href: "/faculties", label: "Faculties" },
+    { href: '/faculties', label: 'Faculties' },
     {
-      href: "/faculties/faculty-of-allied-health-sciences",
-      label: "Allied Health Sciences",
+      href: '/faculties/faculty-of-allied-health-sciences',
+      label: 'Allied Health Sciences',
     },
     {
-      href: "/faculties/faculty-of-natural-and-applied-sciences",
-      label: "Natural and Applied Sciences",
+      href: '/faculties/faculty-of-natural-and-applied-sciences',
+      label: 'Natural and Applied Sciences',
     },
-    { href: "/faculties/faculty-of-computing", label: "Computing" },
+    { href: '/faculties/faculty-of-computing', label: 'Computing' },
     {
-      href: "/faculties/faculty-of-arts-management-and-social-sciences",
-      label: "Arts, Management and Social Sciences",
+      href: '/faculties/faculty-of-arts-management-and-social-sciences',
+      label: 'Arts, Management and Social Sciences',
     },
   ];
 
   const portalLinks = [
-    { href: "https://form.eustonuniversity.org", label: "Admissional Portal" },
-    { href: "/coming-soon", label: "myEU VLMS" },
-    { href: "https://edupay.eustonuniversity.org", label: "Edu Pay" },
+    { href: 'https://form.eustonuniversity.org', label: 'Admissional Portal' },
+    { href: '/coming-soon', label: 'myEU VLMS' },
+    { href: 'https://edupay.eustonuniversity.org', label: 'Edu Pay' },
   ];
 
   const socialLinks = [
     {
-      href: "https://instagram.com",
-      label: "Instagram",
+      href: 'https://instagram.com',
+      label: 'Instagram',
       icon: <Instagram className="h-5 w-5" />,
     },
     {
-      href: "https://twitter.com",
-      label: "Twitter",
+      href: 'https://twitter.com',
+      label: 'Twitter',
       icon: <Twitter className="h-5 w-5" />,
     },
     {
-      href: "https://facebook.com",
-      label: "Facebook",
+      href: 'https://facebook.com',
+      label: 'Facebook',
       icon: <Facebook className="h-5 w-5" />,
     },
     {
-      href: "https://linkedin.com",
-      label: "LinkedIn",
+      href: 'https://linkedin.com',
+      label: 'LinkedIn',
       icon: <Linkedin className="h-5 w-5" />,
     },
   ];
@@ -412,7 +412,7 @@ const Navbar = () => {
                             {aboutOpen && (
                               <motion.div
                                 initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
+                                animate={{ opacity: 1, height: 'auto' }}
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.2 }}
                                 className="pl-4 overflow-hidden"
@@ -454,7 +454,7 @@ const Navbar = () => {
                             {portalOpen && (
                               <motion.div
                                 initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
+                                animate={{ opacity: 1, height: 'auto' }}
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.2 }}
                                 className="pl-4 overflow-hidden"
@@ -506,7 +506,7 @@ const Navbar = () => {
                             {facultyOpen && (
                               <motion.div
                                 initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
+                                animate={{ opacity: 1, height: 'auto' }}
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.2 }}
                                 className="pl-4 overflow-hidden"

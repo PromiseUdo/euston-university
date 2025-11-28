@@ -14,13 +14,13 @@ const slides = [
     subheading: 'Euston University',
     primaryButton: 'Apply',
     secondaryButton: 'Learn more',
-    url: 'https://form.eustonuniversity.org/',
+    url: 'https://form.eustonuniversity.org/register',
   },
   {
     image: '/slide22.webp',
     headline: 'Designed for the 21st Century Learner',
     subheading: 'Euston University',
-    url: 'https://form.eustonuniversity.org/',
+    url: 'https://form.eustonuniversity.org/register/',
 
     primaryButton: 'Apply',
     secondaryButton: 'Learn more',
