@@ -1,18 +1,16 @@
+'use client';
 
-
-"use client";
-
-import React, { useState } from "react";
-import Image from "next/image";
-import Lightbox, { SlideImage } from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 // ✅ Thumbnails plugin
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
-import CTA from "./components/cta";
-import PageHeader from "@/components/page-hero";
+import CTA from './components/cta';
+import PageHeader from '@/components/page-hero';
 
 // Extend SlideImage to include category
 interface CustomSlide extends SlideImage {
@@ -20,60 +18,78 @@ interface CustomSlide extends SlideImage {
 }
 
 // Categories
-const categories = ["All", "Campus & Facilities"];
+const categories = ['All', 'Campus & Facilities'];
 
 // Local images with explicit aspect ratios
 const images = [
   {
-    src: "/IMG_0001.webp",
-    category: "Campus & Facilities",
-    alt: "Campus Building",
-    aspectRatio: "600/800",
+    src: '/IMG_0001.webp',
+    category: 'Campus & Facilities',
+    alt: 'Campus Building',
+    aspectRatio: '600/800',
   },
   {
-    src: "/IMG_0040.webp",
-    category: "Campus & Facilities",
-    alt: "Students on Campus",
-    aspectRatio: "600/700",
+    src: '/IMG_0040.webp',
+    category: 'Campus & Facilities',
+    alt: 'Students on Campus',
+    aspectRatio: '600/700',
   },
   {
-    src: "/IMG_0093.webp",
-    category: "Campus & Facilities",
-    alt: "University Library",
-    aspectRatio: "600/900",
+    src: '/IMG_0093.webp',
+    category: 'Campus & Facilities',
+    alt: 'University Library',
+    aspectRatio: '600/900',
   },
   {
-    src: "/IMG_0071.webp",
-    category: "Campus & Facilities",
-    alt: "Graduation Ceremony",
-    aspectRatio: "600/750",
+    src: '/IMG_0071.webp',
+    category: 'Campus & Facilities',
+    alt: 'Graduation Ceremony',
+    aspectRatio: '600/750',
   },
   {
-    src: "/IMG_0173.webp",
-    category: "Campus & Facilities",
-    alt: "Sports Festival",
-    aspectRatio: "600/650",
+    src: '/IMG_0173.webp',
+    category: 'Campus & Facilities',
+    alt: 'Sports Festival',
+    aspectRatio: '600/650',
   },
   {
-    src: "/IMG_0129.webp",
-    category: "Campus & Facilities",
-    alt: "Lecture Hall",
-    aspectRatio: "600/720",
+    src: '/IMG_0129.webp',
+    category: 'Campus & Facilities',
+    alt: 'Lecture Hall',
+    aspectRatio: '600/720',
+  },
+  {
+    src: '/euston-bus1.webp',
+    category: 'Campus & Facilities',
+    alt: 'Graduation Ceremony',
+    aspectRatio: '600/750',
+  },
+  {
+    src: '/euston-lab.webp',
+    category: 'Campus & Facilities',
+    alt: 'Sports Festival',
+    aspectRatio: '600/650',
+  },
+  {
+    src: '/euston-lab2.webp',
+    category: 'Campus & Facilities',
+    alt: 'Lecture Hall',
+    aspectRatio: '600/720',
   },
 ];
 
 export default function GalleryPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Gallery", href: "/gallery", isActive: true },
+    { label: 'Home', href: '/' },
+    { label: 'Gallery', href: '/gallery', isActive: true },
   ];
 
   const filteredImages =
-    selectedCategory === "All"
+    selectedCategory === 'All'
       ? images
       : images.filter((img) => img.category === selectedCategory);
 
@@ -102,8 +118,8 @@ export default function GalleryPage() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition duration-300 ${
                 selectedCategory === cat
-                  ? "bg-[#890c25] text-white"
-                  : "bg-gray-200 hover:bg-gray-300 text-gray-800"
+                  ? 'bg-[#890c25] text-white'
+                  : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
               }`}
             >
               {cat}
@@ -147,14 +163,14 @@ export default function GalleryPage() {
           index={photoIndex}
           plugins={[Thumbnails]}
           styles={{
-            container: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
+            container: { backgroundColor: 'rgba(0, 0, 0, 0.9)' },
           }}
           render={{
             slide: ({ slide }) => (
               <div className="relative w-full h-full">
                 <Image
                   src={slide.src}
-                  alt={slide.alt || ""}
+                  alt={slide.alt || ''}
                   fill
                   className="object-contain"
                   style={{ aspectRatio: images[photoIndex].aspectRatio }}
