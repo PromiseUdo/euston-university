@@ -55,6 +55,31 @@ const galleryItems = [
     title: 'Project 6',
     aspectRatio: '600/700',
   },
+
+  {
+    id: 7,
+    src: '/euston-bus1.webp',
+    alt: 'Gallery image 7',
+    title: 'Project 7',
+    aspectRatio: '600/900',
+    alignBottom: true,
+  },
+  {
+    id: 8,
+    src: '/euston-lab.webp',
+    alt: 'Gallery image 8',
+    title: 'Project 8',
+    aspectRatio: '600/900',
+    alignBottom: true,
+  },
+  {
+    id: 9,
+    src: '/euston-lab2.webp',
+    alt: 'Gallery image 9',
+    title: 'Project 9',
+    aspectRatio: '600/900',
+    alignBottom: true,
+  },
 ];
 
 const MasonryGallery = () => {
