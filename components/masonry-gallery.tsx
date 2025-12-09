@@ -58,7 +58,7 @@ const galleryItems = [
 
   {
     id: 7,
-    src: '/euston-bus1.webp',
+    src: '/bus2.webp',
     alt: 'Gallery image 7',
     title: 'Project 7',
     aspectRatio: '600/900',

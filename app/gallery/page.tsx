@@ -59,7 +59,7 @@ const images = [
     aspectRatio: '600/720',
   },
   {
-    src: '/euston-bus1.webp',
+    src: '/bus2.webp',
     category: 'Campus & Facilities',
     alt: 'Graduation Ceremony',
     aspectRatio: '600/750',
