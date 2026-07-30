@@ -1,56 +1,51 @@
-"use client";
+'use client';
 
-import React from "react";
-import { ArrowRight } from "lucide-react";
-import MaxWidthWrapper from "./max-width-wrapper";
-import Image from "next/image";
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import MaxWidthWrapper from './max-width-wrapper';
+import Image from 'next/image';
 
 const faculties = [
   {
-    name: "Faculty of Allied Health Sciences",
-    programs: ["BNSc Nursing Science"],
-  },
-  {
-    name: "Faculty of Natural and Applied Sciences",
+    name: 'Faculty of Allied Health Sciences',
     programs: [
-      "BSc Biology",
-      "BSc Microbiology",
-      "BSc Chemistry",
-      "BSc Mathematics",
-      "BSc Statistics",
-      "BSc Physics",
-      "BSc Physics with Electronics",
-      "BSc Forensic Science",
+      'BNSc Nursing Science',
+      'B.MLS. Medical Laboratory Science',
+      'B.Sc. Public Health',
+    ],
+  },
+  // {
+  //   name: 'Faculty of Natural and Applied Sciences',
+  //   programs: [
+  //     'BSc Biology',
+  //     'BSc Microbiology',
+  //     'BSc Chemistry',
+  //     'BSc Mathematics',
+  //     'BSc Statistics',
+  //     'BSc Physics',
+  //     'BSc Physics with Electronics',
+  //     'BSc Forensic Science',
+  //   ],
+  // },
+  {
+    name: 'Faculty of Science and Computing',
+    programs: [
+      'B.Sc. Computer Science',
+      'B.Sc. Cyber Security',
+      'B.Sc. Information Technology',
+      'B.Sc. Software Engineering',
+      'BSc. Microbiology',
     ],
   },
   {
-    name: "Faculty of Computing",
+    name: 'Faculty of Management and Social Sciences',
     programs: [
-      "BSc Computer Science",
-      "BSc Cybersecurity",
-      "BSc Data Science",
-      "BSc Information and Communication Technology (ICT)",
-      "BSc Information Systems",
-      "BSc Information Technology",
-      "BSc Software Engineering",
-      "BSc Artificial Intelligence",
-    ],
-  },
-  {
-    name: "Faculty of Arts, Management and Social Sciences",
-    programs: [
-      "BSc Accounting",
-      "BSc Economics",
-      "BSc Finance",
-      "BSc Entrepreneurship and Innovation",
-      "BSc Business Administration",
-      "BSc Public Administration",
-      "BSc Procurement Management",
-      "BSc Logistics and Supply Chain Management",
-      "BSc Criminology and Security Studies",
-      "BSc Hospitality and Tourism Management",
-      "BA History and International Studies",
-      "BA French",
+      'B.Sc. Accounting',
+      'B.Sc. Finance',
+      'B.Sc. Procurement Management',
+      'B.Sc. Entrepreneurship Studies',
+      'B.Sc. Economics',
+      'B.Sc. Criminology and Security Studies',
     ],
   },
 ];
@@ -75,17 +70,17 @@ const AcademicPrograms: React.FC = () => {
               key={index}
               className={`relative flex-shrink-0 w-[90%] sm:w-[70%] md:w-auto snap-center rounded-lg shadow-md overflow-hidden group ${
                 index === 0
-                  ? "bg-blue-100"
+                  ? 'bg-blue-100'
                   : index === 1
-                  ? "bg-green-100"
-                  : index === 2
-                  ? "bg-purple-100"
-                  : "bg-yellow-100"
+                    ? 'bg-green-100'
+                    : index === 2
+                      ? 'bg-purple-100'
+                      : 'bg-yellow-100'
               } min-h-[540px] md:min-h-[600px]`}
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <Image
-                  src={`/slide${index + 1}.${index % 2 === 0 ? "png" : "jpg"}`}
+                  src={`/slide${index + 1}.${index % 2 === 0 ? 'png' : 'jpg'}`}
                   alt={`${faculty.name} background`}
                   fill
                   className="object-cover"

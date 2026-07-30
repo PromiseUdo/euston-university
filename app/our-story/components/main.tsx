@@ -1,8 +1,8 @@
-import React from "react";
-import MaxWidthWrapper from "@/components/max-width-wrapper";
-import CategoryMenu from "@/app/news/[slug]/components/category-menu";
-import DepartmentContactInfo from "@/app/news/[slug]/components/department-contact-info";
-import OtherFaculties from "@/app/news/[slug]/components/other-faculties";
+import React from 'react';
+import MaxWidthWrapper from '@/components/max-width-wrapper';
+import CategoryMenu from '@/app/news/[slug]/components/category-menu';
+import DepartmentContactInfo from '@/app/news/[slug]/components/department-contact-info';
+import OtherFaculties from '@/app/news/[slug]/components/other-faculties';
 
 const Main = () => {
   return (
@@ -109,7 +109,7 @@ const Main = () => {
                 </p>
                 <p className="text-[15px] leading-[22.5px] text-[#292929]">
                   Today, Euston University offers an impressive array of
-                  undergraduate programmes across four faculties:{" "}
+                  undergraduate programmes across four faculties:{' '}
                 </p>
 
                 <ul className="list-disc pl-6 space-y-4 text-[15px] text-[#292929]">
@@ -118,23 +118,24 @@ const Main = () => {
                     offering a BNSc in Nursing Science, preparesstudents for
                     compassionate service in healthcare.
                   </li>
-                  <li>
-                    <strong>The Faculty of Natural and Applied Sciences</strong>{" "}
+                  {/* <li>
+                    <strong>The Faculty of Natural and Applied Sciences</strong>{' '}
                     features critical programmes like Biology,Microbiology,
                     Forensic Science, Physics with Electronics, and
                     Biochemistry—laying astrong scientific foundation for
                     research and innovation.
-                  </li>
+                  </li> */}
                   <li>
-                    <strong>The Faculty of Computing</strong> delivers
-                    high-demand tech programmes such as Cybersecurity,Data
-                    Science, Software Engineering, Artificial Intelligence, and
-                    Information Technology—training future tech leaders.
+                    <strong>The Faculty of Science and Computing</strong>{' '}
+                    delivers high-demand tech programmes such as
+                    Cybersecurity,Data Science, Software Engineering, Artificial
+                    Intelligence, and Information Technology—training future
+                    tech leaders.
                   </li>
                   <li>
                     <strong>
                       The Faculty of Arts, Management, and Social Sciences
-                    </strong>{" "}
+                    </strong>{' '}
                     develops thinkers, entrepreneurs,and public servants through
                     courses like Accounting, Public Administration,
                     Economics,History and International Studies, and Criminology
@@ -180,7 +181,7 @@ const Main = () => {
 
                 <ul className="list-disc pl-6 space-y-4 text-[15px] text-[#292929]">
                   <li>
-                    Contact information (Address, email, phone, socials) <br />{" "}
+                    Contact information (Address, email, phone, socials) <br />{' '}
                     Address: kilometer 10 Abakaliki-Enugu Expressway, Abakaliki,
                     <br />
                     Email: registrar@eustonuniversity.edu.ng or
@@ -201,11 +202,11 @@ const Main = () => {
                 email="info@eustonuniversity.edu.ng"
                 phone="+2348138863143"
                 socials={{
-                  facebook: "#",
-                  instagram: "#",
-                  linkedin: "#",
-                  pinterest: "#",
-                  youtube: "#",
+                  facebook: '#',
+                  instagram: '#',
+                  linkedin: '#',
+                  pinterest: '#',
+                  youtube: '#',
                 }}
               />
               <OtherFaculties />

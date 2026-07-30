@@ -123,14 +123,14 @@ const Navbar = () => {
       href: '/faculties/faculty-of-allied-health-sciences',
       label: 'Allied Health Sciences',
     },
-    {
-      href: '/faculties/faculty-of-natural-and-applied-sciences',
-      label: 'Natural and Applied Sciences',
-    },
-    { href: '/faculties/faculty-of-computing', label: 'Computing' },
+    // {
+    //   href: '/faculties/faculty-of-natural-and-applied-sciences',
+    //   label: 'Natural and Applied Sciences',
+    // },
+    { href: '/faculties/faculty-of-computing', label: 'Science and Computing' },
     {
       href: '/faculties/faculty-of-arts-management-and-social-sciences',
-      label: 'Arts, Management and Social Sciences',
+      label: 'Management and Social Sciences',
     },
   ];
 

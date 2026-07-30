@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { Search, ArrowRight } from "lucide-react";
-import Link from "next/link";
-import MaxWidthWrapper from "@/components/max-width-wrapper";
+import React, { useState } from 'react';
+import { Search, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import MaxWidthWrapper from '@/components/max-width-wrapper';
 
 interface FacultyItem {
   thumbnail: string;
@@ -14,34 +14,34 @@ interface FacultyItem {
 
 const facultyItems: FacultyItem[] = [
   {
-    thumbnail: "/health-sciences.webp",
-    title: "Faculty of Allied Health Sciences",
-    href: "/faculties/faculty-of-allied-health-sciences",
+    thumbnail: '/health-sciences.webp',
+    title: 'Faculty of Allied Health Sciences',
+    href: '/faculties/faculty-of-allied-health-sciences',
+  },
+  // {
+  //   thumbnail: '/applied-sciences.webp',
+  //   title: 'Faculty of Natural and Applied Sciences',
+  //   href: '/faculties/faculty-of-natural-and-applied-sciences',
+  // },
+  {
+    thumbnail: 'computing.webp',
+    title: 'Faculty of Science and Computing',
+    href: '/faculties/faculty-of-computing',
   },
   {
-    thumbnail: "/applied-sciences.webp",
-    title: "Faculty of Natural and Applied Sciences",
-    href: "/faculties/faculty-of-natural-and-applied-sciences",
-  },
-  {
-    thumbnail: "computing.webp",
-    title: "Faculty of Computing",
-    href: "/faculties/faculty-of-computing",
-  },
-  {
-    thumbnail: "/business.webp",
-    title: "Faculty of Arts, Management and Social Sciences",
-    href: "/faculties/faculty-of-arts-management-and-social-sciences",
+    thumbnail: '/business.webp',
+    title: 'Faculty of Management and Social Sciences',
+    href: '/faculties/faculty-of-arts-management-and-social-sciences',
   },
 ];
 
 const FacultySection: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Replace with your search logic (e.g., filter facultyItems or API call)
-    console.log("Search query:", searchQuery);
+    console.log('Search query:', searchQuery);
   };
 
   return (

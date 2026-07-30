@@ -1,18 +1,18 @@
-"use client";
-import React from "react";
-import MaxWidthWrapper from "./max-width-wrapper";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { usePathname } from "next/navigation";
+'use client';
+import React from 'react';
+import MaxWidthWrapper from './max-width-wrapper';
+import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
-import { FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa6"; // Font Awesome 6 icons
+import { FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa6'; // Font Awesome 6 icons
 
 const Footer = () => {
   const pathname = usePathname();
 
   // conditionally apply mt-20 if NOT on /coming-soon
   const containerClasses = `w-full bg-[#181818] pt-[30px] ${
-    pathname !== "/coming-soon" ? "mt-20" : ""
+    pathname !== '/coming-soon' ? 'mt-20' : ''
   }`;
 
   return (
@@ -66,7 +66,7 @@ const Footer = () => {
                 <span className="font-bold">Phone:</span>+234 (0)813 886 3143
               </p>
               <p className="text-gray-400 text-[14px] leading-[21px] mb-2">
-                <span className="font-bold">Email:</span>{" "}
+                <span className="font-bold">Email:</span>{' '}
                 info@eustonuniversity.edu.ng
               </p>
             </div>
@@ -247,13 +247,13 @@ const Footer = () => {
               <div>
                 <p className="text-[#cccccc] text-center text-[14px] leading-[21px] ">
                   Copyright © 2025 Euston University. All rights reserved. -
-                  Developed by{" "}
+                  Developed by{' '}
                   <a
                     target="_blank"
                     href="https://coderstriangle.com"
                     className="underline"
                   >
-                    CodersTriangle
+                    CodersTriangle PLC
                   </a>
                 </p>
               </div>

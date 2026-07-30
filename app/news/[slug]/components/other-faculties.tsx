@@ -1,6 +1,6 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface MenuItem {
   label: string;
@@ -9,18 +9,21 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    label: "Faculty of Allied Health Sciences",
-    href: "/faculties/faculty-of-allied-health-sciences",
+    label: 'Faculty of Allied Health Sciences',
+    href: '/faculties/faculty-of-allied-health-sciences',
   },
+  // {
+  //   label: 'Faculty of Natural and Applied Sciences',
+  //   href: '/faculties/faculty-of-natural-and-applied-sciences',
+  // },
   {
-    label: "Faculty of Natural and Applied Sciences",
-    href: "/faculties/faculty-of-natural-and-applied-sciences",
+    label: 'Faculty of Science and Computing',
+    href: '/faculties/faculty-of-computing',
   },
-  { label: "Faculty of Computing", href: "/faculties/faculty-of-computing" },
-  { label: "Scholarship", href: "/blog-details" },
+  { label: 'Scholarship', href: '/blog-details' },
   {
-    label: "Faculty of Arts, Management, and Social Sciences",
-    href: "/faculties/faculty-of-arts-management-and-social-sciences",
+    label: 'Faculty of Arts, Management, and Social Sciences',
+    href: '/faculties/faculty-of-arts-management-and-social-sciences',
   },
 ];
 

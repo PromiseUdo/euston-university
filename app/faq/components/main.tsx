@@ -21,9 +21,9 @@ export const faqItems = [
     question: 'What academic programmes are offered at Euston University?',
     answer: [
       'Faculty of Allied Health Sciences – BNSc Nursing Science',
-      'Faculty of Natural and Applied Sciences – BSc Biology, BSc Microbiology, BSc Chemistry, BSc Biochemistry, BSc Mathematics, BSc Statistics, BSc Physics, BSc Physics with Electronics, BSc Forensic Science',
-      'Faculty of Computing – BSc Computer Science, BSc Cybersecurity, BSc Data Science, BSc Information and Communications Technology (ICT), BSc Information Systems, BSc Information Technology, BSc Software Engineering, BSc Artificial Intelligence',
-      'Faculty of Arts, Management and Social Sciences – BSc Accounting, BSc Economics, BSc Finance, BSc Entrepreneurship and Innovation, BSc Business Administration, BSc Public Administration, BSc Procurement Management, BSc Logistics and Supply Chain Management, BSc Criminology and Security Studies, BSc Hospitality and Tourism Management, BA History and International Studies, BA French',
+
+      'Faculty of Science and Computing – B.Sc. Computer Science, B.Sc. Cyber Security, B.Sc. Information Technology, B.Sc. Software Engineering, BSc. Microbiology',
+      'Faculty of Management and Social Sciences – B.Sc. Accounting, B.Sc. Finance, B.Sc. Procurement Management, B.Sc. Entrepreneurship Studies, B.Sc. Economics, B.Sc. Criminology and Security Studies',
     ],
   },
   {
