@@ -253,7 +253,7 @@ const Footer = () => {
                     href="https://coderstriangle.com"
                     className="underline"
                   >
-                    CodersTriangle PLC
+                    CodersTriangle Plc
                   </a>
                 </p>
               </div>

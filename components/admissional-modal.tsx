@@ -71,7 +71,7 @@ const AdmissionModal: React.FC = () => {
           <a
             href="https://form.eustonuniversity.org/register"
             className={styles.btnApply}
-            target="_blank"
+            // target="_blank"
             rel="noopener noreferrer"
           >
             Start Application
