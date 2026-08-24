@@ -69,7 +69,7 @@ const AdmissionModal: React.FC = () => {
             now to secure your future at Euston University.
           </p>
           <a
-            href="https://form.eustonuniversity.org/register"
+            href="https://form.eustonuniversity.edu.ng//register"
             className={styles.btnApply}
             // target="_blank"
             rel="noopener noreferrer"

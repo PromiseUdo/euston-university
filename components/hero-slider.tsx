@@ -13,7 +13,7 @@ const slides = [
     headline: 'Inspiring Minds, Shaping Futures',
     subheading: 'Euston University',
     primaryButton: 'Apply',
-    url: 'https://form.eustonuniversity.org/register',
+    url: 'https://form.eustonuniversity.edu.ng//register',
     secondaryButton: 'Learn more',
   },
   {
@@ -21,7 +21,7 @@ const slides = [
     headline: 'Designed for the 21st Century Learner',
     subheading: 'Euston University',
     primaryButton: 'Apply',
-    url: 'https://form.eustonuniversity.org/register',
+    url: 'https://form.eustonuniversity.edu.ng//register',
     secondaryButton: 'Learn more',
   },
   {
@@ -131,7 +131,7 @@ const HeroSlider = () => {
                 />
                 <div className="absolute inset-0 bg-black/60" />
               </motion.div>
-            )
+            ),
         )}
       </AnimatePresence>
 

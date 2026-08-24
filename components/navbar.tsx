@@ -135,9 +135,12 @@ const Navbar = () => {
   ];
 
   const portalLinks = [
-    { href: 'https://form.eustonuniversity.org', label: 'Admissional Portal' },
+    {
+      href: 'https://form.eustonuniversity.edu.ng/.org',
+      label: 'Admissional Portal',
+    },
     { href: '/coming-soon', label: 'myEU VLMS' },
-    { href: 'https://edupay.eustonuniversity.org', label: 'Edu Pay' },
+    { href: 'https://edupay.eustonuniversity.edu.ng/', label: 'Edu Pay' },
   ];
 
   const socialLinks = [

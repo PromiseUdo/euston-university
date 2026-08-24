@@ -10,33 +10,44 @@ import { Toaster } from 'sonner';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.eustonuniversity.edu.ng'),
+
   title: 'Euston University',
+
   description:
     'Official website of Euston University, supporting education and innovation.',
+
+  alternates: {
+    canonical: 'https://www.eustonuniversity.edu.ng/',
+  },
+
   icons: {
     icon: '/favicon.png',
   },
+
   openGraph: {
     title: 'Euston University',
     description:
       'Official website of Euston University, supporting education and innovation.',
-    url: 'https://www.eustonuniversity.org/',
+    url: 'https://www.eustonuniversity.edu.ng/',
     siteName: 'Euston University',
+    type: 'website',
     images: [
       {
-        url: '/slide11.webp', // ✅ big preview image
+        url: '/slide11.webp',
         width: 1200,
         height: 630,
-        alt: 'Euston University Logo',
+        alt: 'Euston University',
       },
     ],
   },
+
   twitter: {
-    card: 'summary_large_image', // ✅ ensures big preview on Twitter/WhatsApp
+    card: 'summary_large_image',
     title: 'Euston University',
     description:
       'Official website of Euston University, supporting education and innovation.',
-    images: ['/favicon.png'],
+    images: ['/slide11.webp'],
   },
 };
 
@@ -60,9 +71,10 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'CollegeOrUniversity', // ✅ correct type
               name: 'Euston University',
+              alternateName: 'Euston University',
               description:
                 'Official website of Euston University, supporting education and innovation.',
-              url: 'https://eustonuniversity.org/',
+              url: 'https://www.eustonuniversity.edu.ng/',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Abakaliki',
