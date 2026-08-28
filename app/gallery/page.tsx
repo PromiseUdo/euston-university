@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -12,93 +12,58 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import CTA from './components/cta';
 import PageHeader from '@/components/page-hero';
 
-// Extend SlideImage to include category
-interface CustomSlide extends SlideImage {
-  category: string;
-}
+const IMAGES_PER_PAGE = 9;
 
-// Categories
-const categories = ['All', 'Campus & Facilities'];
-
-// Local images with explicit aspect ratios
+// All gallery images (single category)
 const images = [
-  {
-    src: '/IMG_0001.webp',
-    category: 'Campus & Facilities',
-    alt: 'Campus Building',
-    aspectRatio: '600/800',
-  },
-  {
-    src: '/IMG_0040.webp',
-    category: 'Campus & Facilities',
-    alt: 'Students on Campus',
-    aspectRatio: '600/700',
-  },
-  {
-    src: '/IMG_0093.webp',
-    category: 'Campus & Facilities',
-    alt: 'University Library',
-    aspectRatio: '600/900',
-  },
-  {
-    src: '/IMG_0071.webp',
-    category: 'Campus & Facilities',
-    alt: 'Graduation Ceremony',
-    aspectRatio: '600/750',
-  },
-  {
-    src: '/IMG_0173.webp',
-    category: 'Campus & Facilities',
-    alt: 'Sports Festival',
-    aspectRatio: '600/650',
-  },
-  {
-    src: '/IMG_0129.webp',
-    category: 'Campus & Facilities',
-    alt: 'Lecture Hall',
-    aspectRatio: '600/720',
-  },
-  {
-    src: '/bus2.webp',
-    category: 'Campus & Facilities',
-    alt: 'Graduation Ceremony',
-    aspectRatio: '600/750',
-  },
-  {
-    src: '/euston-lab.webp',
-    category: 'Campus & Facilities',
-    alt: 'Sports Festival',
-    aspectRatio: '600/650',
-  },
-  {
-    src: '/euston-lab2.webp',
-    category: 'Campus & Facilities',
-    alt: 'Lecture Hall',
-    aspectRatio: '600/720',
-  },
+  { src: '/gallery/B2B_7693.jpg', alt: 'Campus life at Euston University' },
+  { src: '/gallery/B2B_7702.jpg', alt: 'Students on campus' },
+  { src: '/gallery/B2B_7714.jpg', alt: 'University event' },
+  { src: '/gallery/B2B_7718.jpg', alt: 'Campus gathering' },
+  { src: '/gallery/B2B_7721.jpg', alt: 'Students together' },
+  { src: '/gallery/B2B_7906.jpg', alt: 'Campus activity' },
+  { src: '/gallery/B2B_7908.jpg', alt: 'University community' },
+  { src: '/gallery/B2B_7913.jpg', alt: 'Students at Euston University' },
+  { src: '/gallery/B2B_7915.jpg', alt: 'Campus moment' },
+  { src: '/gallery/B2B_7927.jpg', alt: 'University life' },
+  { src: '/gallery/B2B_7934.jpg', alt: 'Students on campus' },
+  { src: '/IMG_0001.webp', alt: 'Campus Building' },
+  { src: '/IMG_0040.webp', alt: 'Students on Campus' },
+  { src: '/IMG_0093.webp', alt: 'University Library' },
+  { src: '/IMG_0071.webp', alt: 'Graduation Ceremony' },
+  { src: '/IMG_0173.webp', alt: 'Sports Festival' },
+  { src: '/IMG_0129.webp', alt: 'Lecture Hall' },
+  { src: '/bus2.webp', alt: 'University Bus' },
+  { src: '/euston-lab.webp', alt: 'University Laboratory' },
+  { src: '/euston-lab2.webp', alt: 'Science Laboratory' },
 ];
 
 export default function GalleryPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Gallery', href: '/gallery', isActive: true },
   ];
 
-  const filteredImages =
-    selectedCategory === 'All'
-      ? images
-      : images.filter((img) => img.category === selectedCategory);
+  const totalPages = Math.max(1, Math.ceil(images.length / IMAGES_PER_PAGE));
+  const pageStart = (currentPage - 1) * IMAGES_PER_PAGE;
+  const pageImages = images.slice(pageStart, pageStart + IMAGES_PER_PAGE);
 
-  // Prepare slides for lightbox with CustomSlide type
-  const slides: CustomSlide[] = filteredImages.map((img) => ({
-    src: img.src,
-    alt: img.alt,
-    category: img.category,
-  }));
+  // Lightbox shows every image regardless of page
+  const slides: SlideImage[] = useMemo(
+    () => images.map((img) => ({ src: img.src, alt: img.alt })),
+    []
+  );
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -109,49 +74,66 @@ export default function GalleryPage() {
         backgroundImage="/news.webp"
       />
 
-      {/* Category Filters */}
-      <div className="max-w-6xl mx-auto px-4 py-8 text-center">
-        <div className="flex flex-wrap gap-3 justify-center">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition duration-300 ${
-                selectedCategory === cat
-                  ? 'bg-[#890c25] text-white'
-                  : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* 3-Column Grid Gallery */}
-      <div className="max-w-6xl mx-auto px-4 pb-12">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredImages.map((img, idx) => (
-            <div
-              key={idx}
-              className="group relative cursor-pointer overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
-              onClick={() => {
-                setPhotoIndex(idx);
-                setIsOpen(true);
-              }}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-sm p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {img.category}
+          {pageImages.map((img, idx) => {
+            const globalIndex = pageStart + idx;
+            return (
+              <div
+                key={img.src}
+                className="group relative cursor-pointer overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
+                onClick={() => {
+                  setPhotoIndex(globalIndex);
+                  setIsOpen(true);
+                }}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
+            <button
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-300 transition disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Prev
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => goToPage(page)}
+                className={`w-10 h-10 rounded-full text-sm font-medium transition ${
+                  page === currentPage
+                    ? 'bg-[#890c25] text-white'
+                    : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-300 transition disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox with Thumbnails */}
@@ -173,11 +155,7 @@ export default function GalleryPage() {
                   alt={slide.alt || ''}
                   fill
                   className="object-contain"
-                  style={{ aspectRatio: images[photoIndex].aspectRatio }}
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-sm p-3 text-center">
-                  {(slide as CustomSlide).category}
-                </div>
               </div>
             ),
           }}
