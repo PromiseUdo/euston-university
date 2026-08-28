@@ -80,6 +80,27 @@ const galleryItems = [
     aspectRatio: '600/900',
     alignBottom: true,
   },
+  {
+    id: 10,
+    src: '/gallery/B2B_7693.jpg',
+    alt: 'Students on campus',
+    title: 'Campus Life',
+    aspectRatio: '600/400',
+  },
+  {
+    id: 11,
+    src: '/gallery/B2B_7913.jpg',
+    alt: 'University community',
+    title: 'Our Community',
+    aspectRatio: '600/400',
+  },
+  {
+    id: 12,
+    src: '/gallery/B2B_7927.jpg',
+    alt: 'Campus event',
+    title: 'Campus Events',
+    aspectRatio: '600/400',
+  },
 ];
 
 const MasonryGallery = () => {
