@@ -12,7 +12,8 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import CTA from './components/cta';
 import PageHeader from '@/components/page-hero';
 
-const IMAGES_PER_PAGE = 9;
+// 3 columns × 6 rows per page
+const IMAGES_PER_PAGE = 18;
 
 // All gallery images (single category)
 const images = [
@@ -27,6 +28,14 @@ const images = [
   { src: '/gallery/B2B_7915.jpg', alt: 'Campus moment' },
   { src: '/gallery/B2B_7927.jpg', alt: 'University life' },
   { src: '/gallery/B2B_7934.jpg', alt: 'Students on campus' },
+  { src: '/gallery/wa-01.jpg', alt: 'Anatomy demonstration room' },
+  { src: '/gallery/wa-03.jpg', alt: 'Library and reading lounge' },
+  { src: '/gallery/wa-04.jpg', alt: 'Student study lounge' },
+  { src: '/gallery/wa-11.jpg', alt: 'Nursing skills lecture room' },
+  { src: '/gallery/wa-12.jpg', alt: 'Clinical practice room' },
+  { src: '/gallery/wa-14.jpg', alt: 'Nursing practical ward' },
+  { src: '/gallery/wa-10.jpg', alt: 'Multipurpose hall' },
+  { src: '/gallery/wa-13.jpg', alt: 'University assembly hall' },
   { src: '/IMG_0001.webp', alt: 'Campus Building' },
   { src: '/IMG_0040.webp', alt: 'Students on Campus' },
   { src: '/IMG_0093.webp', alt: 'University Library' },
