@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -47,24 +47,40 @@ const images = [
   { src: '/euston-lab2.webp', alt: 'Science Laboratory' },
 ];
 
+function shuffle<T>(arr: readonly T[]): T[] {
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 export default function GalleryPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Start with the stable order for SSR, then randomize once on mount
+  // so the gallery looks different on every visit.
+  const [orderedImages, setOrderedImages] = useState(images);
+  useEffect(() => {
+    setOrderedImages(shuffle(images));
+  }, []);
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Gallery', href: '/gallery', isActive: true },
   ];
 
-  const totalPages = Math.max(1, Math.ceil(images.length / IMAGES_PER_PAGE));
+  const totalPages = Math.max(1, Math.ceil(orderedImages.length / IMAGES_PER_PAGE));
   const pageStart = (currentPage - 1) * IMAGES_PER_PAGE;
-  const pageImages = images.slice(pageStart, pageStart + IMAGES_PER_PAGE);
+  const pageImages = orderedImages.slice(pageStart, pageStart + IMAGES_PER_PAGE);
 
-  // Lightbox shows every image regardless of page
+  // Lightbox shows every image regardless of page, in the same order as the grid
   const slides: SlideImage[] = useMemo(
-    () => images.map((img) => ({ src: img.src, alt: img.alt })),
-    []
+    () => orderedImages.map((img) => ({ src: img.src, alt: img.alt })),
+    [orderedImages]
   );
 
   const goToPage = (page: number) => {
