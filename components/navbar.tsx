@@ -105,7 +105,7 @@ const Navbar = () => {
     { href: '#', label: 'Portal' },
     { href: '/admissions', label: 'Admissions' },
     { href: '#', label: 'Faculty' },
-    { href: 'https://libary.eustonuniversity.edu.ng', label: 'Library' },
+    { href: 'https://library.eustonuniversity.edu.ng', label: 'Library' },
     { href: '/news', label: 'News' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -327,7 +327,7 @@ const Navbar = () => {
 
               {/* Remaining Links */}
               <Link
-                href="https://libary.eustonuniversity.edu.ng"
+                href="https://library.eustonuniversity.edu.ng"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-sm text-white hover:text-gray-200 transition-colors duration-200 px-2 py-1"
@@ -536,7 +536,7 @@ const Navbar = () => {
                         </div>
 
                         <Link
-                          href="https://libary.eustonuniversity.edu.ng"
+                          href="https://library.eustonuniversity.edu.ng"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-lg font-medium hover:text-gray-200 transition-colors duration-200 px-4 py-3 hover:bg-[#a1122f]/50"
