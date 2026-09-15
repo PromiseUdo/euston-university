@@ -105,7 +105,7 @@ const Navbar = () => {
     { href: '#', label: 'Portal' },
     { href: '/admissions', label: 'Admissions' },
     { href: '#', label: 'Faculty' },
-    { href: '/faq', label: 'FAQ' },
+    { href: 'https://libary.eustonuniversity.edu.ng', label: 'Library' },
     { href: '/news', label: 'News' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -115,6 +115,7 @@ const Navbar = () => {
     { href: '/our-story', label: 'Our Story' },
     { href: '/why-choose-us', label: 'Why Choose Us' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/faq', label: 'FAQ' },
   ];
 
   const facultyLinks = [
@@ -326,10 +327,12 @@ const Navbar = () => {
 
               {/* Remaining Links */}
               <Link
-                href="/faq"
+                href="https://libary.eustonuniversity.edu.ng"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-medium text-sm text-white hover:text-gray-200 transition-colors duration-200 px-2 py-1"
               >
-                FAQ
+                Library
               </Link>
               <Link
                 href="/news"
@@ -533,11 +536,13 @@ const Navbar = () => {
                         </div>
 
                         <Link
-                          href="/faq"
+                          href="https://libary.eustonuniversity.edu.ng"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-lg font-medium hover:text-gray-200 transition-colors duration-200 px-4 py-3 hover:bg-[#a1122f]/50"
                           onClick={() => setIsOpen(false)}
                         >
-                          FAQ
+                          Library
                         </Link>
 
                         <Link
