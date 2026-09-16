@@ -265,7 +265,6 @@ const Navbar = () => {
                         <Link
                           key={link.label}
                           href={link.href}
-                          target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-sm text-gray-800 hover:text-[#890c25] hover:bg-gray-100 transition-colors duration-200"
                           onClick={() => setPortalOpen(false)}
@@ -468,7 +467,6 @@ const Navbar = () => {
                                   <Link
                                     key={link.label}
                                     href={link.href}
-                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="block text-base font-medium hover:text-[#890c25] transition-colors duration-200 px-4 py-2 hover:bg-[#a1122f]/30"
                                     onClick={() => {
