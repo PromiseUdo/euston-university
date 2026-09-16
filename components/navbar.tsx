@@ -328,7 +328,6 @@ const Navbar = () => {
               {/* Remaining Links */}
               <Link
                 href="https://library.eustonuniversity.edu.ng"
-                target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-sm text-white hover:text-gray-200 transition-colors duration-200 px-2 py-1"
               >
@@ -537,7 +536,6 @@ const Navbar = () => {
 
                         <Link
                           href="https://library.eustonuniversity.edu.ng"
-                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-lg font-medium hover:text-gray-200 transition-colors duration-200 px-4 py-3 hover:bg-[#a1122f]/50"
                           onClick={() => setIsOpen(false)}
