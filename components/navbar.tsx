@@ -140,7 +140,7 @@ const Navbar = () => {
       href: 'https://form.eustonuniversity.edu.ng',
       label: 'Admissional Portal',
     },
-    { href: '/coming-soon', label: 'myEU VLMS' },
+    { href: 'https://myeu.ctlearn.net', label: 'myEU VLMS' },
     { href: 'https://edupay.eustonuniversity.edu.ng', label: 'Edu Pay' },
   ];
 
