@@ -17,7 +17,7 @@ const slides = [
     url: 'https://form.eustonuniversity.edu.ng//register',
   },
   {
-    image: '/slide22.webp',
+    image: '/slide11.webp',
     headline: 'Designed for the 21st Century Learner',
     subheading: 'Euston University',
     url: 'https://form.eustonuniversity.edu.ng//register/',
