@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 const slides = [
   {
-    image: '/slide11.webp',
+    image: '/slide1.png',
     headline: 'Inspiring Minds, Shaping Futures',
     subheading: 'Euston University',
     primaryButton: 'Apply',
